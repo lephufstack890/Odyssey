@@ -1,0 +1,63 @@
+.footer {
+    width: 100%;
+    background-color: #141416;
+    padding: 20px 60px 0;
+    height: 467px;
+    &__layout {
+        display: grid;
+        grid-template-columns: 472px 202px 405px auto;
+
+        &__two {
+            &__list {
+                list-style: none;
+            }
+
+            &__item {
+                width: 121px;
+                height: 55px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 10px;
+                transition: all 0.1s linear;
+                border-radius: 8px;
+                &:hover {
+                    background-color: #889ce7;
+                    a {
+                        color: #141416;
+                    }
+                }
+                a {
+                    font-size: 18px;
+                    line-height: 25px;
+                    color: rgb(138, 138, 138);
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &__three {
+            button {
+                background-color: transparent;
+                outline: none;
+                cursor: pointer;
+                width: 115px;
+                height: 55px;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: rgb(138, 138, 138);
+                border: 1px solid rgb(138, 138, 138);
+                font-size: 16px;
+                transition: all 0.1s linear;
+
+                &:hover {
+                    background-color: #889ce7;
+                    color: #141416;
+                    border-color: #889ce7;
+                }
+            }
+        }
+    }
+}
