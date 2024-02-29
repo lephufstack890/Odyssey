@@ -1,7 +1,7 @@
 .header {
     width: 100%;
     background-color: #141416;
-    padding: 20px 0px;
+    padding: 0 0px 20px;
 }
 
 .header__list-menu {
@@ -55,7 +55,68 @@
 
     span:hover {
         text-decoration: underline;
-        color: #8A8A8A;
+        color: #8a8a8a;
         border: none;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    height: 60px;
+    height: 50px;
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+    display: flex;
+    justify-content: center;
+    background: #eff1f2;
+    border-bottom: 3px solid #a0138e;
+    &:hover {
+        background-color: #fff;
+        .inner {
+            &__link {
+                span {
+                    background-color: #a0138e;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.inner {
+    height: 100%;
+    width: var(--default-layout-width);
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #20303c;
+        flex-shrink: 0;
+        font-size: 14px;
+        line-height: 24px;
+        text-decoration: none;
+        height: 100%;
+        font-weight: 500;
+        svg {
+            width: 36px;
+            height: 22px;
+        }
+
+        span {
+            width: 112px;
+            height: 35px;
+            font-weight: 500;
+            align-items: center;
+            border: 1px solid #a0138e;
+            border-radius: 17px;
+            color: #a0138e;
+            display: inline-flex;
+            flex-shrink: 0;
+            font-family: wixFreemiumFontW01-65Medi, wixFreemiumFontW02-65Medi, wixFreemiumFontW10-65Medi, Helvetica Neue,
+                Helvetica, Arial, メイリオ, meiryo, ヒラギノ角ゴ pro w3, hiragino kaku gothic pro, sans-serif;
+            font-size: 14px;
+            margin-left: 6px;
+            justify-content: center;
+            text-align: center;
+        }
     }
 }
