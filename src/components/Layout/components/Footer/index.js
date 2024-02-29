@@ -9,7 +9,7 @@ import inst from '~/assets/images/footer/in.png';
 
 const cx = classNames.bind(styles);
 
-function Footer() {
+function Footer({ language }) {
     return (
         <footer className={cx('footer')}>
             <div className={cx('footer__layout')}>
@@ -59,26 +59,26 @@ function Footer() {
                             lineHeight: '36px',
                         }}
                     >
-                        163/22 Huỳnh Văn Bánh, Phường 11, Quận Phú Nhuận, Thành phố Hồ Chí Minh
+                        {language == 1 ? "163/22 Huỳnh Văn Bánh, Ward 11, Phú Nhuận District, Hồ Chí Minh City" : "163/22 Huỳnh Văn Bánh, Phường 11, Quận Phú Nhuận, Thành phố Hồ Chí Minh "}
                     </div>
 
                     <div style={{ fontSize: '14px', color: 'rgb(138, 138, 138)' }}>
-                        © 2021 Odyssey. Đã đăng ký bản quyền.
+                        {language == 1 ? "© 2021 Odyssey. All rights reserved." : "© 2021 Odyssey. Đã đăng ký bản quyền."}
                     </div>
                 </div>
                 <div className={cx('footer__layout__two')}>
                     <ul className={cx('footer__layout__two__list')}>
                         <li className={cx('footer__layout__two__item')}>
-                            <Link to="/">Trang chủ</Link>
+                            <Link to="/">{language == 1 ? "Home" : "Trang chủ"}</Link>
                         </li>
                         <li className={cx('footer__layout__two__item')}>
-                            <Link to="/mission">Sứ mệnh</Link>
+                            <Link to="/mission">{language == 1 ? "Solution" : "Giải pháp"}</Link>
                         </li>
                         <li className={cx('footer__layout__two__item')}>
-                            <Link to="/about">Về chúng tôi</Link>
+                            <Link to="/about">{language == 1 ? "Về chúng tôi" : "About us"}</Link>
                         </li>
                         <li className={cx('footer__layout__two__item')}>
-                            <Link to="/contact">Liên hệ</Link>
+                            <Link to="/contact">{language == 1 ? "Liên hệ" : "Contact"}</Link>
                         </li>
                     </ul>
                 </div>
@@ -91,7 +91,7 @@ function Footer() {
                             lineHeight: '36px',
                         }}
                     >
-                        Cập Nhật Thông Tin với Odyssey
+                        {language == 1 ? "Stay Up to Date with Odyssey" : "Cập Nhật Thông Tin với Odyssey"}
                     </div>
                     <form>
                         <div
@@ -140,7 +140,7 @@ function Footer() {
                             lineHeight: '10px',
                         }}
                     >
-                        Theo dõi chúng tôi
+                        {language == 1 ? "Follow Us" : "Theo dõi chúng tôi"}
                     </div>
                     <div>
                         <Link

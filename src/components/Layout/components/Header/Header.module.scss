@@ -19,6 +19,26 @@
     opacity: 0.8;
 }
 
+.dropdown-content {
+    position: absolute;
+    right: 0;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    background: #141416;
+
+    a {
+        color: rgb(138, 138, 138);
+        text-decoration: none;
+        padding: 3px 10px;
+    }
+
+    a:hover {
+        color: rgba(253, 98, 98, 1);
+    }
+}
+
 .header__started {
     border: 1px solid #fff;
     color: #fff;
