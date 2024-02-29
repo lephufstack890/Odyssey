@@ -59,26 +59,30 @@ function Footer({ language }) {
                             lineHeight: '36px',
                         }}
                     >
-                        {language == 1 ? "163/22 Huỳnh Văn Bánh, Ward 11, Phú Nhuận District, Hồ Chí Minh City" : "163/22 Huỳnh Văn Bánh, Phường 11, Quận Phú Nhuận, Thành phố Hồ Chí Minh "}
+                        {language == 1
+                            ? '163/22 Huỳnh Văn Bánh, Ward 11, Phú Nhuận District, Hồ Chí Minh City'
+                            : '163/22 Huỳnh Văn Bánh, Phường 11, Quận Phú Nhuận, Thành phố Hồ Chí Minh '}
                     </div>
 
                     <div style={{ fontSize: '14px', color: 'rgb(138, 138, 138)' }}>
-                        {language == 1 ? "© 2021 Odyssey. All rights reserved." : "© 2021 Odyssey. Đã đăng ký bản quyền."}
+                        {language == 1
+                            ? '© 2021 Odyssey. All rights reserved.'
+                            : '© 2021 Odyssey. Đã đăng ký bản quyền.'}
                     </div>
                 </div>
                 <div className={cx('footer__layout__two')}>
                     <ul className={cx('footer__layout__two__list')}>
                         <li className={cx('footer__layout__two__item')}>
-                            <Link to="/">{language == 1 ? "Home" : "Trang chủ"}</Link>
+                            <Link to="/">{language == 1 ? 'Home' : 'Trang chủ'}</Link>
                         </li>
                         <li className={cx('footer__layout__two__item')}>
-                            <Link to="/mission">{language == 1 ? "Solution" : "Giải pháp"}</Link>
+                            <Link to="/mission">{language == 1 ? 'Solution' : 'Giải pháp'}</Link>
                         </li>
                         <li className={cx('footer__layout__two__item')}>
-                            <Link to="/about">{language == 1 ? "Về chúng tôi" : "About us"}</Link>
+                            <Link to="/about">{language == 1 ? 'About us' : 'Về chúng tôi'}</Link>
                         </li>
                         <li className={cx('footer__layout__two__item')}>
-                            <Link to="/contact">{language == 1 ? "Liên hệ" : "Contact"}</Link>
+                            <Link to="/contact">{language == 1 ? 'Contact' : 'Liên hệ'}</Link>
                         </li>
                     </ul>
                 </div>
@@ -91,7 +95,7 @@ function Footer({ language }) {
                             lineHeight: '36px',
                         }}
                     >
-                        {language == 1 ? "Stay Up to Date with Odyssey" : "Cập Nhật Thông Tin với Odyssey"}
+                        {language == 1 ? 'Stay Up to Date with Odyssey' : 'Cập Nhật Thông Tin với Odyssey'}
                     </div>
                     <form>
                         <div
@@ -140,7 +144,7 @@ function Footer({ language }) {
                             lineHeight: '10px',
                         }}
                     >
-                        {language == 1 ? "Follow Us" : "Theo dõi chúng tôi"}
+                        {language == 1 ? 'Follow Us' : 'Theo dõi chúng tôi'}
                     </div>
                     <div>
                         <Link

@@ -1,0 +1,42 @@
+.main-page {
+    width: 100%;
+    &__sectionOne {
+        max-height: 820px;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+
+        video {
+            height: 820px;
+        }
+
+        &__content {
+            position: absolute;
+            top: 68px;
+            left: 105px;
+            color: #fff;
+            width: 768px;
+
+            a {
+                width: 140px;
+                height: 55px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid rgb(253, 98, 98);
+                color: #fff;
+                background-color: rgb(253, 98, 98);
+                text-decoration: none;
+                outline: none;
+                transition: all 0.2s linear;
+                font-size: 16px;
+                line-height: 22px;
+                border-radius: 5px;
+                &:hover {
+                    background-color: transparent;
+                    border-color: #fff;
+                }
+            }
+        }
+    }
+}

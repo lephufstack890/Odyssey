@@ -7,7 +7,6 @@ import Footer from '../components/Footer';
 const cx = classNames.bind(styles);
 
 function DefaultLayout({ children }) {
-
     const [language, setLanguage] = useState(1);
 
     // Hàm callback để nhận dữ liệu ngôn ngữ từ Header
@@ -16,11 +15,9 @@ function DefaultLayout({ children }) {
     };
 
     return (
-        <div className={cx('wrapper')}>
+        <div>
             <Header onLanguageChange={handleLanguageChange} />
-            <div className={cx('container')}>
-                <div className={cx('content')}>{children}</div>
-            </div>
+            <div>{children}</div>
             <Footer language={language} />
         </div>
     );

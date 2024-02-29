@@ -92,9 +92,9 @@ function Header({ onLanguageChange }) {
                     </a>
                 </div>
             </div>
-            <div className={cx('container')}>
+            <div className={cx('container')} style={{ padding: '15px 0' }}>
                 <div className={cx('row', 'align-items-center')}>
-                    <div className={cx('col-lg-4')}>
+                    <div className={cx('col-lg-3')}>
                         <Link to="/" style={{ textDecoration: 'none' }}>
                             <div style={{ display: 'flex', alignItems: 'flex-end' }}>
                                 <img src={f1} alt="Logo" />
@@ -112,7 +112,7 @@ function Header({ onLanguageChange }) {
                             </div>
                         </Link>
                     </div>
-                    <div className={cx('col-lg-4')}>
+                    <div className={cx('col-lg-6')}>
                         <div className={cx('header__list-menu')}>
                             <Link className={cx('header__list-menu--item')} to="/">
                                 {language == 1 ? 'Home' : 'Trang chủ'}
@@ -124,6 +124,7 @@ function Header({ onLanguageChange }) {
                                 to="/"
                             >
                                 <span>{language == 1 ? 'Solution' : 'Giải pháp'}</span>
+
                                 {isSolutionHovered && (
                                     <div className={cx('dropdown-content')}>
                                         {Menu?.map((item, index) => (
@@ -142,7 +143,7 @@ function Header({ onLanguageChange }) {
                             </Link>
                         </div>
                     </div>
-                    <div className={cx('col-lg-4')}>
+                    <div className={cx('col-lg-3')}>
                         <div className={cx('d-flex', 'align-items-center', 'justify-content-end')}>
                             <div className={cx('header__language')}>
                                 <span onClick={() => languageEN(1)}>EN</span>
