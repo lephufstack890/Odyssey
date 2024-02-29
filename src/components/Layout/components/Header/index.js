@@ -6,8 +6,9 @@ import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
-function Header() {
+function Header({ onLanguageChange }) {
     const [isSolutionHovered, setIsSolutionHovered] = useState(false);
+    const [language, setLanguage] = useState(1);
 
     const handleSolutionHover = () => {
         setIsSolutionHovered(true);
@@ -17,37 +18,56 @@ function Header() {
         setIsSolutionHovered(false);
     };
 
+    const languageEN = () => {
+        setLanguage(1);
+        onLanguageChange(1);
+    };
+
+    const languageVN = () => {
+        setLanguage(2);
+        onLanguageChange(2);
+    };
+
+
     const Menu = [
         {
-            title: 'Web and Mobile application',
+            titleEN: 'Web and Mobile application',
+            titleVN: 'Ứng dụng di động và web',
             link: ""
         },
         {
-            title: 'Data Analytics',
+            titleEN: 'Data Analytics',
+            titleVN: 'Phân tích dữ liệu',
             link: ""
         },
         {
-            title: 'Business Intelligence',
+            titleEN: 'Business Intelligence',
+            titleVN: 'Trí tuệ doanh nghiệp',
             link: ""
         },
         {
-            title: 'Artificial Intelligence',
+            titleEN: 'Artificial Intelligence',
+            titleVN: 'Trí tuệ nhân tạo',
             link: ""
         },
         {
-            title: 'Cloud Computing',
+            titleEN: 'Cloud Computing',
+            titleVN: 'Điện toán đám mây',
             link: ""
         },
         {
-            title: 'Big Data',
+            titleEN: 'Big Data',
+            titleVN: 'Dữ liệu lớn',
             link: ""
         },
         {
-            title: 'Internet of things',
+            titleEN: 'Internet of things',
+            titleVN: 'Internet vạn vật',
             link: ""
         },
         {
-            title: 'Blockchain',
+            titleEN: 'Blockchain',
+            titleVN: 'Blockchain',
             link: ""
         }
     ]
@@ -76,33 +96,33 @@ function Header() {
                     </div>
                     <div className={cx('col-lg-4')}>
                         <div className={cx('header__list-menu')}>
-                            <Link className={cx('header__list-menu--item')} to="/">Home</Link>
+                            <Link className={cx('header__list-menu--item')} to="/">{language == 1 ? "Home" : "Trang chủ"}</Link>
                             <Link
                                 onMouseEnter={handleSolutionHover}
                                 onMouseLeave={handleSolutionLeave}
                                 className={cx('header__list-menu--item', 'position-relative')} to="/"
                             >
-                                <span>Solution</span>
+                                <span>{language == 1 ? "Solution" : "Giải pháp"}</span>
                                 {isSolutionHovered && (
                                     <div className={cx('dropdown-content')}>
                                         {Menu?.map((item, index) => (
-                                            <Link key={index} to={item?.link}>{item?.title}</Link>
+                                            <Link key={index} to={item?.link}>{language == 1 ? item?.titleEN : item?.titleVN}</Link>
                                         ))}
                                     </div>
                                 )}
                             </Link>
-                            <Link className={cx('header__list-menu--item')} to="/">Misson</Link>
-                            <Link className={cx('header__list-menu--item')} to="/">About us</Link>
+                            <Link className={cx('header__list-menu--item')} to="/">{language == 1 ? "Misson" : "Về sứ mệnh"}</Link>
+                            <Link className={cx('header__list-menu--item')} to="/">{language == 1 ? "About us" : "Về chúng tôi"}</Link>
                         </div>
                     </div>
                     <div className={cx('col-lg-4')}>
                         <div className={cx('d-flex', 'align-items-center', 'justify-content-end')}>
                             <div className={cx('header__language')}>
-                                <span>EN</span>
-                                <span>VN</span>
+                                <span onClick={() => languageEN(1)}>EN</span>
+                                <span onClick={() => languageVN(2)}>VN</span>
                             </div>
                             <div className={cx('header__started')}>
-                                <span>Get started</span>
+                                <span>{language == 1 ? "Get started" : "Bắt đầu"}</span>
                             </div>
                         </div>
                     </div>

@@ -1,20 +1,27 @@
+import { useState } from 'react';
 import classNames from 'classnames/bind';
 import Header from '~/components/Layout/components/Header';
 import styles from './DefaultLayout.module.scss';
-import Sidebar from './Sidebar';
 import Footer from '../components/Footer';
 
 const cx = classNames.bind(styles);
 
 function DefaultLayout({ children }) {
+
+    const [language, setLanguage] = useState(1);
+
+    // Hàm callback để nhận dữ liệu ngôn ngữ từ Header
+    const handleLanguageChange = (lang) => {
+        setLanguage(lang);
+    };
+
     return (
         <div className={cx('wrapper')}>
-            <Header />
+            <Header onLanguageChange={handleLanguageChange} />
             <div className={cx('container')}>
-                <Sidebar />
                 <div className={cx('content')}>{children}</div>
             </div>
-            <Footer />
+            <Footer language={language} />
         </div>
     );
 }
