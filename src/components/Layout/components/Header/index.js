@@ -1,12 +1,14 @@
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
+import f1 from '~/assets/images/footer/f1.png';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
 function Header() {
     return (
-        <header className={cx('wrapper')}>
-            <div className={cx('inner')}>
+        <header className={cx('header')}>
+            {/* <div className={cx('inner')}>
                 <a href="#" className={cx('inner__link')}>
                     This site was designed with the
                     <div style={{ margin: '0 5px', display: 'flex' }}>
@@ -22,6 +24,47 @@ function Header() {
                     website builder. Create your website today.
                     <span>Start Now</span>
                 </a>
+            </div> */}
+            <div className={cx('container')}>
+                <div className={cx('row', 'align-items-center')}>
+                    <div className={cx('col-lg-4')}>
+                        <Link to="/" style={{ textDecoration: 'none' }}>
+                            <div style={{ display: 'flex', alignItems: 'flex-end' }}>
+                                <img src={f1} alt="Logo" />
+                                <span
+                                    style={{
+                                        fontSize: '25px',
+                                        color: '#fff',
+                                        fontWeight: '500',
+                                        marginLeft: '10px',
+                                        lineHeight: '1',
+                                    }}
+                                >
+                                    Odyssey
+                                </span>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className={cx('col-lg-4')}>
+                        <div className={cx('header__list-menu')}>
+                            <Link className={cx('header__list-menu--item')} to="/">Home</Link>
+                            <Link className={cx('header__list-menu--item')} to="/">Solution</Link>
+                            <Link className={cx('header__list-menu--item')} to="/">Misson</Link>
+                            <Link className={cx('header__list-menu--item')} to="/">About us</Link>
+                        </div>
+                    </div>
+                    <div className={cx('col-lg-4')}>
+                        <div className={cx('d-flex', 'align-items-center', 'justify-content-end')}>
+                            <div className={cx('header__language')}>
+                                <span>EN</span>
+                                <span>VN</span>
+                            </div>
+                            <div className={cx('header__started')}>
+                                <span>Get started</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
     );
