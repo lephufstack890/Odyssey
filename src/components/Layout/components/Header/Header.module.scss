@@ -1,6 +1,17 @@
 .header {
     width: 100%;
     background-color: #141416;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.header--hidden {
+    top: -100px;
+    /* Điều chỉnh giá trị top để ẩn hoặc hiện header */
 }
 
 .header__list-menu {
@@ -19,7 +30,7 @@
 
 .dropdown-content {
     position: absolute;
-    top: 50px;
+    padding: 17px 0px;
     right: 0;
     width: 220px;
     display: flex;
@@ -27,6 +38,7 @@
     text-align: end;
     background: #141416;
     z-index: 100;
+
     a {
         color: rgb(138, 138, 138);
         text-decoration: none;
@@ -88,8 +100,10 @@
     justify-content: center;
     background: #eff1f2;
     border-bottom: 3px solid #a0138e;
+
     &:hover {
         background-color: #fff;
+
         .inner {
             &__link {
                 span {
@@ -105,8 +119,10 @@
     background: #eff1f2;
     border-bottom: 3px solid #a0138e;
     height: 47px;
+
     &:hover {
         background-color: #fff;
+
         .inner {
             &__link {
                 span {
@@ -120,6 +136,7 @@
     .inner {
         height: 100%;
         width: 100%;
+
         &__link {
             display: flex;
             justify-content: center;
@@ -131,6 +148,7 @@
             text-decoration: none;
             height: 100%;
             font-weight: 500;
+
             svg {
                 width: 36px;
                 height: 22px;
