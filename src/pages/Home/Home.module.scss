@@ -7,23 +7,6 @@
 
     }
 
-    // .animation {
-    //     opacity: 0;
-    //     animation: fadeIn 8s forwards;
-    // }
-
-    // @keyframes fadeIn {
-    //     from {
-    //         opacity: 0;
-    //         transform: translateX(-40px);
-    //     }
-
-    //     to {
-    //         opacity: 1;
-    //         transform: translateX(0);
-    //     }
-    // }
-
     .active {
 
         &::before {
@@ -153,6 +136,7 @@
     &__odyssey {
 
         position: relative;
+        background: #141416;
 
         &-content {
             position: absolute;
@@ -172,6 +156,95 @@
                 max-width: 610px;
                 text-align: center;
                 color: rgb(138, 138, 138);
+            }
+        }
+
+        &-actions {
+            margin-top: -70px;
+
+            &-item {
+                border: 1px solid rgb(138, 138, 138);
+                background: #141416;
+                flex: 0 0 auto;
+                width: 20%;
+            }
+
+            &-startedLeft {
+                flex: 0 0 auto;
+                width: 60%;
+                text-align: center;
+                position: relative;
+
+                p {
+                    position: absolute;
+                    top: 50%;
+                    width: 100%;
+                    color: #fff;
+                    font-size: 40px;
+                    padding: 0px 142px;
+                    transform: translateY(-50%);
+                }
+            }
+
+            &-startedRight {
+                flex: 0 0 auto;
+                width: 40%;
+
+                p {
+                    color: rgb(138, 138, 138);
+                    padding: 70px 110px 0px 110px;
+                    text-align: justify;
+                }
+
+                a {
+                    width: 140px;
+                    height: 55px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid rgb(253, 98, 98);
+                    color: #fff;
+                    background-color: rgb(253, 98, 98);
+                    text-decoration: none;
+                    outline: none;
+                    transition: all 0.2s linear;
+                    font-size: 16px;
+                    line-height: 22px;
+                    border-radius: 5px;
+                    margin-left: 110px;
+                    margin-top: 20px;
+                }
+
+                a:hover {
+                    background-color: transparent;
+                    border-color: #fff;
+                }
+            }
+
+            &-item:first-child {
+                padding: 56px;
+
+                span {
+                    font-size: 29px;
+                    font-weight: 600;
+                    color: #fff;
+                }
+            }
+
+            &-item:nth-child(2) {
+                padding: 74px 45px;
+            }
+
+            &-item:nth-child(3) {
+                padding: 72px 45px;
+            }
+
+            &-item:nth-child(4) {
+                padding: 79px 40px;
+            }
+
+            &-item:nth-child(5) {
+                padding: 72px 45px;
             }
         }
     }
