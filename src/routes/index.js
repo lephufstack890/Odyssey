@@ -7,6 +7,7 @@ import Following from '~/pages/Following';
 import Profile from '~/pages/Profile';
 import Upload from '~/pages/Upload';
 import Search from '~/pages/Search';
+import Solution from '~/pages/Solution';
 
 // Public routes
 const publicRoutes = [
@@ -15,6 +16,7 @@ const publicRoutes = [
     { path: '/profile', component: Profile },
     { path: '/upload', component: Upload, layout: HeaderOnly },
     { path: '/search', component: Search, layout: null },
+    { path: '/solution', component: Solution },
 ];
 
 const privateRoutes = [];

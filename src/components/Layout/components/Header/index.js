@@ -117,7 +117,7 @@ function Header({ onLanguageChange }) {
                                 onMouseEnter={handleSolutionHover}
                                 onMouseLeave={handleSolutionLeave}
                                 className={cx('header__list-menu--item', 'position-relative')}
-                                to="/"
+                                to="/solution"
                             >
                                 <span>{language == 1 ? 'Solution' : 'Giải pháp'}</span>
 
