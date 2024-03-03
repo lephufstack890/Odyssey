@@ -14,12 +14,10 @@ function Solution() {
             <div className={cx('solution__intro')}>
                 <div style={{ position: 'absolute', maxWidth: '798px', left: '110px', bottom: ' 43px' }}>
                     <div className={cx('solution__intro__title')}>
-                        Giải pháp phần mềm mới cho một thế giới tốt đẹp hơn
+                        Innovative Software Solutions for a Better World
                     </div>
                     <div className={cx('solution__intro__description')}>
-                        Chúng tôi cam kết cung cấp các giải pháp đáng tin cậy và có khả năng mở rộng giúp bạn đạt được
-                        mục tiêu kinh doanh của mình. Đội ngũ chuyên gia của chúng tôi luôn nỗ lực để dẫn đầu và mang
-                        đến cho bạn những giải pháp công nghệ mới nhất thúc đẩy sự đổi mới và tiến bộ.
+                        We commit to integrate with your ecosystem and providing reliable and scalable solutions that help you achieve your business goals. Our team of experts constantly strives to stay ahead of the curve and bring you the latest technology solutions that drive innovation and progress.
                     </div>
                 </div>
             </div>
