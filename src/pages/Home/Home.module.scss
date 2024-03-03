@@ -7,19 +7,19 @@
 
     }
 
-    .active {
+    // .enlarge-img {
+    //     // width: 400px;
+    //     transition: all 0.3s ease !important;
 
-        &::before {
-            opacity: 1;
-            z-index: 1;
-            transform: scale(1.05);
-        }
-    }
+    //     // .sl-img {
+    //     //     height: 400px;
+    //     // }
+    // }
 
 
     &__solutions {
         background: #141416;
-        padding: 0px 180px;
+        padding: 0px 38px;
 
         &-top {
             display: flex;
@@ -53,13 +53,20 @@
         }
 
         &-contentDestop {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
             &-item {
+                transition: transform 0.3s ease;
                 position: relative;
                 cursor: pointer;
 
                 .sl-img {
                     transition: transform 0.3s ease;
-                    width: 97%;
+                    width: 100%;
+                    height: 400px;
+                    padding-right: 10px;
                 }
 
                 &::before {
@@ -74,15 +81,40 @@
                     transition: opacity 0.3s ease;
                 }
 
-                &:hover {
-                    .sl-img {
-                        transform: scale(1.05);
+                div {
+                    position: absolute;
+                    bottom: 36px;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    justify-content: space-around;
+
+                    span {
+                        font-size: 20px;
+                        color: #fff;
                     }
 
-                    // &::before {
-                    //     opacity: 1 !important;
-                    // }
+                    a {
+                        width: 140px;
+                        height: 55px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1px solid rgb(253, 98, 98);
+                        color: #fff;
+                        background-color: rgb(253, 98, 98);
+                        text-decoration: none;
+                        outline: none;
+                        transition: all 0.2s linear;
+                        font-size: 16px;
+                        line-height: 22px;
+                        border-radius: 5px;
+                    }
 
+                    a:hover {
+                        background-color: transparent;
+                        border-color: #fff;
+                    }
                 }
             }
 
@@ -302,6 +334,7 @@
         }
     }
 }
+
 
 @media (max-width: 768px) {
     .main-page {

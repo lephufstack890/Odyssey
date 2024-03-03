@@ -76,7 +76,7 @@ function Footer({ language }) {
                             <Link to="/">{language == 1 ? 'Home' : 'Trang chủ'}</Link>
                         </li>
                         <li className={cx('footer__layout__two__item')}>
-                            <Link to="/mission">{language == 1 ? 'Solution' : 'Giải pháp'}</Link>
+                            <Link to="/solution">{language == 1 ? 'Solution' : 'Giải pháp'}</Link>
                         </li>
                         <li className={cx('footer__layout__two__item')}>
                             <Link to="/about">{language == 1 ? 'About us' : 'Về chúng tôi'}</Link>

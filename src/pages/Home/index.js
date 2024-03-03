@@ -1,27 +1,40 @@
+import { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Home.module.scss';
 import { Link } from 'react-router-dom';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import OwlCarousel from 'react-owl-carousel2';
+import 'react-owl-carousel2/lib/styles.css';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { useState } from 'react';
 import startedVideo from './../../assets/video/home/started.mp4';
 
 const cx = classNames.bind(styles);
 
 function Home() {
-    const [activeIndex, setActiveIndex] = useState(-1);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [activeSlider, setActiveSlider] = useState(false);
+
+    const ref = useRef();
+
+    const options = {
+        items: 6,
+        nav: true,
+        margin: 12,
+        rewind: true,
+        autoplay: false
+    };
 
     const handleMouseEnter = (index) => {
+        setActiveSlider(true);
         setActiveIndex(index);
     };
 
     const handleMouseLeave = () => {
-        setActiveIndex(-1);
+        setActiveSlider(false);
+        setActiveIndex(0);
     };
     return (
         <div className={cx('main-page')}>
@@ -57,27 +70,39 @@ function Home() {
                         <span>Explore how you can digitalize your business with Odyssey</span>
                     </div>
                     <div className={cx('main-page__solutions-contentDestop')}>
-                        <div>
-                            <Swiper modules={[Navigation, Pagination, A11y]} spaceBetween={20} slidesPerView={6}>
-                                {Array.from({ length: 8 }).map((_, index) => (
-                                    <SwiperSlide key={index}>
-                                        <div
-                                            className={cx('main-page__solutions-content-item', {
-                                                active: activeIndex === index,
-                                            })}
-                                            onMouseEnter={() => handleMouseEnter(index)}
-                                            onMouseLeave={handleMouseLeave}
-                                        >
-                                            <img
-                                                className={cx('sl-img')}
-                                                src={require(`./../../assets/images/home/solution${index + 1}.png`)}
-                                                alt=""
-                                            />
+                        {/* <OwlCarousel
+                            ref={ref} options={options}
+                        > */}
+                        {Array.from({ length: 6 }).map((_, index) => (
+                            <div
+                                key={index}
+                                className={cx('main-page__solutions-contentDestop-item')}
+                                onMouseEnter={() => handleMouseEnter(index)}
+                                onMouseLeave={handleMouseLeave}
+                            >
+                                {activeIndex === index ? (
+                                    <>
+                                        <img
+                                            style={{ width: '600px' }}
+                                            className={cx('sl-img', 'enlarge-img')} // Thêm lớp enlarge-img
+                                            src={require(`./../../assets/images/home/big${index + 1}.png`)}
+                                            alt=""
+                                        />
+                                        <div>
+                                            <span>Web & Application</span>
+                                            <Link to={'/'}>Learn More</Link>
                                         </div>
-                                    </SwiperSlide>
-                                ))}
-                            </Swiper>
-                        </div>
+                                    </>
+                                ) : (
+                                    <img
+                                        className={cx('sl-img', 'enlarge-img')} // Thêm lớp enlarge-img
+                                        src={require(`./../../assets/images/home/solution${index + 1}.png`)}
+                                        alt=""
+                                    />
+                                )}
+                            </div>
+                        ))}
+                        {/* </OwlCarousel> */}
                     </div>
                     <div className={cx('main-page__solutions-contentMobile')}>
                         <div>

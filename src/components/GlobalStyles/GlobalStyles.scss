@@ -30,6 +30,20 @@ body {
     color: rgba(253, 98, 98, 1) !important;
 }
 
+.owl-stage-outer {
+    height: 529px;
+}
+
+
+.owl-item {
+    transition: width 0.3s ease;
+    /* Áp dụng transition cho thuộc tính width với thời gian 0.3s và chế độ ease */
+}
+
+.owl-item:hover {
+    width: 360px !important;
+}
+
 // .swiper-button-next:after {
 //     content: "" !important;
 //     background-image: url('./../../assets/images/home/icon-arrow-right.png') !important;
