@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import f1 from '~/assets/images/footer/f1.png';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import { FaBars } from "react-icons/fa6";
 
 const cx = classNames.bind(styles);
 
@@ -90,8 +91,8 @@ function Header({ onLanguageChange }) {
         <header className={cx('header', { 'header--hidden': !visible })}>
             <div className={cx('container')} style={{ padding: '15px 0' }}>
                 <div className={cx('row', 'align-items-center')}>
-                    <div className={cx('col-lg-3')}>
-                        <Link to="/" style={{ textDecoration: 'none' }}>
+                    <div className={cx('col-lg-3 col-4')}>
+                        <NavLink to="/" style={{ textDecoration: 'none' }}>
                             <div style={{ display: 'flex', alignItems: 'flex-end' }}>
                                 <img src={f1} alt="Logo" />
                                 <span
@@ -106,14 +107,14 @@ function Header({ onLanguageChange }) {
                                     Odyssey
                                 </span>
                             </div>
-                        </Link>
+                        </NavLink>
                     </div>
-                    <div className={cx('col-lg-6')}>
+                    <div className={cx('mobile', 'col-lg-6')}>
                         <div className={cx('header__list-menu')}>
-                            <Link className={cx('header__list-menu--item')} to="/">
+                            <NavLink className={cx('header__list-menu--item')} to="/">
                                 {language == 1 ? 'Home' : 'Trang chủ'}
-                            </Link>
-                            <Link
+                            </NavLink>
+                            <NavLink
                                 onMouseEnter={handleSolutionHover}
                                 onMouseLeave={handleSolutionLeave}
                                 className={cx('header__list-menu--item', 'position-relative')}
@@ -130,16 +131,16 @@ function Header({ onLanguageChange }) {
                                         ))}
                                     </div>
                                 )}
-                            </Link>
-                            <Link className={cx('header__list-menu--item')} to="/">
+                            </NavLink>
+                            <NavLink className={cx('header__list-menu--item')} to="/mission">
                                 {language == 1 ? 'Misson' : 'Về sứ mệnh'}
-                            </Link>
-                            <Link className={cx('header__list-menu--item')} to="/">
+                            </NavLink>
+                            <NavLink className={cx('header__list-menu--item')} to="/about-us">
                                 {language == 1 ? 'About us' : 'Về chúng tôi'}
-                            </Link>
+                            </NavLink>
                         </div>
                     </div>
-                    <div className={cx('col-lg-3')}>
+                    <div className={cx('col-lg-3 col-8')}>
                         <div className={cx('d-flex', 'align-items-center', 'justify-content-end')}>
                             <div className={cx('header__language')}>
                                 <span onClick={() => languageEN(1)}>EN</span>
@@ -147,6 +148,9 @@ function Header({ onLanguageChange }) {
                             </div>
                             <div className={cx('header__started')}>
                                 <span>{language == 1 ? 'Get started' : 'Bắt đầu'}</span>
+                            </div>
+                            <div className={cx('header__bar')}>
+                                <span><FaBars /></span>
                             </div>
                         </div>
                     </div>

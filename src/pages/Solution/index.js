@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Solution.module.scss';
 import { Navigation } from 'swiper/modules';
@@ -8,15 +8,6 @@ import { Link } from 'react-router-dom';
 const cx = classNames.bind(styles);
 
 function Solution() {
-    const [activeIndex, setActiveIndex] = useState(-1);
-
-    const handleMouseEnter = (index) => {
-        setActiveIndex(index);
-    };
-
-    const handleMouseLeave = () => {
-        setActiveIndex(-1);
-    };
 
     return (
         <div className={cx('solution')}>
@@ -140,7 +131,7 @@ function Solution() {
                         <SwiperSlide>Slide 8</SwiperSlide>
                         <SwiperSlide>Slide 9</SwiperSlide> */}
                     </Swiper>
-                    {}
+                    { }
                 </div>
             </div>
         </div>

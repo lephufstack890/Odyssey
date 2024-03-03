@@ -26,6 +26,10 @@ body {
     text-rendering: optimizespeed;
 }
 
+.active {
+    color: rgba(253, 98, 98, 1) !important;
+}
+
 // .swiper-button-next:after {
 //     content: "" !important;
 //     background-image: url('./../../assets/images/home/icon-arrow-right.png') !important;

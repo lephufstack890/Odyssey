@@ -16,7 +16,9 @@
 
 .header__list-menu {
     text-align: center;
+
 }
+
 
 .header__list-menu--item {
     padding: 10px 10px;
@@ -27,6 +29,7 @@
 .header__list-menu--item:hover {
     color: rgba(253, 98, 98, 1);
 }
+
 
 .dropdown-content {
     position: absolute;
@@ -174,4 +177,34 @@
             }
         }
     }
+}
+
+.header__bar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile {
+        display: none;
+    }
+
+    .header__bar {
+        display: block;
+
+        span {
+            color: rgba(138, 138, 138, 1);
+            font-size: 30px;
+            padding: 0px 25px;
+            cursor: pointer;
+        }
+    }
+
+    .header__list-menu--item {
+        display: none;
+    }
+
+    .header__language {
+        display: none;
+    }
+
 }

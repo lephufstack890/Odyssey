@@ -49,36 +49,51 @@ function Home() {
                     </div>
                 </div>
 
-                <div style={{ background: '#141416', padding: '0px 180px' }}>
-                    <div className={cx('main-page__solutions')}>
-                        <div className={cx('main-page__solutions-top')}>
-                            <span>Our Solutions</span>
-                            <span>Cooperate to innovate</span>
-                            <span>your company</span>
-                            <span>Explore how you can digitalize your business with Odyssey</span>
+                <div className={cx('main-page__solutions')}>
+                    <div className={cx('main-page__solutions-top')}>
+                        <span>Our Solutions</span>
+                        <span>Cooperate to innovate</span>
+                        <span>your company</span>
+                        <span>Explore how you can digitalize your business with Odyssey</span>
+                    </div>
+                    <div className={cx('main-page__solutions-contentDestop')}>
+                        <div>
+                            <Swiper modules={[Navigation, Pagination, A11y]} spaceBetween={20} slidesPerView={6}>
+                                {Array.from({ length: 8 }).map((_, index) => (
+                                    <SwiperSlide key={index}>
+                                        <div
+                                            className={cx('main-page__solutions-content-item', {
+                                                active: activeIndex === index,
+                                            })}
+                                            onMouseEnter={() => handleMouseEnter(index)}
+                                            onMouseLeave={handleMouseLeave}
+                                        >
+                                            <img
+                                                className={cx('sl-img')}
+                                                src={require(`./../../assets/images/home/solution${index + 1}.png`)}
+                                                alt=""
+                                            />
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
                         </div>
-                        <div className={cx('main-page__solutions-content')}>
-                            <div>
-                                <Swiper modules={[Navigation, Pagination, A11y]} spaceBetween={20} slidesPerView={6}>
-                                    {Array.from({ length: 8 }).map((_, index) => (
-                                        <SwiperSlide key={index}>
-                                            <div
-                                                className={cx('main-page__solutions-content-item', {
-                                                    active: activeIndex === index,
-                                                })}
-                                                onMouseEnter={() => handleMouseEnter(index)}
-                                                onMouseLeave={handleMouseLeave}
-                                            >
-                                                <img
-                                                    className={cx('sl-img')}
-                                                    src={require(`./../../assets/images/home/solution${index + 1}.png`)}
-                                                    alt=""
-                                                />
-                                            </div>
-                                        </SwiperSlide>
-                                    ))}
-                                </Swiper>
-                            </div>
+                    </div>
+                    <div className={cx('main-page__solutions-contentMobile')}>
+                        <div>
+                            {Array.from({ length: 8 }).map((_, index) => (
+                                <div
+                                    className={cx('row')}
+                                >
+                                    <div className={cx('col-12')}>
+                                        <img
+                                            className={cx('sl-img-mobile')}
+                                            src={require(`./../../assets/images/home/solution${index + 1}.png`)}
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -128,7 +143,7 @@ function Home() {
                         </p>
                     </div>
                     <div className={cx('main-page__odyssey-actions', 'container')}>
-                        <div className={cx('d-flex', 'align-items-center')}>
+                        <div className={cx('d-flex', 'flex-wrap', 'align-items-center')}>
                             <div className={cx('main-page__odyssey-actions-item')}>
                                 <span>Our Partners</span>
                             </div>
@@ -157,7 +172,7 @@ function Home() {
                                 />
                             </div>
                         </div>
-                        <div className={cx('d-flex')}>
+                        <div className={cx('d-flex', 'flex-wrap')}>
                             <div
                                 className={cx('main-page__odyssey-actions-startedLeft')}
                                 style={{ border: '1px solid rgb(138, 138, 138)' }}
