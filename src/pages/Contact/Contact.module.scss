@@ -1,0 +1,147 @@
+.Contact {
+    &__intro {
+        position: relative;
+        width: 100%;
+        height: 463px;
+        background: url(https://static.wixstatic.com/media/c837a6_3f53cdbff83b47b19a97bd35c767333c~mv2.jpg/v1/fill/w_1351,h_453,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c837a6_3f53cdbff83b47b19a97bd35c767333c~mv2.jpg) no-repeat;
+        background-size: cover;
+
+        &-wrapper {
+            position: absolute;
+            max-width: 798px;
+            left: 110px;
+            bottom: 43px;
+        }
+
+        &__title {
+            color: #fff;
+            font-size: 60px;
+            line-height: 72px;
+            font-weight: 400;
+            margin-bottom: 18px;
+        }
+
+        &__description {
+            color: #fff;
+            font-size: 22px;
+            line-height: 28px;
+        }
+    }
+
+    &__form {
+
+        background: rgb(20, 20, 22);
+
+        &-left {
+            position: relative;
+            border: 1px solid rgba(138, 138, 138, 1);
+
+            p {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                color: rgba(138, 138, 138, 1);
+                padding: 0px 140px;
+                text-align: justify;
+            }
+        }
+
+        &-right {
+            border: 1px solid rgba(138, 138, 138, 1);
+            padding: 110px !important;
+
+            label {
+                color: rgba(138, 138, 138, 1);
+                margin-bottom: 10px;
+            }
+
+            input {
+                padding: 10px;
+                border-radius: 5px;
+                outline: none;
+                font-size: 20px;
+                background: rgb(20, 20, 22);
+                border: 1px solid rgb(138, 138, 138);
+                color: rgb(138, 138, 138);
+            }
+
+            textarea {
+                padding: 10px;
+                font-size: 16px;
+                border-radius: 5px;
+                outline: none;
+                background: rgb(20, 20, 22);
+                border: 1px solid rgb(138, 138, 138);
+                color: rgb(138, 138, 138);
+            }
+
+            button {
+                width: 100%;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid rgb(253, 98, 98);
+                color: #fff;
+                background-color: rgb(253, 98, 98);
+                text-decoration: none;
+                outline: none;
+                transition: all 0.2s linear;
+                font-size: 18px;
+                line-height: 22px;
+                border-radius: 5px;
+                margin-top: 17px;
+            }
+
+            button:hover {
+                background-color: transparent;
+                border-color: #fff;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .Contact {
+
+        &__intro {
+            &-wrapper {
+                position: absolute;
+                left: 0;
+                transform: translateY(-50%);
+                top: 50%;
+                bottom: 0;
+                padding: 0px 20px;
+            }
+
+            &__title {
+                font-size: 45px;
+                text-align: center;
+            }
+
+            &__description {
+                font-size: 27px;
+                line-height: 28px;
+                text-align: center;
+            }
+        }
+
+        &__form {
+            &-left {
+                height: 325px;
+
+                p {
+                    padding: 0px 56px;
+                    text-align: justify;
+                    line-height: 35px;
+                }
+            }
+
+            &-right {
+                padding: 30px !important;
+            }
+        }
+
+    }
+}
