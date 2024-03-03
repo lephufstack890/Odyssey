@@ -11,7 +11,7 @@ function Mission() {
     return (
         <div className={cx('Mission')}>
             <div className={cx('Mission__intro')}>
-                <div style={{ position: 'absolute', maxWidth: '798px', left: '110px', bottom: ' 43px' }}>
+                <div className={cx('Mission__intro-wrapper')}>
                     <div className={cx('Mission__intro__title')}>
                         Our Mission
                     </div>
@@ -31,13 +31,13 @@ function Mission() {
             </div>
 
             <div className={cx('Mission__need')}>
-                <div className={cx('container')} style={{ padding: '60px 0px' }}>
+                <div className={cx('container')}>
                     <div className={cx('row')}>
-                        <div className={cx('Mission__need-left', 'col-lg-5')}>
+                        <div className={cx('Mission__need-left', 'col-lg-5', 'col-md-5', 'col-sm-12')}>
                             <img style={{ width: '100%' }} src={m1} alt='mission' />
                             <p>We understand what you need</p>
                         </div>
-                        <div className={cx('Mission__need-right', 'col-lg-7')}>
+                        <div className={cx('Mission__need-right', 'col-lg-7', 'col-md-5', 'col-sm-12')}>
                             <p>
                                 We understand that every business is unique. That's why we offer customized software applications tailored to your specific needs. Whether you're looking to streamline your operations or improve customer engagement, we've got you covered. We commit to provide exceptional customer service from start to finish. Our team of experts is available to answer your questions and provide support whenever you need it.
                             </p>
@@ -48,7 +48,7 @@ function Mission() {
 
             <div className={cx('Mission__help')}>
                 <div className={cx('container')} style={{ padding: '0' }}>
-                    <div className={cx('row')}>
+                    <div className={cx('row', 'Mission__help-wrapper')}>
                         <div className={cx('Mission__help-left', 'col-lg-7')}>
                             <p>
                                 At Odyssey, we are proud to have an experienced leadership team that brings a wealth of knowledge and expertise to our company. Our leaders have a proven track record of success in the technology industry and are dedicated to driving our company forward. We believe that our people are our greatest asset, and we are committed to creating a supportive and inclusive work environment that fosters creativity and innovation. Our team is made up of talented developers, designers, and project managers who work together to deliver exceptional results.
