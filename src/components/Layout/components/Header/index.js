@@ -3,7 +3,7 @@ import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import f1 from '~/assets/images/footer/f1.png';
 import { Link, NavLink } from 'react-router-dom';
-import { FaBars } from "react-icons/fa6";
+import { FaBars } from 'react-icons/fa6';
 
 const cx = classNames.bind(styles);
 
@@ -48,42 +48,42 @@ function Header({ onLanguageChange }) {
         {
             titleEN: 'Web and Mobile application',
             titleVN: 'Ứng dụng di động và web',
-            link: '',
+            link: '/web-and-mobile-application',
         },
         {
             titleEN: 'Data Analytics',
             titleVN: 'Phân tích dữ liệu',
-            link: '',
+            link: '/data-analytics',
         },
         {
             titleEN: 'Business Intelligence',
             titleVN: 'Trí tuệ doanh nghiệp',
-            link: '',
+            link: '/business-intelligence',
         },
         {
             titleEN: 'Artificial Intelligence',
             titleVN: 'Trí tuệ nhân tạo',
-            link: '',
+            link: '/artificial-tntelligence',
         },
         {
             titleEN: 'Cloud Computing',
             titleVN: 'Điện toán đám mây',
-            link: '',
+            link: '/cloud-computing',
         },
         {
             titleEN: 'Big Data',
             titleVN: 'Dữ liệu lớn',
-            link: '',
+            link: '/big-data',
         },
         {
             titleEN: 'Internet of things',
             titleVN: 'Internet vạn vật',
-            link: '',
+            link: '/internet-of-things',
         },
         {
             titleEN: 'Blockchain',
             titleVN: 'Blockchain',
-            link: '',
+            link: '/blockchain',
         },
     ];
 
@@ -150,7 +150,9 @@ function Header({ onLanguageChange }) {
                                 <span>{language == 1 ? 'Get started' : 'Bắt đầu'}</span>
                             </div>
                             <div className={cx('header__bar')}>
-                                <span><FaBars /></span>
+                                <span>
+                                    <FaBars />
+                                </span>
                             </div>
                         </div>
                     </div>

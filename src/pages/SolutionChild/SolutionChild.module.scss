@@ -1,0 +1,117 @@
+.solution {
+    width: 100%;
+
+    .active {
+        &::before {
+            opacity: 1;
+            z-index: 1;
+            transform: scale(1.05);
+        }
+    }
+
+    &__intro {
+        position: relative;
+        width: 100%;
+        height: 463px;
+        background: url(https://static.wixstatic.com/media/c837a6_3f53cdbff83b47b19a97bd35c767333c~mv2.jpg/v1/fill/w_1351,h_453,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c837a6_3f53cdbff83b47b19a97bd35c767333c~mv2.jpg)
+            no-repeat;
+        background-size: cover;
+        &__title {
+            color: #fff;
+            font-size: 60px;
+            line-height: 72px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        &__description {
+            color: #8a8a8a;
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
+
+    &__new {
+        width: 100%;
+
+        padding: 0px;
+        background-color: #141416;
+        display: flex;
+        align-items: center;
+        &__top {
+            flex: 1;
+
+            margin: 0 auto;
+
+            &__text {
+                line-height: 42px;
+                font-size: 30px;
+                color: #fff;
+                margin-bottom: 20px;
+                text-align: left;
+                width: 475px;
+                margin: 0 auto;
+            }
+
+            &__text-two {
+                line-height: 28px;
+                font-size: 16px;
+                color: rgb(138, 138, 138);
+                margin-bottom: 20px;
+
+                width: 653px;
+                margin: 0 auto;
+                width: 475px;
+                margin: 0 auto;
+                text-align: left;
+            }
+        }
+
+        &__video {
+            flex: 1;
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+                opacity: 1;
+            }
+        }
+
+        &--three {
+            padding: 30px 0 40px;
+            flex-direction: column;
+            .solution__new__top {
+                margin-top: 30px;
+
+                &__text {
+                    width: 688px;
+                    font-size: 38px;
+                    text-align: center;
+                    font-size: 30px;
+                    line-height: 42px;
+                }
+            }
+
+            .solution__new__bottom {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                width: 653px;
+                margin-top: 50px;
+                align-items: center;
+
+                img {
+                    width: 93px; /* 3 images per row with space between */
+                    margin-bottom: 30px;
+                    margin-right: 50px;
+                    /* You can adjust the width percentage and margin as needed */
+                }
+            }
+        }
+    }
+}
