@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import styles from './SolutionChild.module.scss';
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import angular from './../../assets/images/solution/angular.svg';
 
 const cx = classNames.bind(styles);
 
@@ -197,7 +198,11 @@ function SolutionChild() {
 
                 <div className={cx('solution__new__bottom')}>
                     {data[indexPage].images.map((item, index) => {
-                        return <img key={index} src={item} alt={`Image ${index}`} />;
+                        return (
+                            <div className={cx('image-container')} key={index}>
+                                <img src={item} alt={`Image ${index}`} />
+                            </div>
+                        );
                     })}
                 </div>
             </div>

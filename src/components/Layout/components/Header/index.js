@@ -125,9 +125,9 @@ function Header({ onLanguageChange }) {
                                 {isSolutionHovered && (
                                     <div className={cx('dropdown-content')}>
                                         {Menu?.map((item, index) => (
-                                            <Link key={index} to={item?.link}>
+                                            <NavLink key={index} to={item?.link}>
                                                 {language == 1 ? item?.titleEN : item?.titleVN}
-                                            </Link>
+                                            </NavLink>
                                         ))}
                                     </div>
                                 )}

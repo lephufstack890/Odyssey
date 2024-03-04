@@ -30,21 +30,34 @@ body {
     color: rgba(253, 98, 98, 1) !important;
 }
 
-.owl-stage-outer {
-    height: 529px;
+.slick-slider {
+    padding: 0px 90px;
+    height: 450px;
+    overflow: hidden;
 }
 
-
-.owl-item {
-    transition: width 0.3s ease;
-    /* Áp dụng transition cho thuộc tính width với thời gian 0.3s và chế độ ease */
+.slick-slide {
+    transition-timing-function: linear;
+    transition-duration: 0.3s;
 }
 
-.owl-item:hover {
-    width: 360px !important;
+.slick-current {
+    transition-timing-function: linear;
+    transition-duration: 0.3s;
+    width: auto !important;
+    object-fit: cover;
 }
 
-// .swiper-button-next:after {
-//     content: "" !important;
-//     background-image: url('./../../assets/images/home/icon-arrow-right.png') !important;
-// }
+#active-content {
+    display: none;
+}
+
+.slick-current #active-content {
+    display: flex !important;
+}
+
+@media (max-width: 768px) {
+    .slick-slider {
+        display: none;
+    }
+}

@@ -43,40 +43,42 @@ function AboutUs() {
                     </div>
                 </div>
 
-                <div className={cx('solution__new__bottom')}>
-                    <div className={cx('item')}>
-                        <img src="https://static.wixstatic.com/media/c794a2_cd7f518018094d8295613dfb0ebf78e3~mv2.jpg/v1/crop/x_0,y_0,w_2000,h_2248/fill/w_287,h_323,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_3435_edited.jpg" />
+                <div className={cx('container', 'solution__new__bottom', 'justify-content-center')}>
+                    <div className={cx('row')}>
+                        <div className={cx('item', 'col-lg-3')}>
+                            <img src="https://static.wixstatic.com/media/c794a2_cd7f518018094d8295613dfb0ebf78e3~mv2.jpg/v1/crop/x_0,y_0,w_2000,h_2248/fill/w_287,h_323,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_3435_edited.jpg" />
 
-                        <div className={cx('item__title')}>
-                            <span>Khanh Nguyen</span>
-                            <span>Founder & CEO</span>
+                            <div className={cx('item__title')}>
+                                <span>Khanh Nguyen</span>
+                                <span>Founder & CEO</span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className={cx('item')}>
-                        <img src="https://static.wixstatic.com/media/c794a2_4477ec376737464dbb009ad42d2dcce1~mv2.jpg/v1/crop/x_0,y_0,w_2000,h_2248/fill/w_287,h_323,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_3448_edited.jpg" />
+                        <div className={cx('item', 'col-lg-3')}>
+                            <img src="https://static.wixstatic.com/media/c794a2_4477ec376737464dbb009ad42d2dcce1~mv2.jpg/v1/crop/x_0,y_0,w_2000,h_2248/fill/w_287,h_323,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_3448_edited.jpg" />
 
-                        <div className={cx('item__title')}>
-                            <span>Y Nguyen</span>
-                            <span>Project Manager</span>
+                            <div className={cx('item__title')}>
+                                <span>Y Nguyen</span>
+                                <span>Project Manager</span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className={cx('item')}>
-                        <img src="https://static.wixstatic.com/media/c794a2_320bf9a2136948d290884bc6acd2d335~mv2.jpg/v1/crop/x_0,y_0,w_2000,h_2248/fill/w_287,h_323,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_3442_edited.jpg" />
+                        <div className={cx('item', 'col-lg-3')}>
+                            <img src="https://static.wixstatic.com/media/c794a2_320bf9a2136948d290884bc6acd2d335~mv2.jpg/v1/crop/x_0,y_0,w_2000,h_2248/fill/w_287,h_323,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_3442_edited.jpg" />
 
-                        <div className={cx('item__title')}>
-                            <span>Hao Nguyen</span>
-                            <span>Tech Lead</span>
+                            <div className={cx('item__title')}>
+                                <span>Hao Nguyen</span>
+                                <span>Tech Lead</span>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className={cx('item')}>
-                        <img src="https://static.wixstatic.com/media/c794a2_7c8d9744cd6c47f9abad98514b2b4a47~mv2.jpg/v1/crop/x_0,y_0,w_2000,h_2248/fill/w_287,h_323,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_3427_edited.jpg" />
+                        <div className={cx('item', 'col-lg-3')}>
+                            <img src="https://static.wixstatic.com/media/c794a2_7c8d9744cd6c47f9abad98514b2b4a47~mv2.jpg/v1/crop/x_0,y_0,w_2000,h_2248/fill/w_287,h_323,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_3427_edited.jpg" />
 
-                        <div className={cx('item__title')}>
-                            <span>Quang Tran</span>
-                            <span>Product Manager</span>
+                            <div className={cx('item__title')}>
+                                <span>Quang Tran</span>
+                                <span>Product Manager</span>
+                            </div>
                         </div>
                     </div>
                 </div>
