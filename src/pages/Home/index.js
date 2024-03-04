@@ -1,41 +1,130 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Home.module.scss';
 import { Link } from 'react-router-dom';
-import OwlCarousel from 'react-owl-carousel2';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import 'react-owl-carousel2/lib/styles.css';
-
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import { FaArrowRightLong } from "react-icons/fa6";
 import startedVideo from './../../assets/video/home/started.mp4';
 
 const cx = classNames.bind(styles);
 
 function Home() {
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [activeSlider, setActiveSlider] = useState(false);
+    const [destopSliderOpen, setDestopSliderOpen] = useState(null);
+    const [mobileSliderOpen, setMobileSliderOpen] = useState(null);
+    const sliderRef = useRef(null);
 
-    const ref = useRef();
-
-    const options = {
-        items: 6,
-        nav: true,
-        margin: 12,
-        rewind: true,
-        autoplay: false
+    const handleMobileSliderToggle = (index) => {
+        setMobileSliderOpen(index === mobileSliderOpen ? null : index);
     };
 
-    const handleMouseEnter = (index) => {
-        setActiveSlider(true);
-        setActiveIndex(index);
+
+    const handleAfterChange = (index) => {
+        // Xác định phần tử hiện tại và số lượng phần tử
+        const currentSlide = index;
+        const slideCount = sliderRef.current.props.children.length;
+
+        // Kiểm tra xem innerSlider và list có tồn tại không
+        if (sliderRef.current.innerSlider && sliderRef.current.innerSlider.list) {
+            const slides = sliderRef.current.innerSlider.list.childNodes;
+
+            // Kiểm tra xem slides có tồn tại không và có đủ số phần tử không
+            if (slides && slides.length === slideCount) {
+                for (let i = 0; i < slideCount; i++) {
+                    if (i === currentSlide) {
+                        slides[i].classList.add('desktop-active-slide');
+                    } else {
+                        slides[i].classList.remove('desktop-active-slide');
+                    }
+                }
+            }
+        }
     };
 
-    const handleMouseLeave = () => {
-        setActiveSlider(false);
-        setActiveIndex(0);
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToScroll: 1,
+        slidesToShow: 7,
+        centerMode: true,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 6
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 6
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 6
+                }
+            }
+        ],
+        afterChange: handleAfterChange // Gọi hàm này sau mỗi lần slider thay đổi
     };
+
+
+    const Menu = [
+        {
+            title: 'Web & Application',
+        },
+        {
+            title: 'Data Analytic'
+        },
+        {
+            title: 'Business Intelligence'
+        },
+        {
+            title: 'Artificial Intelligence'
+        },
+        {
+            title: 'Cloud Computing'
+        },
+        {
+            title: 'Internet of things'
+        },
+        {
+            title: 'Big Data'
+        },
+        {
+            title: 'Blockchain'
+        },
+    ]
+
+    const handleActiveSliderDesstop = (index) => {
+        setDestopSliderOpen(index === destopSliderOpen ? null : index);
+        sliderRef.current.slickGoTo(index); // Di chuyển slider tới vị trí của slider được click
+        // Thêm class .desktop-active-slide cho item được click
+        const slider = sliderRef.current;
+        if (slider) {
+            const currentSlide = slider.innerSlider.list.querySelector('.slick-current');
+            if (currentSlide) {
+                currentSlide.classList.remove('desktop-active-slide');
+            }
+            const items = slider.innerSlider.list.querySelectorAll('.main-page__solutions-contentDestop-item');
+            items.forEach((item, i) => {
+                if (i === index) {
+                    item.classList.add('desktop-active-slide');
+                } else {
+                    item.classList.remove('desktop-active-slide');
+                }
+            });
+        }
+    }
+
+
     return (
         <div className={cx('main-page')}>
             <div className={cx('main-page__sectionOne')}>
@@ -69,53 +158,57 @@ function Home() {
                         <span>your company</span>
                         <span>Explore how you can digitalize your business with Odyssey</span>
                     </div>
-                    <div className={cx('main-page__solutions-contentDestop')}>
-                        {/* <OwlCarousel
-                            ref={ref} options={options}
-                        > */}
-                        {Array.from({ length: 6 }).map((_, index) => (
+                    <Slider ref={sliderRef} {...settings}>
+                        {Menu?.map((item, index) => (
                             <div
                                 key={index}
                                 className={cx('main-page__solutions-contentDestop-item')}
-                                onMouseEnter={() => handleMouseEnter(index)}
-                                onMouseLeave={handleMouseLeave}
+                                onClick={() => handleActiveSliderDesstop(index)}
                             >
-                                {activeIndex === index ? (
-                                    <>
-                                        <img
-                                            style={{ width: '600px' }}
-                                            className={cx('sl-img', 'enlarge-img')} // Thêm lớp enlarge-img
-                                            src={require(`./../../assets/images/home/big${index + 1}.png`)}
-                                            alt=""
-                                        />
-                                        <div>
-                                            <span>Web & Application</span>
-                                            <Link to={'/'}>Learn More</Link>
-                                        </div>
-                                    </>
-                                ) : (
+                                <>
                                     <img
                                         className={cx('sl-img', 'enlarge-img')} // Thêm lớp enlarge-img
-                                        src={require(`./../../assets/images/home/solution${index + 1}.png`)}
+                                        src={require(`./../../assets/images/home/big${index + 1}.png`)}
                                         alt=""
                                     />
-                                )}
+                                    <div id='active-content'>
+                                        <span>{item?.title}</span>
+                                        <Link to={'/'}>Learn More</Link>
+                                    </div>
+                                </>
                             </div>
                         ))}
-                        {/* </OwlCarousel> */}
-                    </div>
+                    </Slider>
                     <div className={cx('main-page__solutions-contentMobile')}>
                         <div>
-                            {Array.from({ length: 8 }).map((_, index) => (
+                            {Menu?.map((item, index) => (
                                 <div
                                     className={cx('row')}
+                                    onClick={() => handleMobileSliderToggle(index)}
+                                    key={index}
                                 >
-                                    <div className={cx('col-12')}>
-                                        <img
-                                            className={cx('sl-img-mobile')}
-                                            src={require(`./../../assets/images/home/solution${index + 1}.png`)}
-                                            alt=""
-                                        />
+                                    <div className={cx('col-12', 'pb-4', 'position-relative')}>
+                                        {mobileSliderOpen === index ? (
+                                            <>
+                                                <img
+                                                    style={{ width: '100%', cursor: 'pointer' }}
+                                                    className={cx('sl-img-mobile')}
+                                                    src={require(`./../../assets/images/home/mobile/sl-big${index + 1}.png`)}
+                                                    alt=""
+                                                />
+                                                <div className={cx('content-img')}>
+                                                    <p>{item?.title}</p>
+                                                    <span><FaArrowRightLong /></span>
+                                                </div>
+                                            </>
+                                        ) : (
+                                            <img
+                                                style={{ width: '100%', cursor: 'pointer' }}
+                                                className={cx('sl-img-mobile')}
+                                                src={require(`./../../assets/images/home/mobile/sl${index + 1}.png`)}
+                                                alt=""
+                                            />
+                                        )}
                                     </div>
                                 </div>
                             ))}
