@@ -41,7 +41,7 @@ function SolutionChild() {
         },
         {
             title: 'Trí tuệ doanh nghiệp',
-            video: 'https://video.wixstatic.com/video/11062b_91f1ae429baf467eba9f9ba98b5a7fc1/720p/mp4/file.mp4',
+            video: 'https://video.wixstatic.com/video/11062b_50f6f6470c9642078f20bc034734c14b/720p/mp4/file.mp4',
             content:
                 'Chúng tôi tạo ra những trang web và ứng dụng di động đẹp mắt giúp doanh nghiệp của bạn vượt trội. Với những giải pháp sáng tạo và đổi mới trong việc phát triển ứng dụng di động và web, chúng tôi giúp bạn xây dựng thương hiệu của mình. Chúng tôi cung cấp dịch vụ phát triển ứng dụng di động xuất sắc nhằm mang đến trải nghiệm tuyệt vời cho khách hàng của bạn để quảng bá sản phẩm của bạn trên mọi thiết bị và nền tảng.',
             images: [
@@ -86,7 +86,7 @@ function SolutionChild() {
         },
         {
             title: 'Dữ liệu lớn',
-            video: 'https://video.wixstatic.com/video/c794a2_d6ad9110e59a4b77941ded5246eda6cb/720p/mp4/file.mp4',
+            video: 'https://video.wixstatic.com/video/11062b_40d3bbdabcd3461abfe2a96c4d0219b0/720p/mp4/file.mp4',
             content:
                 'Chúng tôi giải quyết các thách thức về dữ liệu lớn cho khách hàng để giúp họ thật sự trở thành doanh nghiệp số. Dịch vụ dữ liệu lớn của chúng tôi bao gồm chiến lược dữ liệu lớn, dịch vụ xử lý dữ liệu lớn thời gian thực, học máy, quản lý nền tảng dữ liệu và các giải pháp phân tích dữ liệu. Chúng tôi giúp bạn triển khai chiến lược dữ liệu lớn toàn diện và tập trung vào các giải pháp phân tích dữ liệu lớn.',
             images: [
@@ -171,9 +171,20 @@ function SolutionChild() {
                 </div>
 
                 <div className={cx('solution__new__video')}>
-                    <video autoPlay muted loop>
-                        <source src={data[indexPage].video} type="video/mp4"></source>
-                    </video>
+                    {/* <video autoPlay muted loop>
+                        <source  type="video/mp4"></source>
+                    </video> */}
+
+                    <video
+                        crossOrigin="anonymous"
+                        playSinline=""
+                        preload="auto"
+                        loop
+                        tabIndex="-1"
+                        autoPlay
+                        muted
+                        src={data[indexPage].video}
+                    ></video>
                 </div>
             </div>
 
