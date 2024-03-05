@@ -4,12 +4,13 @@ import styles from './Header.module.scss';
 import f1 from '~/assets/images/footer/f1.png';
 import { Link, NavLink } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa6';
+import { useTranslation } from 'react-i18next';
 
 const cx = classNames.bind(styles);
 
-function Header({ onLanguageChange }) {
+function Header() {
+    const { i18n, t } = useTranslation();
     const [isSolutionHovered, setIsSolutionHovered] = useState(false);
-    const [language, setLanguage] = useState(1);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
 
@@ -34,54 +35,47 @@ function Header({ onLanguageChange }) {
         setIsSolutionHovered(false);
     };
 
-    const languageEN = () => {
-        setLanguage(1);
-        onLanguageChange(1);
-    };
-
-    const languageVN = () => {
-        setLanguage(2);
-        onLanguageChange(2);
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
     };
 
     const Menu = [
         {
-            titleEN: 'Web and Mobile application',
-            titleVN: 'Ứng dụng di động và web',
+            type: 'Web and Mobile application',
             link: '/web-and-mobile-application',
         },
         {
-            titleEN: 'Data Analytics',
+            type: 'Data Analytics',
             titleVN: 'Phân tích dữ liệu',
             link: '/data-analytics',
         },
         {
-            titleEN: 'Business Intelligence',
+            type: 'Business Intelligence',
             titleVN: 'Trí tuệ doanh nghiệp',
             link: '/business-intelligence',
         },
         {
-            titleEN: 'Artificial Intelligence',
+            type: 'Artificial Intelligence',
             titleVN: 'Trí tuệ nhân tạo',
             link: '/artificial-tntelligence',
         },
         {
-            titleEN: 'Cloud Computing',
+            type: 'Cloud Computing',
             titleVN: 'Điện toán đám mây',
             link: '/cloud-computing',
         },
         {
-            titleEN: 'Big Data',
+            type: 'Big Data',
             titleVN: 'Dữ liệu lớn',
             link: '/big-data',
         },
         {
-            titleEN: 'Internet of things',
+            type: 'Internet of things',
             titleVN: 'Internet vạn vật',
             link: '/internet-of-things',
         },
         {
-            titleEN: 'Blockchain',
+            type: 'Blockchain',
             titleVN: 'Blockchain',
             link: '/blockchain',
         },
@@ -112,7 +106,7 @@ function Header({ onLanguageChange }) {
                     <div className={cx('mobile', 'col-lg-6')}>
                         <div className={cx('header__list-menu')}>
                             <NavLink className={cx('header__list-menu--item')} to="/">
-                                {language == 1 ? 'Home' : 'Trang chủ'}
+                                {t('home')}
                             </NavLink>
                             <NavLink
                                 onMouseEnter={handleSolutionHover}
@@ -120,34 +114,34 @@ function Header({ onLanguageChange }) {
                                 className={cx('header__list-menu--item', 'position-relative')}
                                 to="/solution"
                             >
-                                <span>{language == 1 ? 'Solution' : 'Giải pháp'}</span>
+                                <span> {t('solution')}</span>
 
                                 {isSolutionHovered && (
                                     <div className={cx('dropdown-content')}>
                                         {Menu?.map((item, index) => (
                                             <NavLink key={index} to={item?.link}>
-                                                {language == 1 ? item?.titleEN : item?.titleVN}
+                                                {t(item.type)}
                                             </NavLink>
                                         ))}
                                     </div>
                                 )}
                             </NavLink>
                             <NavLink className={cx('header__list-menu--item')} to="/mission">
-                                {language == 1 ? 'Misson' : 'Về sứ mệnh'}
+                                {t('Misson')}
                             </NavLink>
                             <NavLink className={cx('header__list-menu--item')} to="/about-us">
-                                {language == 1 ? 'About us' : 'Về chúng tôi'}
+                                {t('About us')}
                             </NavLink>
                         </div>
                     </div>
                     <div className={cx('col-lg-3 col-8')}>
                         <div className={cx('d-flex', 'align-items-center', 'justify-content-end')}>
                             <div className={cx('header__language')}>
-                                <span onClick={() => languageEN(1)}>EN</span>
-                                <span onClick={() => languageVN(2)}>VN</span>
+                                <span onClick={() => changeLanguage('en')}>EN</span>
+                                <span onClick={() => changeLanguage('vn')}>VN</span>
                             </div>
                             <div className={cx('header__started')}>
-                                <span>{language == 1 ? 'Get started' : 'Bắt đầu'}</span>
+                                <span>{t('Get started')}</span>
                             </div>
                             <div className={cx('header__bar')}>
                                 <span>

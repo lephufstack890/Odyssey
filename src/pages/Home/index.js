@@ -6,12 +6,14 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'react-owl-carousel2/lib/styles.css';
-import { FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowRightLong } from 'react-icons/fa6';
 import startedVideo from './../../assets/video/home/started.mp4';
+import { useTranslation } from 'react-i18next';
 
 const cx = classNames.bind(styles);
 
 function Home() {
+    const { i18n, t } = useTranslation();
     const [destopSliderOpen, setDestopSliderOpen] = useState(null);
     const [mobileSliderOpen, setMobileSliderOpen] = useState(null);
     const sliderRef = useRef(null);
@@ -19,7 +21,6 @@ function Home() {
     const handleMobileSliderToggle = (index) => {
         setMobileSliderOpen(index === mobileSliderOpen ? null : index);
     };
-
 
     const handleAfterChange = (index) => {
         // Xác định phần tử hiện tại và số lượng phần tử
@@ -56,52 +57,51 @@ function Home() {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 6
-                }
+                    slidesToShow: 6,
+                },
             },
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 6
-                }
+                    slidesToShow: 6,
+                },
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 6
-                }
-            }
+                    slidesToShow: 6,
+                },
+            },
         ],
-        afterChange: handleAfterChange // Gọi hàm này sau mỗi lần slider thay đổi
+        afterChange: handleAfterChange, // Gọi hàm này sau mỗi lần slider thay đổi
     };
-
 
     const Menu = [
         {
             title: 'Web & Application',
         },
         {
-            title: 'Data Analytic'
+            title: 'Data Analytic',
         },
         {
-            title: 'Business Intelligence'
+            title: 'Business Intelligence',
         },
         {
-            title: 'Artificial Intelligence'
+            title: 'Artificial Intelligence',
         },
         {
-            title: 'Cloud Computing'
+            title: 'Cloud Computing',
         },
         {
-            title: 'Internet of things'
+            title: 'Internet of things',
         },
         {
-            title: 'Big Data'
+            title: 'Big Data',
         },
         {
-            title: 'Blockchain'
+            title: 'Blockchain',
         },
-    ]
+    ];
 
     const handleActiveSliderDesstop = (index) => {
         setDestopSliderOpen(index === destopSliderOpen ? null : index);
@@ -122,8 +122,7 @@ function Home() {
                 }
             });
         }
-    }
-
+    };
 
     return (
         <div className={cx('main-page')}>
@@ -138,15 +137,13 @@ function Home() {
 
                     <div className={cx('main-page__sectionOne__content')}>
                         <div style={{ fontSize: '64px', marginBottom: '20px', lineHeight: '76px' }}>
-                            Transform Your World with Innovative Technology
+                            {t('Transform Your World with Innovative Technology')}
                         </div>
                         <div style={{ fontSize: '24px', marginBottom: '19px', lineHeight: '40px' }}>
-                            We believe that technology can make the world a better place. That's why we commit to
-                            develop innovative, effective and reliable software solutions that help you transform your
-                            dream into reality.
+                            {t('We believe that technology')}
                         </div>
                         <div>
-                            <Link to={'/'}>Learn More</Link>
+                            <Link to={'/'}>{t('Learn more')}</Link>
                         </div>
                     </div>
                 </div>
@@ -171,9 +168,9 @@ function Home() {
                                         src={require(`./../../assets/images/home/big${index + 1}.png`)}
                                         alt=""
                                     />
-                                    <div id='active-content'>
+                                    <div id="active-content">
                                         <span>{item?.title}</span>
-                                        <Link to={'/'}>Learn More</Link>
+                                        <Link to={'/'}>{t('Learn more')}</Link>
                                     </div>
                                 </>
                             </div>
@@ -182,23 +179,23 @@ function Home() {
                     <div className={cx('main-page__solutions-contentMobile')}>
                         <div>
                             {Menu?.map((item, index) => (
-                                <div
-                                    className={cx('row')}
-                                    onClick={() => handleMobileSliderToggle(index)}
-                                    key={index}
-                                >
+                                <div className={cx('row')} onClick={() => handleMobileSliderToggle(index)} key={index}>
                                     <div className={cx('col-12', 'pb-4', 'position-relative')}>
                                         {mobileSliderOpen === index ? (
                                             <>
                                                 <img
                                                     style={{ width: '100%', cursor: 'pointer' }}
                                                     className={cx('sl-img-mobile')}
-                                                    src={require(`./../../assets/images/home/mobile/sl-big${index + 1}.png`)}
+                                                    src={require(`./../../assets/images/home/mobile/sl-big${
+                                                        index + 1
+                                                    }.png`)}
                                                     alt=""
                                                 />
                                                 <div className={cx('content-img')}>
                                                     <p>{item?.title}</p>
-                                                    <span><FaArrowRightLong /></span>
+                                                    <span>
+                                                        <FaArrowRightLong />
+                                                    </span>
                                                 </div>
                                             </>
                                         ) : (
@@ -230,7 +227,7 @@ function Home() {
                                     unwavering dedication to delivering results that exceed expectations.
                                 </p>
                                 <div style={{ margin: '10px 120px' }}>
-                                    <Link to={'/'}>Learn More</Link>
+                                    <Link to={'/'}>{t('Learn more')}</Link>
                                 </div>
                             </div>
                             <div className={cx('col-lg-7', 'col-md-6', 'col-12', 'main-page__missons-right')}>

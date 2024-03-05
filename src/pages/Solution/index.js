@@ -4,20 +4,21 @@ import styles from './Solution.module.scss';
 import { Navigation } from 'swiper/modules';
 import { SwiperSlide, Swiper } from 'swiper/react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const cx = classNames.bind(styles);
 
 function Solution() {
-
+    const { t } = useTranslation();
     return (
         <div className={cx('solution')}>
             <div className={cx('solution__intro')}>
                 <div style={{ position: 'absolute', maxWidth: '798px', left: '110px', bottom: ' 43px' }}>
-                    <div className={cx('solution__intro__title')}>
-                        Innovative Software Solutions for a Better World
-                    </div>
+                    <div className={cx('solution__intro__title')}>Innovative Software Solutions for a Better World</div>
                     <div className={cx('solution__intro__description')}>
-                        We commit to integrate with your ecosystem and providing reliable and scalable solutions that help you achieve your business goals. Our team of experts constantly strives to stay ahead of the curve and bring you the latest technology solutions that drive innovation and progress.
+                        We commit to integrate with your ecosystem and providing reliable and scalable solutions that
+                        help you achieve your business goals. Our team of experts constantly strives to stay ahead of
+                        the curve and bring you the latest technology solutions that drive innovation and progress.
                     </div>
                 </div>
             </div>
@@ -71,7 +72,7 @@ function Solution() {
                                                     động & Web
                                                 </h2>
                                                 <Link to={'/'} style={{ width: '140px' }}>
-                                                    Xem thêm
+                                                    {t('Learn more')}
                                                 </Link>
                                             </div>
                                         </div>
@@ -86,7 +87,7 @@ function Solution() {
                                                     Phân tích dữ <br /> liệu
                                                 </h2>
                                                 <Link to={'/'} style={{ width: '140px' }}>
-                                                    Xem thêm
+                                                    {t('Learn more')}
                                                 </Link>
                                             </div>
                                         </div>
@@ -99,7 +100,7 @@ function Solution() {
                                             <div>
                                                 <h2>Trí tuệ doanh nghiệp</h2>
                                                 <Link to={'/'} style={{ width: '140px' }}>
-                                                    Xem thêm
+                                                    {t('Learn more')}
                                                 </Link>
                                             </div>
                                         </div>
@@ -112,7 +113,7 @@ function Solution() {
                                             <div>
                                                 <h2>Trí tuệ nhân tạo</h2>
                                                 <Link to={'/'} style={{ width: '140px' }}>
-                                                    Xem thêm
+                                                    {t('Learn more')}
                                                 </Link>
                                             </div>
                                         </div>
@@ -129,7 +130,7 @@ function Solution() {
                         <SwiperSlide>Slide 8</SwiperSlide>
                         <SwiperSlide>Slide 9</SwiperSlide> */}
                     </Swiper>
-                    { }
+                    {}
                 </div>
             </div>
         </div>
