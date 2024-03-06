@@ -150,10 +150,9 @@ function Home() {
 
                 <div className={cx('main-page__solutions')}>
                     <div className={cx('main-page__solutions-top')}>
-                        <span>Our Solutions</span>
-                        <span>Cooperate to innovate</span>
-                        <span>your company</span>
-                        <span>Explore how you can digitalize your business with Odyssey</span>
+                        <span> {t('Our Solutions')}</span>
+                        <span>{t('Cooperate to innovate your company')}</span>
+                        <span>{t('Explore how you can digitalize your business with Odyssey')}</span>
                     </div>
                     <Slider ref={sliderRef} {...settings}>
                         {Menu?.map((item, index) => (
@@ -217,15 +216,8 @@ function Home() {
                     <div className={cx('container')}>
                         <div className={cx('row')}>
                             <div className={cx('col-lg-5', 'col-md-6', 'col-12', 'main-page__missons-left')}>
-                                <h3>Our Mission: Making the world a better place</h3>
-                                <p>
-                                    We apply the modern software development methodologies such as Waterfall, Agile,
-                                    Scrum, Kanban, XP and so on to meet customer requirements and deliver the software
-                                    with highest quality. Our track record is marked by the successful completion of
-                                    many projects, each earning accolades and commendations from our valued clients.
-                                    These accomplishments stand as a testament to our commitment to excellence and our
-                                    unwavering dedication to delivering results that exceed expectations.
-                                </p>
+                                <h3>{t('Our Mission: Making the world a better place')}</h3>
+                                <p>{t('We apply the modern software')}</p>
                                 <div style={{ margin: '10px 120px' }}>
                                     <Link to={'/'}>{t('Learn more')}</Link>
                                 </div>
@@ -250,12 +242,8 @@ function Home() {
                         />
                     </video>
                     <div className={cx('main-page__odyssey-content')}>
-                        <h3>Why Choose Odyssey</h3>
-                        <p>
-                            Our team comprises individuals who have undergone rigorous training and education at
-                            world-class universities. Our objective is to deliver creative and effective software
-                            solutions, enabling you to transform your aspirations into tangible outcomes.
-                        </p>
+                        <h3> {t('Why Choose Odyssey')}</h3>
+                        <p>{t('Our team comprises')}</p>
                     </div>
                     <div className={cx('main-page__odyssey-actions', 'container')}>
                         <div className={cx('d-flex', 'flex-wrap', 'align-items-center')}>
@@ -300,19 +288,15 @@ function Home() {
                                         />
                                     </video>
                                 )}
-                                <p>Are you ready to transform your business ?</p>
+                                <p>{t('Are you ready to transform your business ?')}</p>
                             </div>
                             <div
                                 className={cx('main-page__odyssey-actions-startedRight')}
                                 style={{ border: '1px solid rgb(138, 138, 138)' }}
                             >
-                                <p>
-                                    We commit to help you achieve your goals. Whether you're looking to streamline your
-                                    operations, improve customer engagement, or gain a competitive edge, we've got the
-                                    tools and expertise you need to succeed
-                                </p>
+                                <p>{t('We commit to help you')}</p>
                                 <div>
-                                    <Link to={'/'}>Get Started</Link>
+                                    <Link to={'/'}>{t('Get Started')}</Link>
                                 </div>
                             </div>
                         </div>
