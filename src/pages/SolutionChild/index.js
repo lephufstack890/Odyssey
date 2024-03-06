@@ -137,7 +137,7 @@ function SolutionChild() {
     return (
         <div className={cx('solution')}>
             <div className={cx('solution__intro')}>
-                <div style={{ position: 'absolute', maxWidth: '798px', left: '110px', bottom: ' 43px' }}>
+                <div className={cx('solution__intro-wraper')} >
                     <div className={cx('solution__intro__title')}>Innovative Software Solutions for a Better World</div>
                     <div className={cx('solution__intro__description')}>
                         We commit to integrate with your ecosystem and providing reliable and scalable solutions that

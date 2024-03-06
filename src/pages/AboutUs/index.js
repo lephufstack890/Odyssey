@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classnames/bind';
 import styles from './AboutUs.module.scss';
-import { Navigation } from 'swiper/modules';
-import { SwiperSlide, Swiper } from 'swiper/react';
-import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -44,7 +41,7 @@ function AboutUs() {
                 </div>
 
                 <div className={cx('container', 'solution__new__bottom', 'justify-content-center')}>
-                    <div className={cx('row')}>
+                    <div className={cx('row', 'justify-content-center')}>
                         <div className={cx('item', 'col-lg-3')}>
                             <img src="https://static.wixstatic.com/media/c794a2_cd7f518018094d8295613dfb0ebf78e3~mv2.jpg/v1/crop/x_0,y_0,w_2000,h_2248/fill/w_287,h_323,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/IMG_3435_edited.jpg" />
 
