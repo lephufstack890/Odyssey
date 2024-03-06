@@ -14,12 +14,10 @@ function Solution() {
         <div className={cx('solution')}>
             <div className={cx('solution__intro')}>
                 <div style={{ position: 'absolute', maxWidth: '798px', left: '110px', bottom: ' 43px' }}>
-                    <div className={cx('solution__intro__title')}>Innovative Software Solutions for a Better World</div>
-                    <div className={cx('solution__intro__description')}>
-                        We commit to integrate with your ecosystem and providing reliable and scalable solutions that
-                        help you achieve your business goals. Our team of experts constantly strives to stay ahead of
-                        the curve and bring you the latest technology solutions that drive innovation and progress.
+                    <div className={cx('solution__intro__title')}>
+                        {t('Innovative Software Solutions for a Better World')}
                     </div>
+                    <div className={cx('solution__intro__description')}>{t('We commit to integrate')}</div>
                 </div>
             </div>
 
@@ -35,14 +33,9 @@ function Solution() {
             <div className={cx('solution__new')}>
                 <div className={cx('solution__new__top')}>
                     <div className={cx('solution__new__top__text')}>
-                        Giải pháp đổi mới cho các doanh nghiệp hiện đại
+                        {t('Innovative Solutions for Modern Businesses')}
                     </div>
-                    <div className={cx('solution__new__top__text-two')}>
-                        Chúng tôi thực hiện những giải pháp của mình một cách nhanh chóng và đáng tin cậy. Những giải
-                        pháp của chúng tôi được thiết kế để giúp bạn luôn dẫn đầu khi cạnh tranh với đối thủ và đạt được
-                        mục tiêu của mình. Từ phân tích dữ liệu trên nền tảng điện toán đám mây đến các ứng dụng phần
-                        mềm có thể tùy chỉnh, chúng tôi có đủ công cụ và chuyên môn để giúp bạn thành công.
-                    </div>
+                    <div className={cx('solution__new__top__text-two')}>{t('We provide unprecedented')}</div>
                 </div>
 
                 <div className={cx('solution__new__carousel')}>
