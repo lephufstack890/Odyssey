@@ -65,6 +65,22 @@ const resources = {
                 'We leverage blockchain technology for solutions that make company operations more efficient. You can focus on high-level business concerns while we handle the nitty-gritty of implementing your blockchain project with speed and security. You can increase your revenue and prepare your organization for the digital economy of the future with our blockchain solutions.',
             'Our blockchain solutions can help promote trust':
                 'Our blockchain solutions can help promote trust, transparency and efficiency',
+            '​Odyssey consists of enthusiastic': `​Odyssey consists of enthusiastic young individuals in software development committed to incorporating new technological progressions into daily life, aiming to enhance the world. Our objective is to deliver creative and effective software solutions, enabling you to transform your aspirations into tangible outcomes.`,
+            'Our Team': 'Our Team',
+            'Our Partners': 'Our Partners',
+            'Our partners stand':
+                'Our partners stand as the cornerstone of our collaborations, comprising some of the most distinguished names in the global technology sphere and prestigious universities known for their academic excellence. Through these invaluable alliances, we foster innovative synergies, drawing from the expertise of top-tier technological enterprises and the intellectual prowess of esteemed academic institutions',
+            'Our Clients': 'Our Clients',
+            'Our client comprises':
+                'Our client comprises a wide array of organizations and businesses operating across multiple sectors within Vietnam. We serve entities spanning various scales, from small and medium enterprises to larger corporations, each contributing uniquely to the vibrant landscape of Vietnam economic activities.',
+            'Our Mission': 'Our Mission',
+            'We are dedicated':
+                'We are dedicated to delivering optimal advantages to your organization or company while maintaining cost-effectiveness. Our commitment lies in empowering your company to operate with heightened efficiency, ensuring a seamless and enhanced customer experience. We prioritize the alignment of our services with your objectives, tailoring solutions that not only optimize operations but also elevate customer satisfaction.',
+            'We understand what you need': 'We understand what you need',
+            'We understand that every business': `We understand that every business is unique. That's why we offer customized software applications tailored to your specific needs. Whether you're looking to streamline your operations or improve customer engagement, we've got you covered. We commit to provide exceptional customer service from start to finish. Our team of experts is available to answer your questions and provide support whenever you need it.`,
+            'At Odyssey, we are':
+                'At Odyssey, we are proud to have an experienced leadership team that brings a wealth of knowledge and expertise to our company. Our leaders have a proven track record of success in the technology industry and are dedicated to driving our company forward. We believe that our people are our greatest asset, and we are committed to creating a supportive and inclusive work environment that fosters creativity and innovation. Our team is made up of talented developers, designers, and project managers who work together to deliver exceptional results.',
+            'We are ready to help you': 'We are ready to help you',
         },
     },
     vn: {
@@ -127,6 +143,24 @@ const resources = {
                 'Chúng tôi tận dụng công nghệ blockchain để tạo ra các giải pháp làm cho hoạt động của công ty hiệu quả hơn. Bạn có thể tập trung vào những vấn đề kinh doanh trong khi chúng tôi xử lý các chi tiết cụ thể của việc triển khai dự án blockchain của bạn nhanh chóng và bảo mật. Bạn có thể tăng doanh thu và chuẩn bị cho nền kinh tế số tương lai với các giải pháp blockchain của chúng tôi.',
             'Our blockchain solutions can help promote trust':
                 'Các giải pháp blockchain của chúng tôi thúc đẩy niềm tin, tăng tính minh bạch và hiệu quả',
+            '​Odyssey consists of enthusiastic':
+                'Odyssey gồm những người trẻ đầy nhiệt huyết trong lĩnh vực phát triển phần mềm, cam kết tích hợp các tiến bộ công nghệ mới vào cuộc sống hàng ngày nhằm làm cho thế giới tốt đẹp hơn. Mục tiêu của chúng tôi là cung cấp các giải pháp phần mềm sáng tạo và hiệu quả, giúp bạn biến ước mơ thành hiện thực.',
+            'Our Team': 'Đội ngũ chúng tôi',
+            'Our Partners': 'Đối tác của chúng tôi',
+            'Our partners stand':
+                'Đối tác của chúng tôi bao gồm những tên tuổi đáng chú ý nhất trong lĩnh vực công nghệ toàn cầu và các trường đại học danh tiếng xuất sắc trong học thuật. Qua những liên kết quý báu này, chúng tôi nhận được sự hỗ trợ từ chuyên môn của các doanh nghiệp công nghệ hàng đầu và sức mạnh trí tuệ của các cơ sở giáo dục uy tín.',
+            'Our Clients': 'Khách hàng của chúng tôi',
+            'Our client comprises':
+                'Khách hàng của chúng tôi gồm các tổ chức và doanh nghiệp hoạt động trong nhiều lĩnh vực khác nhau tại Việt Nam. Chúng tôi phục vụ các đơn vị với quy mô đa dạng, từ doanh nghiệp nhỏ và vừa đến các tập đoàn lớn trong bối cảnh sôi động của nền kinh tế Việt Nam.',
+            'Our Mission': 'Sứ mệnh của chúng tôi',
+            'We are dedicated':
+                'Chúng tôi mong muốn mang lại lợi ích tối đa cho tổ chức và công ty của bạn với chi phí tối thiểu. Chúng tôi cam kết tăng cường khả năng vận hành của công ty bạn một cách hiệu quả, đảm bảo nâng cao trải nghiệm khách hàng. Chúng tôi sẵn sàng điều chỉnh dịch vụ của mình với mục tiêu tạo ra các giải pháp không chỉ tối ưu hóa hoạt động mà còn nâng cao sự hài lòng của khách hàng.',
+            'We understand what you need': 'Chúng tôi hiểu những gì bạn cần',
+            'We understand that every business':
+                'Chúng tôi hiểu rằng mỗi doanh nghiệp đều là duy nhất. Đó là lý do tại sao chúng tôi cung cấp các ứng dụng phần mềm được thiết kế đặc biệt cho nhu cầu cụ thể của bạn. Cho dù bạn muốn tối ưu hóa hoạt động hay cải thiện quan hệ với khách hàng, chúng tôi có đủ kỹ năng để đáp ứng. Chúng tôi cam kết cung cấp dịch vụ khách hàng tốt nhất với đội ngũ chuyên gia luôn sẵn sàng trả lời bất cứ câu hỏi nào của bạn và hỗ trợ bất cứ khi nào bạn cần.',
+            'At Odyssey, we are':
+                'Tại Odyssey, chúng tôi tự hào có một đội ngũ lãnh đạo giàu kinh nghiệm mang đến cho công ty chúng tôi khả năng quản lý tốt. Lãnh đạo của công ty từng đạt được nhiều thành công trong lĩnh vực công nghệ thông tin và không ngừng thúc đẩy sự phát triển của công ty. Chúng tôi tin rằng con người là tài sản quý báu nhất của Odyssey do đó chúng tôi cam kết tạo ra một môi trường làm việc hỗ trợ và thúc đẩy sự sáng tạo và đổi mới. Đội ngũ của chúng tôi bao gồm những nhà phát triển, nhà thiết kế và quản lý dự án tài năng cùng nhau làm việc để mang lại kết quả xuất sắc.',
+            'We are ready to help you': 'Chúng tôi sẵn sàng giúp đỡ bạn',
         },
     },
 };
