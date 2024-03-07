@@ -13,9 +13,9 @@
         position: relative;
         width: 100%;
         height: 463px;
-        background: url(https://static.wixstatic.com/media/c837a6_3f53cdbff83b47b19a97bd35c767333c~mv2.jpg/v1/fill/w_1351,h_453,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c837a6_3f53cdbff83b47b19a97bd35c767333c~mv2.jpg)
-            no-repeat;
+        background: url(https://static.wixstatic.com/media/c837a6_3f53cdbff83b47b19a97bd35c767333c~mv2.jpg/v1/fill/w_1351,h_453,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c837a6_3f53cdbff83b47b19a97bd35c767333c~mv2.jpg) no-repeat;
         background-size: cover;
+
         &__title {
             color: #fff;
             font-size: 60px;
@@ -49,6 +49,7 @@
         width: 100%;
         padding: 60px 0 40px;
         background-color: #141416;
+
         &__top {
             width: 856px;
             margin: 0 auto;
@@ -75,12 +76,33 @@
         &__carousel {
             width: 856px;
             margin: 0 auto;
+            position: relative;
+
+            .swiper-button-next {
+                position: absolute;
+                top: 46%;
+                right: -66px;
+                color: #fff;
+                font-size: 58px;
+                cursor: pointer;
+            }
+
+            .swiper-button-prev {
+                position: absolute;
+                top: 46%;
+                left: -66px;
+                color: #fff;
+                font-size: 58px;
+                cursor: pointer;
+            }
+
             &__wrapper {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 margin-top: 60px;
                 height: 540px;
             }
+
             &__right {
                 display: grid;
                 grid-template-columns: 1fr 1fr;

@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Solution.module.scss';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import { SwiperSlide, Swiper } from 'swiper/react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'; // Import Material Icons
 
 // Import Swiper styles
 import 'swiper/css';
@@ -13,6 +14,22 @@ const cx = classNames.bind(styles);
 
 function Solution() {
     const { t } = useTranslation();
+
+    const swiperRef = useRef(null);
+
+    const goNext = () => {
+        if (swiperRef.current && swiperRef.current.swiper) {
+            swiperRef.current.swiper.slideNext();
+        }
+    };
+
+    const goPrev = () => {
+        if (swiperRef.current && swiperRef.current.swiper) {
+            swiperRef.current.swiper.slidePrev();
+        }
+    };
+
+
     return (
         <div className={cx('solution')}>
             <div className={cx('solution__intro')}>
@@ -43,13 +60,13 @@ function Solution() {
 
                 <div className={cx('solution__new__carousel')}>
                     <Swiper
-                        modules={[Navigation, Pagination, Scrollbar, A11y]}
+                        ref={swiperRef}
+                        modules={[Navigation, Pagination, Autoplay]}
                         spaceBetween={50}
                         slidesPerView={1}
                         navigation
                         pagination={{ clickable: true }}
-                        scrollbar={{ draggable: true }}
-                        autoplay={{ delay: 200 }}
+                        autoplay={{ delay: 3000 }}
                     >
                         <SwiperSlide>
                             <div className={cx('solution__new__carousel__wrapper')}>
@@ -134,7 +151,7 @@ function Solution() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className={cx('solution__new__carousel__right')}>
+                                <div className={cx('solution__new__carousel__right')} style={{ gridTemplateColumns: '121fr 1fr' }}>
                                     <div className={cx('image-item', 'image-item--h270')}>
                                         <img src="https://static.wixstatic.com/media/c794a2_b269cff47a6b468a83839b3255165e07~mv2.jpg/v1/fill/w_214,h_270,q_90/c794a2_b269cff47a6b468a83839b3255165e07~mv2.webp" />
 
@@ -182,6 +199,8 @@ function Solution() {
                             </div>
                         </SwiperSlide>
                     </Swiper>
+                    <div className={cx('swiper-button-next')} onClick={goNext}><MdKeyboardArrowRight /></div>
+                    <div className={cx('swiper-button-prev')} onClick={goPrev}><MdKeyboardArrowLeft /></div>
                 </div>
             </div>
         </div>
