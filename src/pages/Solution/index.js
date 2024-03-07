@@ -29,7 +29,6 @@ function Solution() {
         }
     };
 
-
     return (
         <div className={cx('solution')}>
             <div className={cx('solution__intro')}>
@@ -145,22 +144,22 @@ function Solution() {
 
                                         <div className={cx('overlay')}>
                                             <div>
-                                                <h2>Dữ liệu lớn</h2>
-                                                <Link to={'/'}>Xem thêm</Link>
+                                                <h2>{t('Blockchain')}</h2>
+                                                <Link to={'/'}> {t('Learn more')}</Link>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className={cx('solution__new__carousel__right')} style={{ gridTemplateColumns: '121fr 1fr' }}>
+                                <div
+                                    className={cx('solution__new__carousel__right')}
+                                    style={{ gridTemplateColumns: '121fr 1fr' }}
+                                >
                                     <div className={cx('image-item', 'image-item--h270')}>
                                         <img src="https://static.wixstatic.com/media/c794a2_b269cff47a6b468a83839b3255165e07~mv2.jpg/v1/fill/w_214,h_270,q_90/c794a2_b269cff47a6b468a83839b3255165e07~mv2.webp" />
 
                                         <div className={cx('overlay')}>
                                             <div>
-                                                <h2>
-                                                    Ứng dụng di <br />
-                                                    động & Web
-                                                </h2>
+                                                <h2>{t('Cloud Computing')}</h2>
                                                 <Link to={'/'} style={{ width: '140px' }}>
                                                     {t('Learn more')}
                                                 </Link>
@@ -172,10 +171,7 @@ function Solution() {
 
                                         <div className={cx('overlay')}>
                                             <div>
-                                                <h2>
-                                                    Ứng dụng di <br />
-                                                    động & Web
-                                                </h2>
+                                                <h2>{t('Cloud Computing')}</h2>
                                                 <Link to={'/'} style={{ width: '140px' }}>
                                                     {t('Learn more')}
                                                 </Link>
@@ -188,7 +184,7 @@ function Solution() {
 
                                         <div className={cx('overlay')}>
                                             <div>
-                                                <h2>Trí tuệ doanh nghiệp</h2>
+                                                <h2>{t('Internet of things')}</h2>
                                                 <Link to={'/'} style={{ width: '140px' }}>
                                                     {t('Learn more')}
                                                 </Link>
@@ -199,8 +195,12 @@ function Solution() {
                             </div>
                         </SwiperSlide>
                     </Swiper>
-                    <div className={cx('swiper-button-next')} onClick={goNext}><MdKeyboardArrowRight /></div>
-                    <div className={cx('swiper-button-prev')} onClick={goPrev}><MdKeyboardArrowLeft /></div>
+                    <div className={cx('swiper-button-next')} onClick={goNext}>
+                        <MdKeyboardArrowRight />
+                    </div>
+                    <div className={cx('swiper-button-prev')} onClick={goPrev}>
+                        <MdKeyboardArrowLeft />
+                    </div>
                 </div>
             </div>
         </div>

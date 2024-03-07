@@ -81,6 +81,16 @@ const resources = {
             'At Odyssey, we are':
                 'At Odyssey, we are proud to have an experienced leadership team that brings a wealth of knowledge and expertise to our company. Our leaders have a proven track record of success in the technology industry and are dedicated to driving our company forward. We believe that our people are our greatest asset, and we are committed to creating a supportive and inclusive work environment that fosters creativity and innovation. Our team is made up of talented developers, designers, and project managers who work together to deliver exceptional results.',
             'We are ready to help you': 'We are ready to help you',
+            'Transform Your Business with Odyssey': 'Transform Your Business with Odyssey',
+            'Let’s give your business': 'Let’s give your business what it needs to grow.',
+            'At Odyssey, we are dedicated':
+                'At Odyssey, we are dedicated to helping your business grow. Contact us today to learn more about how our software solutions can help you achieve your goals.',
+            'First name': 'First name',
+            'Last name': 'Last name',
+            Company: 'Company',
+            Phone: 'Phone',
+            'Job Title': 'Job Title',
+            'Your Messengers': 'Your Messengers',
         },
     },
     vn: {
@@ -161,6 +171,16 @@ const resources = {
             'At Odyssey, we are':
                 'Tại Odyssey, chúng tôi tự hào có một đội ngũ lãnh đạo giàu kinh nghiệm mang đến cho công ty chúng tôi khả năng quản lý tốt. Lãnh đạo của công ty từng đạt được nhiều thành công trong lĩnh vực công nghệ thông tin và không ngừng thúc đẩy sự phát triển của công ty. Chúng tôi tin rằng con người là tài sản quý báu nhất của Odyssey do đó chúng tôi cam kết tạo ra một môi trường làm việc hỗ trợ và thúc đẩy sự sáng tạo và đổi mới. Đội ngũ của chúng tôi bao gồm những nhà phát triển, nhà thiết kế và quản lý dự án tài năng cùng nhau làm việc để mang lại kết quả xuất sắc.',
             'We are ready to help you': 'Chúng tôi sẵn sàng giúp đỡ bạn',
+            'Transform Your Business with Odyssey': 'Chuyển đổi doanh nghiệp của bạn cùng Odyssey',
+            'Let’s give your business': 'Hãy cung cấp cho doanh nghiệp của bạn những gì cần để phát triển.',
+            'At Odyssey, we are dedicated':
+                'Chúng tôi cam kết hỗ trợ doanh nghiệp bạn phát triển. Hãy liên hệ với chúng tôi ngay hôm nay để tìm hiểu thêm về giải pháp phần mềm của chúng tôi nhằm giúp bạn đạt được mục tiêu của mình.',
+            'First name': 'Tên',
+            'Last name': 'Họ',
+            Company: 'Công ty',
+            Phone: 'Số điện thoại',
+            'Job Title': 'Chức danh',
+            'Your Messengers': 'Lời nhắn của bạn',
         },
     },
 };
