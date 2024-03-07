@@ -7,10 +7,12 @@
 
         padding: 60px 0 40px;
         background-color: #141416;
+
         &__top {
             width: 856px;
             margin: 0 auto;
             margin-top: 120px;
+
             &__text {
                 line-height: 42px;
                 font-size: 56px;
@@ -41,6 +43,7 @@
         &--three {
             padding: 30px 0 40px;
             height: 350px;
+
             .solution__new__top {
                 margin-top: 30px;
 
@@ -98,12 +101,46 @@
 
     &__video {
         height: 271px;
+
         video {
             height: 100%;
             width: 100%;
             object-fit: cover;
             object-position: center center;
             opacity: 1;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .solution {
+        &__new {
+            &__top {
+                width: 100%;
+
+                &__text-two {
+                    width: 100%;
+                }
+            }
+
+            &__bottom {
+
+                .item {
+                    width: 400px;
+                    height: 400px;
+                    margin-bottom: 48px;
+
+                    &__title {
+                        bottom: -33px;
+                    }
+
+                    img {
+                        width: 400px;
+                        height: 400px;
+                    }
+
+                }
+            }
         }
     }
 }

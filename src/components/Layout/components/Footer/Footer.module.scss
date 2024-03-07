@@ -2,7 +2,8 @@
     width: 100%;
     background-color: #141416;
     padding: 20px 106px 0;
-    height: 467px;
+
+    // height: 467px;
     &__layout {
         display: grid;
         grid-template-columns: 383px 202px 405px auto;
@@ -21,12 +22,15 @@
                 margin-bottom: 10px;
                 transition: all 0.1s linear;
                 border-radius: 8px;
+
                 &:hover {
                     background-color: #889ce7;
+
                     a {
                         color: #141416;
                     }
                 }
+
                 a {
                     font-size: 18px;
                     line-height: 25px;
@@ -56,6 +60,21 @@
                     background-color: #889ce7;
                     color: #141416;
                     border-color: #889ce7;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px 45px 0;
+
+        &__layout {
+
+            &__three {
+                form {
+                    margin-bottom: 14px;
                 }
             }
         }

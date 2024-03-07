@@ -14,8 +14,8 @@ function Footer() {
     const { i18n, t } = useTranslation();
     return (
         <footer className={cx('footer')}>
-            <div className={cx('footer__layout')}>
-                <div className={cx('footer__layout__one')}>
+            <div className={cx('row')}>
+                <div className={cx('footer__layout__one', 'col-lg-3', 'col-12')}>
                     <div>
                         <Link to="/" style={{ textDecoration: 'none' }}>
                             <div style={{ display: 'flex', alignItems: 'flex-end' }}>
@@ -66,7 +66,7 @@ function Footer() {
 
                     <div style={{ fontSize: '14px', color: 'rgb(138, 138, 138)' }}>{t('2021 Odyssey')}</div>
                 </div>
-                <div className={cx('footer__layout__two')}>
+                <div className={cx('footer__layout__two', 'col-lg-3', 'col-12')}>
                     <ul className={cx('footer__layout__two__list')}>
                         <li className={cx('footer__layout__two__item')}>
                             <Link to="/"> {t('home')}</Link>
@@ -82,7 +82,7 @@ function Footer() {
                         </li>
                     </ul>
                 </div>
-                <div className={cx('footer__layout__three')}>
+                <div className={cx('footer__layout__three', 'col-lg-3', 'col-12')}>
                     <div
                         style={{
                             fontSize: '18px',
@@ -131,7 +131,7 @@ function Footer() {
                         </div>
                     </form>
                 </div>
-                <div className={cx('footer__layout__four')}>
+                <div className={cx('footer__layout__four', 'col-lg-3', 'col-12')}>
                     <div
                         style={{
                             fontSize: '18px',

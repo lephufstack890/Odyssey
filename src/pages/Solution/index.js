@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Solution.module.scss';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { SwiperSlide, Swiper } from 'swiper/react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+
+// Import Swiper styles
+import 'swiper/css';
 
 const cx = classNames.bind(styles);
 
@@ -39,7 +42,15 @@ function Solution() {
                 </div>
 
                 <div className={cx('solution__new__carousel')}>
-                    <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+                    <Swiper
+                        modules={[Navigation, Pagination, Scrollbar, A11y]}
+                        spaceBetween={50}
+                        slidesPerView={1}
+                        navigation
+                        pagination={{ clickable: true }}
+                        scrollbar={{ draggable: true }}
+                        autoplay={{ delay: 200 }}
+                    >
                         <SwiperSlide>
                             <div className={cx('solution__new__carousel__wrapper')}>
                                 <div className={cx('solution__new__carousel__left')}>
@@ -109,16 +120,68 @@ function Solution() {
                                 </div>
                             </div>
                         </SwiperSlide>
-                        {/* <SwiperSlide>Slide 2</SwiperSlide>
-                        <SwiperSlide>Slide 3</SwiperSlide>
-                        <SwiperSlide>Slide 4</SwiperSlide>
-                        <SwiperSlide>Slide 5</SwiperSlide>
-                        <SwiperSlide>Slide 6</SwiperSlide>
-                        <SwiperSlide>Slide 7</SwiperSlide>
-                        <SwiperSlide>Slide 8</SwiperSlide>
-                        <SwiperSlide>Slide 9</SwiperSlide> */}
+                        <SwiperSlide>
+                            <div className={cx('solution__new__carousel__wrapper')}>
+                                <div className={cx('solution__new__carousel__left')}>
+                                    <div className={cx('image-item')}>
+                                        <img src="https://static.wixstatic.com/media/c794a2_8370907b50064a96ad8e58557a0a4485~mv2.png/v1/fill/w_427,h_540,q_90/c794a2_8370907b50064a96ad8e58557a0a4485~mv2.webp" />
+
+                                        <div className={cx('overlay')}>
+                                            <div>
+                                                <h2>Dữ liệu lớn</h2>
+                                                <Link to={'/'}>Xem thêm</Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className={cx('solution__new__carousel__right')}>
+                                    <div className={cx('image-item', 'image-item--h270')}>
+                                        <img src="https://static.wixstatic.com/media/c794a2_b269cff47a6b468a83839b3255165e07~mv2.jpg/v1/fill/w_214,h_270,q_90/c794a2_b269cff47a6b468a83839b3255165e07~mv2.webp" />
+
+                                        <div className={cx('overlay')}>
+                                            <div>
+                                                <h2>
+                                                    Ứng dụng di <br />
+                                                    động & Web
+                                                </h2>
+                                                <Link to={'/'} style={{ width: '140px' }}>
+                                                    {t('Learn more')}
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className={cx('image-item', 'image-item--h270')} style={{ opacity: 0 }}>
+                                        <img src="https://static.wixstatic.com/media/c794a2_b269cff47a6b468a83839b3255165e07~mv2.jpg/v1/fill/w_214,h_270,q_90/c794a2_b269cff47a6b468a83839b3255165e07~mv2.webp" />
+
+                                        <div className={cx('overlay')}>
+                                            <div>
+                                                <h2>
+                                                    Ứng dụng di <br />
+                                                    động & Web
+                                                </h2>
+                                                <Link to={'/'} style={{ width: '140px' }}>
+                                                    {t('Learn more')}
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className={cx('image-item', 'image-item--h270')}>
+                                        <img src="https://static.wixstatic.com/media/c794a2_90fa6a18e5d847aa9ce92489eea8e503~mv2.jpg/v1/fill/w_214,h_270,fp_0.35_0.51,q_90/c794a2_90fa6a18e5d847aa9ce92489eea8e503~mv2.webp" />
+
+                                        <div className={cx('overlay')}>
+                                            <div>
+                                                <h2>Trí tuệ doanh nghiệp</h2>
+                                                <Link to={'/'} style={{ width: '140px' }}>
+                                                    {t('Learn more')}
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </SwiperSlide>
                     </Swiper>
-                    {}
                 </div>
             </div>
         </div>
