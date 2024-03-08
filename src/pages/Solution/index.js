@@ -32,7 +32,7 @@ function Solution() {
     return (
         <div className={cx('solution')}>
             <div className={cx('solution__intro')}>
-                <div style={{ position: 'absolute', maxWidth: '798px', left: '110px', bottom: ' 43px' }}>
+                <div className={cx('solution__intro-wrapper')}>
                     <div className={cx('solution__intro__title')}>
                         {t('Innovative Software Solutions for a Better World')}
                     </div>
