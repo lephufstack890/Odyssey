@@ -13,7 +13,8 @@ function Header() {
     const [isSolutionHovered, setIsSolutionHovered] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
-
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isMobileSolutionOpen, setIsMobileSolutionOpen] = useState(false);
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {
@@ -143,7 +144,7 @@ function Header() {
                             <div className={cx('header__started')}>
                                 <span>{t('Get started')}</span>
                             </div>
-                            <div className={cx('header__bar')}>
+                            <div className={cx('header__bar')} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
                                 <span>
                                     <FaBars />
                                 </span>
@@ -152,6 +153,73 @@ function Header() {
                     </div>
                 </div>
             </div>
+
+            {isMobileMenuOpen && (
+                <div className={cx('mobile-menu', { 'mobile-menu--open': isMobileMenuOpen })}>
+                    <div className={cx('mobile-menu__close')}>
+                        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="w-6 h-6"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div className={cx('mobile-menu__content')}>
+                        <div className={cx('header__language', 'header__language--mobile')}>
+                            <span onClick={() => changeLanguage('en')}>EN</span>
+                            <span onClick={() => changeLanguage('vn')}>VN</span>
+                        </div>
+
+                        <NavLink className={cx('mobile-menu__item')} to="/">
+                            {t('home')}
+                        </NavLink>
+                        <NavLink
+                            onClick={() => {
+                                setIsMobileSolutionOpen(!isMobileSolutionOpen);
+                            }}
+                            className={cx('mobile-menu__item', 'mobile-menu__item--solution')}
+                            to="/solution"
+                        >
+                            <span> {t('solution')}</span>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="w-6 h-6"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </NavLink>
+
+                        <div style={{ display: isMobileSolutionOpen ? 'flex' : 'none', flexDirection: 'column' }}>
+                            {Menu?.map((item, index) => (
+                                <NavLink
+                                    key={index}
+                                    to={item?.link}
+                                    className={cx('mobile-menu__item', 'mobile-menu__item--child')}
+                                >
+                                    {t(item.type)}
+                                </NavLink>
+                            ))}
+                        </div>
+
+                        <NavLink className={cx('mobile-menu__item')} to="/mission">
+                            {t('Misson')}
+                        </NavLink>
+                        <NavLink className={cx('mobile-menu__item')} to="/about-us">
+                            {t('About us')}
+                        </NavLink>
+                    </div>
+                </div>
+            )}
         </header>
     );
 }
