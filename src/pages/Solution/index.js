@@ -202,6 +202,55 @@ function Solution() {
                         <MdKeyboardArrowLeft />
                     </div>
                 </div>
+
+                <div className={cx('solution__new__carousel__mobile')}>
+                    <div style={{ width: '100%' }}>
+                        <img
+                            style={{ width: '100%' }}
+                            src="https://static.wixstatic.com/media/c794a2_01bb2e456b43420b84e5beb2471f795d~mv2.jpg/v1/fill/w_427,h_540,q_90/c794a2_01bb2e456b43420b84e5beb2471f795d~mv2.webp"
+                        />
+                    </div>
+
+                    <div style={{ width: '100%' }}>
+                        <img
+                            style={{ width: '50%' }}
+                            src="https://static.wixstatic.com/media/c794a2_089ed9c3a6514a4fadb9c902123cc8df~mv2.jpg/v1/fill/w_214,h_270,q_90/c794a2_089ed9c3a6514a4fadb9c902123cc8df~mv2.webp"
+                        />
+                        <img
+                            style={{ width: '50%' }}
+                            src="https://static.wixstatic.com/media/c794a2_76c3e074559b474b979df51a5d68b4f3~mv2.jpg/v1/fill/w_214,h_270,q_90/c794a2_76c3e074559b474b979df51a5d68b4f3~mv2.webp"
+                        />
+                    </div>
+
+                    <div style={{ width: '100%' }}>
+                        <img
+                            style={{ width: '50%' }}
+                            src="https://static.wixstatic.com/media/c794a2_bd8fa2fff7ee4fb289be22a78e48c802~mv2.jpg/v1/fill/w_214,h_270,q_90/c794a2_bd8fa2fff7ee4fb289be22a78e48c802~mv2.webp"
+                        />
+                        <img
+                            style={{ width: '50%' }}
+                            src="https://static.wixstatic.com/media/c794a2_2962dbd66be74847b98fd4728772bfdb~mv2.png/v1/fill/w_214,h_270,q_90/c794a2_2962dbd66be74847b98fd4728772bfdb~mv2.webp"
+                        />
+                    </div>
+
+                    <div style={{ width: '100%' }}>
+                        <img
+                            style={{ width: '100%' }}
+                            src="https://static.wixstatic.com/media/c794a2_8370907b50064a96ad8e58557a0a4485~mv2.png/v1/fill/w_427,h_540,q_90/c794a2_8370907b50064a96ad8e58557a0a4485~mv2.webp"
+                        />
+                    </div>
+
+                    <div style={{ width: '100%' }}>
+                        <img
+                            style={{ width: '50%' }}
+                            src="https://static.wixstatic.com/media/c794a2_b269cff47a6b468a83839b3255165e07~mv2.jpg/v1/fill/w_214,h_270,q_90/c794a2_b269cff47a6b468a83839b3255165e07~mv2.webp"
+                        />
+                        <img
+                            style={{ width: '50%' }}
+                            src="https://static.wixstatic.com/media/c794a2_90fa6a18e5d847aa9ce92489eea8e503~mv2.jpg/v1/fill/w_214,h_270,fp_0.35_0.51,q_90/c794a2_90fa6a18e5d847aa9ce92489eea8e503~mv2.webp"
+                        />
+                    </div>
+                </div>
             </div>
         </div>
     );
