@@ -19,12 +19,16 @@ function Mission() {
             </div>
 
             <div className={cx('Mission__video')}>
-                <video autoPlay muted loop>
-                    <source
-                        src="https://video.wixstatic.com/video/c794a2_587ca1159a1a4b779fb87f455bdab19f/1080p/mp4/file.mp4"
-                        type="video/mp4"
-                    />
-                </video>
+                {window.innerWidth > 768 ? (
+                    <video autoPlay muted loop className='desktop-video'>
+                        <source
+                            src="https://video.wixstatic.com/video/c794a2_587ca1159a1a4b779fb87f455bdab19f/1080p/mp4/file.mp4"
+                            type="video/mp4"
+                        />
+                    </video>
+                ) : (
+                    <img style={{ width: '100%' }} src="https://static.wixstatic.com/media/c794a2_587ca1159a1a4b779fb87f455bdab19ff000.jpg/v1/fill/w_1519,h_500,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/c794a2_587ca1159a1a4b779fb87f455bdab19ff000.jpg" alt="Mobile Image" className="mobile-image" />
+                )}
             </div>
 
             <div className={cx('Mission__need')}>

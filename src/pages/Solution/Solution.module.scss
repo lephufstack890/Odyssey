@@ -20,8 +20,7 @@
         position: relative;
         width: 100%;
         height: 463px;
-        background: url(https://static.wixstatic.com/media/c837a6_3f53cdbff83b47b19a97bd35c767333c~mv2.jpg/v1/fill/w_1351,h_453,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c837a6_3f53cdbff83b47b19a97bd35c767333c~mv2.jpg)
-            no-repeat;
+        background: url(https://static.wixstatic.com/media/c837a6_3f53cdbff83b47b19a97bd35c767333c~mv2.jpg/v1/fill/w_1351,h_453,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c837a6_3f53cdbff83b47b19a97bd35c767333c~mv2.jpg) no-repeat;
         background-size: cover;
 
         &__title {
@@ -210,6 +209,10 @@
             padding: 0px 20px;
         }
 
+        &__video {
+            height: auto;
+        }
+
         &__intro {
             &__title {
                 font-size: 45px;
@@ -230,6 +233,7 @@
             &__top {
                 margin: 0 20px;
                 width: 460px;
+
                 &__text {
                     line-height: 42px;
                     font-size: 30px;
