@@ -41,12 +41,16 @@ function Solution() {
             </div>
 
             <div className={cx('solution__video')}>
-                <video autoPlay muted loop>
-                    <source
-                        src="https://video.wixstatic.com/video/c794a2_11eba1f5b64f4b7e9a7bde53371293b4/1080p/mp4/file.mp4"
-                        type="video/mp4"
-                    />
-                </video>
+                {window.innerWidth > 768 ? (
+                    <video autoPlay muted loop className='desktop-video'>
+                        <source
+                            src="https://video.wixstatic.com/video/c794a2_11eba1f5b64f4b7e9a7bde53371293b4/1080p/mp4/file.mp4"
+                            type="video/mp4"
+                        />
+                    </video>
+                ) : (
+                    <img style={{ width: '100%' }} src='https://static.wixstatic.com/media/c794a2_11eba1f5b64f4b7e9a7bde53371293b4f000.jpg/v1/fill/w_1519,h_500,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/c794a2_11eba1f5b64f4b7e9a7bde53371293b4f000.jpg' alt="Mobile Image" className="mobile-image" />
+                )}
             </div>
 
             <div className={cx('solution__new')}>
@@ -65,7 +69,7 @@ function Solution() {
                         slidesPerView={1}
                         navigation
                         pagination={{ clickable: true }}
-                        autoplay={{ delay: 3000 }}
+                    // autoplay={{ delay: 3000 }}
                     >
                         <SwiperSlide>
                             <div className={cx('solution__new__carousel__wrapper')}>

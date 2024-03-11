@@ -61,4 +61,15 @@ body {
     .slick-slider {
         display: none;
     }
+
+    .desktop-video {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-image {
+        display: none;
+        height: auto;
+    }
 }

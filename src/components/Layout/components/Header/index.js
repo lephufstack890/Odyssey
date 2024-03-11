@@ -40,6 +40,10 @@ function Header() {
         i18n.changeLanguage(lng);
     };
 
+    const handleMenuItemClick = () => {
+        setIsMobileMenuOpen(false); // Ẩn menu đi sau khi click vào một mục menu
+    };
+
     const Menu = [
         {
             type: 'Web and Mobile application',
@@ -162,11 +166,11 @@ function Header() {
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                stroke-width="1.5"
+                                strokeWidth="1.5"
                                 stroke="currentColor"
-                                class="w-6 h-6"
+                                className="w-6 h-6"
                             >
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
                             </svg>
                         </button>
                     </div>
@@ -176,12 +180,13 @@ function Header() {
                             <span onClick={() => changeLanguage('vn')}>VN</span>
                         </div>
 
-                        <NavLink className={cx('mobile-menu__item')} to="/">
+                        <NavLink className={cx('mobile-menu__item')} to="/" onClick={handleMenuItemClick}>
                             {t('home')}
                         </NavLink>
                         <NavLink
                             onClick={() => {
                                 setIsMobileSolutionOpen(!isMobileSolutionOpen);
+                                handleMenuItemClick(); // Ẩn menu đi sau khi click vào một mục menu
                             }}
                             className={cx('mobile-menu__item', 'mobile-menu__item--solution')}
                             to="/solution"
@@ -191,11 +196,11 @@ function Header() {
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                stroke-width="1.5"
+                                strokeWidth="1.5"
                                 stroke="currentColor"
-                                class="w-6 h-6"
+                                className="w-6 h-6"
                             >
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                             </svg>
                         </NavLink>
 
@@ -205,16 +210,17 @@ function Header() {
                                     key={index}
                                     to={item?.link}
                                     className={cx('mobile-menu__item', 'mobile-menu__item--child')}
+                                    onClick={handleMenuItemClick} // Ẩn menu đi sau khi click vào một mục menu
                                 >
                                     {t(item.type)}
                                 </NavLink>
                             ))}
                         </div>
 
-                        <NavLink className={cx('mobile-menu__item')} to="/mission">
+                        <NavLink className={cx('mobile-menu__item')} to="/mission" onClick={handleMenuItemClick}>
                             {t('Misson')}
                         </NavLink>
-                        <NavLink className={cx('mobile-menu__item')} to="/about-us">
+                        <NavLink className={cx('mobile-menu__item')} to="/about-us" onClick={handleMenuItemClick}>
                             {t('About us')}
                         </NavLink>
                     </div>

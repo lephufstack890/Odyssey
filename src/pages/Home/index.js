@@ -79,27 +79,35 @@ function Home() {
     const Menu = [
         {
             title: 'Web & Application',
+            link: 'web-and-mobile-application'
         },
         {
             title: 'Data Analytic',
+            link: 'data-analytics'
         },
         {
             title: 'Business Intelligence',
+            link: 'business-intelligence'
         },
         {
             title: 'Artificial Intelligence',
+            link: 'artificial-tntelligence'
         },
         {
             title: 'Cloud Computing',
+            link: 'cloud-computing'
         },
         {
             title: 'Internet of things',
+            link: 'internet-of-things'
         },
         {
             title: 'Big Data',
+            link: 'big-data'
         },
         {
             title: 'Blockchain',
+            link: 'blockchain'
         },
     ];
 
@@ -128,12 +136,17 @@ function Home() {
         <div className={cx('main-page')}>
             <div className={cx('main-page__sectionOne')}>
                 <div className={cx('main-page__video')}>
-                    <video autoPlay muted loop>
-                        <source
-                            src="https://video.wixstatic.com/video/c794a2_553d56f3fda64a6bb01d8a7b545f8665/1080p/mp4/file.mp4"
-                            type="video/mp4"
-                        />
-                    </video>
+                    {window.innerWidth > 768 ? (
+                        <video autoPlay muted loop>
+                            <source
+                                src="https://video.wixstatic.com/video/c794a2_553d56f3fda64a6bb01d8a7b545f8665/1080p/mp4/file.mp4"
+                                type="video/mp4"
+                            />
+                        </video>
+                    ) : (
+                        <img src="https://static.wixstatic.com/media/c794a2_553d56f3fda64a6bb01d8a7b545f8665f000.jpg/v1/fill/w_1519,h_820,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/c794a2_553d56f3fda64a6bb01d8a7b545f8665f000.jpg" alt="Mobile Image" />
+                    )}
+
 
                     <div className={cx('main-page__sectionOne__content')}>
                         <div style={{ fontSize: '64px', marginBottom: '20px', lineHeight: '76px' }}>
@@ -143,7 +156,7 @@ function Home() {
                             {t('We believe that technology')}
                         </div>
                         <div>
-                            <Link to={'/'}>{t('Learn more')}</Link>
+                            <Link to={'/solution'}>{t('Learn more')}</Link>
                         </div>
                     </div>
                 </div>
@@ -169,7 +182,7 @@ function Home() {
                                     />
                                     <div id="active-content">
                                         <span>{item?.title}</span>
-                                        <Link to={'/'}>{t('Learn more')}</Link>
+                                        <Link to={item?.link}>{t('Learn more')}</Link>
                                     </div>
                                 </>
                             </div>
@@ -185,16 +198,18 @@ function Home() {
                                                 <img
                                                     style={{ width: '100%', cursor: 'pointer' }}
                                                     className={cx('sl-img-mobile')}
-                                                    src={require(`./../../assets/images/home/mobile/sl-big${
-                                                        index + 1
-                                                    }.png`)}
+                                                    src={require(`./../../assets/images/home/mobile/sl-big${index + 1
+                                                        }.png`)}
                                                     alt=""
                                                 />
                                                 <div className={cx('content-img')}>
                                                     <p>{item?.title}</p>
-                                                    <span>
+                                                    {/* <span>
                                                         <FaArrowRightLong />
-                                                    </span>
+                                                    </span> */}
+                                                    <Link to={item?.link}>
+                                                        <FaArrowRightLong />
+                                                    </Link>
                                                 </div>
                                             </>
                                         ) : (
@@ -219,28 +234,36 @@ function Home() {
                                 <h3>{t('Our Mission: Making the world a better place')}</h3>
                                 <p>{t('We apply the modern software')}</p>
                                 <div style={{ margin: '10px 120px' }}>
-                                    <Link to={'/'}>{t('Learn more')}</Link>
+                                    <Link to={'/mission'}>{t('Learn more')}</Link>
                                 </div>
                             </div>
                             <div className={cx('col-lg-7', 'col-md-6', 'col-12', 'main-page__missons-right')}>
-                                <video autoPlay muted loop>
-                                    <source
-                                        src="https://video.wixstatic.com/video/11062b_cca29298dbe547f4983e127aba1c1966/1080p/mp4/file.mp4"
-                                        type="video/mp4"
-                                    />
-                                </video>
+                                {window.innerWidth > 768 ? (
+                                    <video autoPlay muted loop className="desktop-video">
+                                        <source
+                                            src="https://video.wixstatic.com/video/11062b_cca29298dbe547f4983e127aba1c1966/1080p/mp4/file.mp4"
+                                            type="video/mp4"
+                                        />
+                                    </video>
+                                ) : (
+                                    <img style={{ height: '350px', width: '100%' }} src="https://static.wixstatic.com/media/11062b_cca29298dbe547f4983e127aba1c1966f000.jpg/v1/fill/w_825,h_912,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/11062b_cca29298dbe547f4983e127aba1c1966f000.jpg" alt="Mobile Image" className="mobile-image" />
+                                )}
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div className={cx('main-page__odyssey')}>
-                    <video autoPlay muted loop>
-                        <source
-                            src="https://video.wixstatic.com/video/c794a2_4f8fe01f8e54496a922159eb6ea3894a/720p/mp4/file.mp4"
-                            type="video/mp4"
-                        />
-                    </video>
+                    {window.innerWidth > 768 ? (
+                        <video autoPlay muted loop>
+                            <source
+                                src="https://video.wixstatic.com/video/c794a2_4f8fe01f8e54496a922159eb6ea3894a/720p/mp4/file.mp4"
+                                type="video/mp4"
+                            />
+                        </video>
+                    ) : (
+                        <img src="https://static.wixstatic.com/media/c794a2_4f8fe01f8e54496a922159eb6ea3894af000.jpg/v1/fill/w_1152,h_566,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/c794a2_4f8fe01f8e54496a922159eb6ea3894af000.jpg" alt="Mobile Image" />
+                    )}
                     <div className={cx('main-page__odyssey-content')}>
                         <h3> {t('Why Choose Odyssey')}</h3>
                         <p>{t('Our team comprises')}</p>
@@ -280,13 +303,15 @@ function Home() {
                                 className={cx('main-page__odyssey-actions-startedLeft')}
                                 style={{ border: '1px solid rgb(138, 138, 138)' }}
                             >
-                                {startedVideo && (
-                                    <video autoPlay muted loop>
+                                {window.innerWidth > 768 ? (
+                                    <video autoPlay muted loop className='desktop-video'>
                                         <source
                                             src="https://video.wixstatic.com/video/c794a2_553d56f3fda64a6bb01d8a7b545f8665/1080p/mp4/file.mp4"
                                             type="video/mp4"
                                         />
                                     </video>
+                                ) : (
+                                    <img style={{ width: '100%' }} src="https://static.wixstatic.com/media/c794a2_553d56f3fda64a6bb01d8a7b545f8665f000.jpg/v1/fill/w_1519,h_820,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/c794a2_553d56f3fda64a6bb01d8a7b545f8665f000.jpg" alt="Mobile Image" className="mobile-image" />
                                 )}
                                 <p>{t('Are you ready to transform your business ?')}</p>
                             </div>
@@ -296,7 +321,7 @@ function Home() {
                             >
                                 <p>{t('We commit to help you')}</p>
                                 <div>
-                                    <Link to={'/'}>{t('Get Started')}</Link>
+                                    <Link to={'/contact'}>{t('Get Started')}</Link>
                                 </div>
                             </div>
                         </div>

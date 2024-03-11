@@ -15,6 +15,7 @@ function SolutionChild() {
         {
             title: t('Web and Mobile application'),
             video: 'https://video.wixstatic.com/video/11062b_f97f2d088d4949ea996a4f8a3ac1c1cd/720p/mp4/file.mp4',
+            poster: 'https://static.wixstatic.com/media/11062b_f97f2d088d4949ea996a4f8a3ac1c1cdf000.jpg/v1/fill/w_761,h_532,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/11062b_f97f2d088d4949ea996a4f8a3ac1c1cdf000.jpg',
             content: t('We create stunning websites'),
             images: [
                 'https://static.wixstatic.com/media/c794a2_6d0e648ad0be4505bb44a1f96478a7a0~mv2.png/v1/crop/x_8,y_67,w_1007,h_890/fill/w_93,h_94,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Angular_full_color_logo_svg.png',
@@ -29,6 +30,7 @@ function SolutionChild() {
         {
             title: t('Data Analytics'),
             video: 'https://video.wixstatic.com/video/11062b_91f1ae429baf467eba9f9ba98b5a7fc1/720p/mp4/file.mp4',
+            poster: 'https://static.wixstatic.com/media/11062b_91f1ae429baf467eba9f9ba98b5a7fc1f000.jpg/v1/fill/w_761,h_532,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/11062b_91f1ae429baf467eba9f9ba98b5a7fc1f000.jpg',
             content: t('Our data science team'),
             images: [
                 'https://static.wixstatic.com/media/c794a2_3ec5722787ef4742ab248bc30efd1f6c~mv2.png/v1/fill/w_127,h_76,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Amazon_Web_Services_Logo.png',
@@ -43,6 +45,7 @@ function SolutionChild() {
         {
             title: t('Business Intelligence'),
             video: 'https://video.wixstatic.com/video/11062b_50f6f6470c9642078f20bc034734c14b/720p/mp4/file.mp4',
+            poster: 'https://static.wixstatic.com/media/11062b_50f6f6470c9642078f20bc034734c14bf000.jpg/v1/fill/w_761,h_532,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/11062b_50f6f6470c9642078f20bc034734c14bf000.jpg',
             content: t('We translate data into'),
             images: [
                 'https://static.wixstatic.com/media/c794a2_b2e12532853a422d8a9e5f17cf80db44~mv2.png/v1/fill/w_89,h_90,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1024px-New_Power_BI_Logo_svg.png',
@@ -54,6 +57,7 @@ function SolutionChild() {
         {
             title: t('Artificial Intelligence'),
             video: 'https://video.wixstatic.com/video/11062b_2d0218bd0ba34344b5b3b18775206ae4/720p/mp4/file.mp4',
+            poster: 'https://static.wixstatic.com/media/11062b_2d0218bd0ba34344b5b3b18775206ae4f000.jpg/v1/fill/w_761,h_532,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/11062b_2d0218bd0ba34344b5b3b18775206ae4f000.jpg',
             content: t('We specialize in artificial'),
             images: [
                 'https://static.wixstatic.com/media/c794a2_3ec5722787ef4742ab248bc30efd1f6c~mv2.png/v1/crop/x_16,y_0,w_611,h_375/fill/w_117,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Amazon_Web_Services_Logo.png',
@@ -64,6 +68,7 @@ function SolutionChild() {
         {
             title: t('Cloud Computing'),
             video: 'https://video.wixstatic.com/video/c794a2_d6ad9110e59a4b77941ded5246eda6cb/720p/mp4/file.mp4',
+            poster: 'https://static.wixstatic.com/media/c794a2_d6ad9110e59a4b77941ded5246eda6cbf000.jpg/v1/fill/w_761,h_532,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/c794a2_d6ad9110e59a4b77941ded5246eda6cbf000.jpg',
             content: t('We have a team'),
             images: [
                 'https://static.wixstatic.com/media/c794a2_a6f9b0c6611244bb83ad86baec33ceaa~mv2.png/v1/crop/x_5,y_0,w_236,h_193/fill/w_91,h_74,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Google_Cloud_logo_svg.png',
@@ -78,6 +83,7 @@ function SolutionChild() {
         {
             title: t('Big Data'),
             video: 'https://video.wixstatic.com/video/11062b_40d3bbdabcd3461abfe2a96c4d0219b0/720p/mp4/file.mp4',
+            poster: 'https://static.wixstatic.com/media/11062b_40d3bbdabcd3461abfe2a96c4d0219b0f000.jpg/v1/fill/w_761,h_532,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/11062b_40d3bbdabcd3461abfe2a96c4d0219b0f000.jpg',
             content: t('We solve big data'),
             images: [
                 'https://static.wixstatic.com/media/c794a2_a199d6d1269044009e26b43ddeb3b82f~mv2.png/v1/fill/w_127,h_76,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/hortonworks-icon.png',
@@ -89,6 +95,7 @@ function SolutionChild() {
         {
             title: t('Internet of things'),
             video: 'https://video.wixstatic.com/video/c794a2_c670a6a7ee3643e1a7c33ac6543b1b02/720p/mp4/file.mp4',
+            poster: 'https://static.wixstatic.com/media/c794a2_c670a6a7ee3643e1a7c33ac6543b1b02f000.jpg/v1/fill/w_761,h_532,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/c794a2_c670a6a7ee3643e1a7c33ac6543b1b02f000.jpg',
             content: t('We are a complete'),
             images: [
                 'https://static.wixstatic.com/media/c794a2_b3d09a81cbce47e2b1d4df93c3e6375c~mv2.png/v1/crop/x_6,y_0,w_872,h_881/fill/w_93,h_94,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/camera.png',
@@ -99,6 +106,7 @@ function SolutionChild() {
         {
             title: t('Blockchain'),
             video: 'https://video.wixstatic.com/video/c794a2_d7a966842d80429e8ae5fa3199ed9a45/720p/mp4/file.mp4',
+            poster: 'https://static.wixstatic.com/media/c794a2_d7a966842d80429e8ae5fa3199ed9a45f000.jpg/v1/fill/w_761,h_532,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/c794a2_d7a966842d80429e8ae5fa3199ed9a45f000.jpg',
             content: t('We leverage blockchain technology'),
             images: [
                 'https://static.wixstatic.com/media/c794a2_932a942746d441f1bcab3bc9f16e2fc8~mv2.png/v1/fill/w_115,h_105,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Asset%205.png',
@@ -131,7 +139,7 @@ function SolutionChild() {
     return (
         <div className={cx('solution')}>
             <div className={cx('solution__intro')}>
-                <div style={{ position: 'absolute', maxWidth: '798px', left: '110px', bottom: ' 43px' }}>
+                <div className={cx('solution__intro-wraper')} style={{ position: 'absolute', maxWidth: '798px', left: '110px', bottom: ' 43px' }}>
                     <div className={cx('solution__intro__title')}>Innovative Software Solutions for a Better World</div>
                     <div className={cx('solution__intro__description')}>
                         We commit to integrate with your ecosystem and providing reliable and scalable solutions that
@@ -152,17 +160,22 @@ function SolutionChild() {
                     {/* <video autoPlay muted loop>
                         <source  type="video/mp4"></source>
                     </video> */}
+                    {window.innerWidth > 768 ? (
+                        <video
+                            crossOrigin="anonymous"
+                            playSinline=""
+                            preload="auto"
+                            loop
+                            tabIndex="-1"
+                            autoPlay
+                            muted
+                            src={data[indexPage].video}
+                            className='desktop-video'
+                        ></video>
+                    ) : (
+                        <img style={{ width: '100%' }} src={data[indexPage].poster} alt="Mobile Image" className="mobile-image" />
+                    )}
 
-                    <video
-                        crossOrigin="anonymous"
-                        playSinline=""
-                        preload="auto"
-                        loop
-                        tabIndex="-1"
-                        autoPlay
-                        muted
-                        src={data[indexPage].video}
-                    ></video>
                 </div>
             </div>
 
