@@ -69,7 +69,7 @@ function Solution() {
                         slidesPerView={1}
                         navigation
                         pagination={{ clickable: true }}
-                    // autoplay={{ delay: 3000 }}
+                        autoplay={{ delay: 3000 }}
                     >
                         <SwiperSlide>
                             <div className={cx('solution__new__carousel__wrapper')}>

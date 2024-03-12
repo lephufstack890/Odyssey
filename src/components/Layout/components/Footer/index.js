@@ -18,7 +18,7 @@ function Footer() {
                 <div className={cx('footer__layout__one', 'col-lg-3', 'col-12')}>
                     <div>
                         <Link to="/" style={{ textDecoration: 'none' }}>
-                            <div style={{ display: 'flex', alignItems: 'flex-end' }}>
+                            <div className={cx('footer__layout__one-logo')} style={{ display: 'flex', alignItems: 'flex-end' }}>
                                 <img src={f1} alt="Logo" />
                                 <span
                                     style={{
@@ -41,6 +41,7 @@ function Footer() {
                                     marginBottom: '17px',
                                     width: '204px',
                                 }}
+                                className={cx('footer__layout__one-change')}
                             >
                                 We change the world
                             </div>

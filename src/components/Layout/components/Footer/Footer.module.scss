@@ -77,6 +77,68 @@
                     margin-bottom: 14px;
                 }
             }
+
+            &__one {
+                text-align: center;
+                margin-bottom: 48px;
+
+                &-logo {
+                    justify-content: center;
+                }
+
+
+                &-change {
+                    width: 100% !important;
+                }
+            }
+
+            &__two {
+
+                &__item {
+                    padding: 0;
+                    width: 100%;
+
+                    a {
+                        width: 121px;
+                        height: 55px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 10px;
+                        transition: all 0.1s linear;
+                        border-radius: 8px;
+                    }
+
+                    &:hover {
+                        background-color: transparent;
+                    }
+
+                    a:hover {
+                        background-color: #889ce7;
+
+                        a {
+                            color: #141416;
+                        }
+                    }
+                }
+
+            }
+
+            &__three {
+                text-align: center;
+
+                input {
+                    width: 100% !important;
+                }
+
+                button {
+                    width: 100% !important;
+                }
+            }
+
+            &__four {
+                text-align: center;
+            }
         }
     }
 }

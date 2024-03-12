@@ -97,8 +97,8 @@ const resources = {
         translation: {
             home: 'Trang chủ',
             solution: 'Giải pháp',
-            Misson: 'Về sứ mệnh',
-            'About us': 'Về chúng tôi',
+            Misson: 'Sứ mệnh',
+            'About us': 'Chúng tôi',
             'Web and Mobile application': 'Ứng dụng di động và web',
             'Data Analytics': 'Phân tích dữ liệu',
             'Business Intelligence': 'Trí tuệ doanh nghiệp',

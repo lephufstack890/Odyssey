@@ -145,9 +145,9 @@ function Header() {
                                 <span onClick={() => changeLanguage('en')}>EN</span>
                                 <span onClick={() => changeLanguage('vn')}>VN</span>
                             </div>
-                            <div className={cx('header__started')}>
+                            <Link className={cx('header__started')} to={'/contact'}>
                                 <span>{t('Get started')}</span>
-                            </div>
+                            </Link>
                             <div className={cx('header__bar')} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
                                 <span>
                                     <FaBars />
