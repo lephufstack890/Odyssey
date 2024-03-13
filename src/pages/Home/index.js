@@ -7,7 +7,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'react-owl-carousel2/lib/styles.css';
 import { FaArrowRightLong } from 'react-icons/fa6';
-import startedVideo from './../../assets/video/home/started.mp4';
+import m1 from './../../assets/images/home/started.png';
 import { useTranslation } from 'react-i18next';
 
 const cx = classNames.bind(styles);
@@ -323,16 +323,16 @@ function Home() {
                                 style={{ border: '1px solid rgb(138, 138, 138)' }}
                             >
                                 {window.innerWidth > 768 ? (
-                                    <video autoPlay muted loop className="desktop-video">
-                                        <source
-                                            src="https://video.wixstatic.com/video/c794a2_553d56f3fda64a6bb01d8a7b545f8665/1080p/mp4/file.mp4"
-                                            type="video/mp4"
-                                        />
-                                    </video>
+                                    <img
+                                        style={{ width: '100%' }}
+                                        src={m1}
+                                        alt="Mobile Image"
+                                        className="desktop-video"
+                                    />
                                 ) : (
                                     <img
                                         style={{ width: '100%' }}
-                                        src="https://static.wixstatic.com/media/c794a2_553d56f3fda64a6bb01d8a7b545f8665f000.jpg/v1/fill/w_1519,h_820,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/c794a2_553d56f3fda64a6bb01d8a7b545f8665f000.jpg"
+                                        src={m1}
                                         alt="Mobile Image"
                                         className="mobile-image"
                                     />
