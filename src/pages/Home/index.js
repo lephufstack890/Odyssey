@@ -209,9 +209,8 @@ function Home() {
                                                 <img
                                                     style={{ width: '100%', cursor: 'pointer' }}
                                                     className={cx('sl-img-mobile')}
-                                                    src={require(`./../../assets/images/home/mobile/sl-big${
-                                                        index + 1
-                                                    }.png`)}
+                                                    src={require(`./../../assets/images/home/mobile/sl-big${index + 1
+                                                        }.png`)}
                                                     alt=""
                                                 />
                                                 <div className={cx('content-img')}>
@@ -326,7 +325,7 @@ function Home() {
                                 {window.innerWidth > 768 ? (
                                     <video autoPlay muted loop className="desktop-video">
                                         <source
-                                            src="https://video.wixstatic.com/video/c794a2_553d56f3fda64a6bb01d8a7b545f8665/1080p/mp4/file.mp4"
+                                            src={startedVideo}
                                             type="video/mp4"
                                         />
                                     </video>
