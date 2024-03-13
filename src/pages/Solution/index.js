@@ -80,7 +80,7 @@ function Solution() {
                                         <div className={cx('overlay')}>
                                             <div>
                                                 <h2>{t('Big Data')}</h2>
-                                                <Link to={'/'}>{t('Learn more')}</Link>
+                                                <Link to={'/big-data'}>{t('Learn more')}</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -92,7 +92,7 @@ function Solution() {
                                         <div className={cx('overlay')}>
                                             <div>
                                                 <h2>{t('Web and Mobile application')}</h2>
-                                                <Link to={'/'} style={{ width: '140px' }}>
+                                                <Link to={'/web-and-mobile-application'} style={{ width: '140px' }}>
                                                     {t('Learn more')}
                                                 </Link>
                                             </div>
@@ -105,7 +105,7 @@ function Solution() {
                                         <div className={cx('overlay')}>
                                             <div>
                                                 <h2>{t('Data Analytics')}</h2>
-                                                <Link to={'/'} style={{ width: '140px' }}>
+                                                <Link to={'/data-analytics'} style={{ width: '140px' }}>
                                                     {t('Learn more')}
                                                 </Link>
                                             </div>
@@ -118,7 +118,7 @@ function Solution() {
                                         <div className={cx('overlay')}>
                                             <div>
                                                 <h2>{t('Business Intelligence')}</h2>
-                                                <Link to={'/'} style={{ width: '140px' }}>
+                                                <Link to={'/business-intelligence'} style={{ width: '140px' }}>
                                                     {t('Learn more')}
                                                 </Link>
                                             </div>
@@ -131,7 +131,7 @@ function Solution() {
                                         <div className={cx('overlay')}>
                                             <div>
                                                 <h2>{t('Artificial Intelligence')}</h2>
-                                                <Link to={'/'} style={{ width: '140px' }}>
+                                                <Link to={'/artificial-tntelligence'} style={{ width: '140px' }}>
                                                     {t('Learn more')}
                                                 </Link>
                                             </div>
@@ -149,7 +149,7 @@ function Solution() {
                                         <div className={cx('overlay')}>
                                             <div>
                                                 <h2>{t('Blockchain')}</h2>
-                                                <Link to={'/'}> {t('Learn more')}</Link>
+                                                <Link to={'/blockchain'}> {t('Learn more')}</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -164,7 +164,7 @@ function Solution() {
                                         <div className={cx('overlay')}>
                                             <div>
                                                 <h2>{t('Cloud Computing')}</h2>
-                                                <Link to={'/'} style={{ width: '140px' }}>
+                                                <Link to={'/cloud-computing'} style={{ width: '140px' }}>
                                                     {t('Learn more')}
                                                 </Link>
                                             </div>
@@ -176,7 +176,7 @@ function Solution() {
                                         <div className={cx('overlay')}>
                                             <div>
                                                 <h2>{t('Cloud Computing')}</h2>
-                                                <Link to={'/'} style={{ width: '140px' }}>
+                                                <Link to={'/cloud-computing'} style={{ width: '140px' }}>
                                                     {t('Learn more')}
                                                 </Link>
                                             </div>
@@ -189,7 +189,7 @@ function Solution() {
                                         <div className={cx('overlay')}>
                                             <div>
                                                 <h2>{t('Internet of things')}</h2>
-                                                <Link to={'/'} style={{ width: '140px' }}>
+                                                <Link to={'/internet-of-things'} style={{ width: '140px' }}>
                                                     {t('Learn more')}
                                                 </Link>
                                             </div>

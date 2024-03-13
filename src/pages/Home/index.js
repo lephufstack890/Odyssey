@@ -178,7 +178,7 @@ function Home() {
                             <div
                                 key={index}
                                 className={cx('main-page__solutions-contentDestop-item')}
-                                style={{ width: indexMenu === index ? '45%' : '12.5%' }}
+                                style={{ width: indexMenu === index ? '80%' : '12.5%', transition: '0.5s' }}
                                 onClick={() => setIndexMenu(index)}
                             >
                                 <>
@@ -206,34 +206,23 @@ function Home() {
                         <div>
                             {Menu?.map((item, index) => (
                                 <div className={cx('row')} onClick={() => handleMobileSliderToggle(index)} key={index}>
-                                    <div className={cx('col-12', 'pb-4', 'position-relative')}>
-                                        {mobileSliderOpen === index ? (
-                                            <>
-                                                <img
-                                                    style={{ width: '100%', cursor: 'pointer' }}
-                                                    className={cx('sl-img-mobile')}
-                                                    src={require(`./../../assets/images/home/mobile/sl-big${index + 1
-                                                        }.png`)}
-                                                    alt=""
-                                                />
-                                                <div className={cx('content-img')}>
-                                                    <p>{item?.title}</p>
-                                                    {/* <span>
-                                                        <FaArrowRightLong />
-                                                    </span> */}
-                                                    <Link to={item?.link}>
-                                                        <FaArrowRightLong />
-                                                    </Link>
-                                                </div>
-                                            </>
-                                        ) : (
+                                    <div className={cx('col-12', 'pb-4', 'position-relative')} style={{ height: indexMenu === index ? '100%' : '98px', transition: indexMenu === index ? 'height 0.5s linear' : 'none' }}
+                                        onClick={() => setIndexMenu(index)}>
+                                        <>
                                             <img
-                                                style={{ width: '100%', cursor: 'pointer' }}
+                                                style={{ width: '100%', cursor: 'pointer', height: '100%', objectFit: 'cover' }}
                                                 className={cx('sl-img-mobile')}
-                                                src={require(`./../../assets/images/home/mobile/sl${index + 1}.png`)}
+                                                src={require(`./../../assets/images/home/mobile/sl-big${index + 1
+                                                    }.png`)}
                                                 alt=""
                                             />
-                                        )}
+                                            <div className={cx('content-img')}>
+                                                <p>{item?.title}</p>
+                                                <Link to={item?.link} style={{ display: indexMenu === index ? 'flex' : 'none' }}>
+                                                    <FaArrowRightLong />
+                                                </Link>
+                                            </div>
+                                        </>
                                     </div>
                                 </div>
                             ))}
