@@ -4,8 +4,6 @@
     &__video {
         position: relative;
         line-height: 9px;
-
-
     }
 
     // .enlarge-img {
@@ -16,7 +14,6 @@
     //     //     height: 400px;
     //     // }
     // }
-
 
     &__solutions {
         background: #141416;
@@ -54,49 +51,41 @@
         }
 
         &-contentDestop {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-
+            width: 100%;
             &-item {
-                transition: transform 0.3s ease;
+                width: 12.5%;
                 position: relative;
-                cursor: pointer;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.3);
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    z-index: 1;
+                }
 
                 .sl-img {
-                    transition: transform 0.3s ease;
                     width: 100%;
-                    padding-right: 10px;
-                    height: 450px;
+                    height: 510px;
                     object-fit: cover;
                 }
 
-                // #active-content {
-                //     display: none;
-                // }
-
-                &::before {
-                    content: "";
-                    width: 97%;
-                    height: 100%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    background: rgba(138, 138, 138, 0.45);
-                    opacity: 0;
-                    transition: opacity 0.3s ease;
-                }
-
-                div {
+                .overlay-content {
                     position: absolute;
                     bottom: 36px;
+                    z-index: 2;
                     display: flex;
+                    justify-content: space-between;
                     align-items: center;
                     width: 100%;
-                    justify-content: space-around;
-
+                    padding: 0 10px;
                     span {
-                        font-size: 20px;
+                        font-size: 16px;
                         color: #fff;
                     }
 
@@ -116,19 +105,25 @@
                         line-height: 22px;
                         border-radius: 5px;
                     }
-
-                    a:hover {
-                        background-color: transparent;
-                        border-color: #fff;
-                    }
                 }
-            }
 
+                // div {
+
+                //     display: flex;
+                //     align-items: center;
+                //     width: 100%;
+                //     justify-content: space-around;
+
+                //     a:hover {
+                //         background-color: transparent;
+                //         border-color: #fff;
+                //     }
+                // }
+            }
         }
     }
 
     &__missons {
-
         &-left {
             background-image: url('https://static.wixstatic.com/media/c837a6_eb322a4179e54d788eef6896e67f05d0~mv2.jpg/v1/fill/w_661,h_912,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c837a6_eb322a4179e54d788eef6896e67f05d0~mv2.jpg');
             background-size: cover;
@@ -178,7 +173,6 @@
     }
 
     &__odyssey {
-
         position: relative;
         background: #141416;
 
@@ -341,17 +335,22 @@
     }
 }
 
-
+.main-page__solutions-content {
+    display: flex;
+    column-gap: 10px;
+}
 
 @media (max-width: 768px) {
-    .main-page {
+    .main-page__solutions-contentDestop-item {
+        display: none;
+    }
 
+    .main-page {
         &__video {
             height: 800px;
         }
 
         &__sectionOne {
-
             &__content {
                 position: absolute;
                 top: 50%;
@@ -449,7 +448,6 @@
         }
 
         &__missons {
-
             &-left {
                 border: none;
                 padding-bottom: 30px;
@@ -482,12 +480,10 @@
 
             &-right {
                 border: none;
-
             }
         }
 
         &__odyssey {
-
             &-content {
                 h3 {
                     padding: 50px 10px;
@@ -502,7 +498,6 @@
                     text-align: center;
                     padding: 32px 0px !important;
                 }
-
 
                 &-startedLeft {
                     width: 100%;
@@ -534,8 +529,6 @@
                     }
                 }
             }
-
-
         }
     }
 }

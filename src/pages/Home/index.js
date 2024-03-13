@@ -17,6 +17,7 @@ function Home() {
     const [destopSliderOpen, setDestopSliderOpen] = useState(null);
     const [mobileSliderOpen, setMobileSliderOpen] = useState(null);
     const sliderRef = useRef(null);
+    const [indexMenu, setIndexMenu] = useState(0);
 
     const handleMobileSliderToggle = (index) => {
         setMobileSliderOpen(index === mobileSliderOpen ? null : index);
@@ -79,35 +80,35 @@ function Home() {
     const Menu = [
         {
             title: 'Web & Application',
-            link: 'web-and-mobile-application'
+            link: 'web-and-mobile-application',
         },
         {
             title: 'Data Analytic',
-            link: 'data-analytics'
+            link: 'data-analytics',
         },
         {
             title: 'Business Intelligence',
-            link: 'business-intelligence'
+            link: 'business-intelligence',
         },
         {
             title: 'Artificial Intelligence',
-            link: 'artificial-tntelligence'
+            link: 'artificial-tntelligence',
         },
         {
             title: 'Cloud Computing',
-            link: 'cloud-computing'
+            link: 'cloud-computing',
         },
         {
             title: 'Internet of things',
-            link: 'internet-of-things'
+            link: 'internet-of-things',
         },
         {
             title: 'Big Data',
-            link: 'big-data'
+            link: 'big-data',
         },
         {
             title: 'Blockchain',
-            link: 'blockchain'
+            link: 'blockchain',
         },
     ];
 
@@ -144,9 +145,11 @@ function Home() {
                             />
                         </video>
                     ) : (
-                        <img src="https://static.wixstatic.com/media/c794a2_553d56f3fda64a6bb01d8a7b545f8665f000.jpg/v1/fill/w_1519,h_820,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/c794a2_553d56f3fda64a6bb01d8a7b545f8665f000.jpg" alt="Mobile Image" />
+                        <img
+                            src="https://static.wixstatic.com/media/c794a2_553d56f3fda64a6bb01d8a7b545f8665f000.jpg/v1/fill/w_1519,h_820,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/c794a2_553d56f3fda64a6bb01d8a7b545f8665f000.jpg"
+                            alt="Mobile Image"
+                        />
                     )}
-
 
                     <div className={cx('main-page__sectionOne__content')}>
                         <div style={{ fontSize: '64px', marginBottom: '20px', lineHeight: '76px' }}>
@@ -167,12 +170,13 @@ function Home() {
                         <span>{t('Cooperate to innovate your company')}</span>
                         <span>{t('Explore how you can digitalize your business with Odyssey')}</span>
                     </div>
-                    <Slider ref={sliderRef} {...settings}>
+                    <div className={cx('main-page__solutions-content')}>
                         {Menu?.map((item, index) => (
                             <div
                                 key={index}
                                 className={cx('main-page__solutions-contentDestop-item')}
-                                onClick={() => handleActiveSliderDesstop(index)}
+                                style={{ width: indexMenu === index ? '45%' : '12.5%' }}
+                                onClick={() => setIndexMenu(index)}
                             >
                                 <>
                                     <img
@@ -180,14 +184,21 @@ function Home() {
                                         src={require(`./../../assets/images/home/big${index + 1}.png`)}
                                         alt=""
                                     />
-                                    <div id="active-content">
-                                        <span>{item?.title}</span>
-                                        <Link to={item?.link}>{t('Learn more')}</Link>
+                                    <div className={cx('overlay-content')}>
+                                        <span style={{ fontSize: indexMenu === index ? '20px' : '16px' }}>
+                                            {item?.title}
+                                        </span>
+                                        <Link
+                                            to={item?.link}
+                                            style={{ display: indexMenu === index ? 'flex' : 'none' }}
+                                        >
+                                            {t('Learn more')}
+                                        </Link>
                                     </div>
                                 </>
                             </div>
                         ))}
-                    </Slider>
+                    </div>
                     <div className={cx('main-page__solutions-contentMobile')}>
                         <div>
                             {Menu?.map((item, index) => (
@@ -198,8 +209,9 @@ function Home() {
                                                 <img
                                                     style={{ width: '100%', cursor: 'pointer' }}
                                                     className={cx('sl-img-mobile')}
-                                                    src={require(`./../../assets/images/home/mobile/sl-big${index + 1
-                                                        }.png`)}
+                                                    src={require(`./../../assets/images/home/mobile/sl-big${
+                                                        index + 1
+                                                    }.png`)}
                                                     alt=""
                                                 />
                                                 <div className={cx('content-img')}>
@@ -246,7 +258,12 @@ function Home() {
                                         />
                                     </video>
                                 ) : (
-                                    <img style={{ height: '350px', width: '100%' }} src="https://static.wixstatic.com/media/11062b_cca29298dbe547f4983e127aba1c1966f000.jpg/v1/fill/w_825,h_912,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/11062b_cca29298dbe547f4983e127aba1c1966f000.jpg" alt="Mobile Image" className="mobile-image" />
+                                    <img
+                                        style={{ height: '350px', width: '100%' }}
+                                        src="https://static.wixstatic.com/media/11062b_cca29298dbe547f4983e127aba1c1966f000.jpg/v1/fill/w_825,h_912,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/11062b_cca29298dbe547f4983e127aba1c1966f000.jpg"
+                                        alt="Mobile Image"
+                                        className="mobile-image"
+                                    />
                                 )}
                             </div>
                         </div>
@@ -262,7 +279,10 @@ function Home() {
                             />
                         </video>
                     ) : (
-                        <img src="https://static.wixstatic.com/media/c794a2_4f8fe01f8e54496a922159eb6ea3894af000.jpg/v1/fill/w_1152,h_566,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/c794a2_4f8fe01f8e54496a922159eb6ea3894af000.jpg" alt="Mobile Image" />
+                        <img
+                            src="https://static.wixstatic.com/media/c794a2_4f8fe01f8e54496a922159eb6ea3894af000.jpg/v1/fill/w_1152,h_566,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/c794a2_4f8fe01f8e54496a922159eb6ea3894af000.jpg"
+                            alt="Mobile Image"
+                        />
                     )}
                     <div className={cx('main-page__odyssey-content')}>
                         <h3> {t('Why Choose Odyssey')}</h3>
@@ -304,14 +324,19 @@ function Home() {
                                 style={{ border: '1px solid rgb(138, 138, 138)' }}
                             >
                                 {window.innerWidth > 768 ? (
-                                    <video autoPlay muted loop className='desktop-video'>
+                                    <video autoPlay muted loop className="desktop-video">
                                         <source
                                             src="https://video.wixstatic.com/video/c794a2_553d56f3fda64a6bb01d8a7b545f8665/1080p/mp4/file.mp4"
                                             type="video/mp4"
                                         />
                                     </video>
                                 ) : (
-                                    <img style={{ width: '100%' }} src="https://static.wixstatic.com/media/c794a2_553d56f3fda64a6bb01d8a7b545f8665f000.jpg/v1/fill/w_1519,h_820,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/c794a2_553d56f3fda64a6bb01d8a7b545f8665f000.jpg" alt="Mobile Image" className="mobile-image" />
+                                    <img
+                                        style={{ width: '100%' }}
+                                        src="https://static.wixstatic.com/media/c794a2_553d56f3fda64a6bb01d8a7b545f8665f000.jpg/v1/fill/w_1519,h_820,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/c794a2_553d56f3fda64a6bb01d8a7b545f8665f000.jpg"
+                                        alt="Mobile Image"
+                                        className="mobile-image"
+                                    />
                                 )}
                                 <p>{t('Are you ready to transform your business ?')}</p>
                             </div>
