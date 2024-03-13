@@ -19,6 +19,9 @@ function Home() {
     const sliderRef = useRef(null);
     const [indexMenu, setIndexMenu] = useState(0);
 
+    // const videoIN = 'http://localhost:3000/started.mp4'
+    const videoIN = 'http://14.225.254.135:3000/started.mp4'
+
     const handleMobileSliderToggle = (index) => {
         setMobileSliderOpen(index === mobileSliderOpen ? null : index);
     };
@@ -323,12 +326,12 @@ function Home() {
                                 style={{ border: '1px solid rgb(138, 138, 138)' }}
                             >
                                 {window.innerWidth > 768 ? (
-                                    <img
-                                        style={{ width: '100%' }}
-                                        src={m1}
-                                        alt="Mobile Image"
-                                        className="desktop-video"
-                                    />
+                                    <video autoPlay muted loop>
+                                        <source
+                                            src={videoIN}
+                                            type="video/mp4"
+                                        />
+                                    </video>
                                 ) : (
                                     <img
                                         style={{ width: '100%' }}
