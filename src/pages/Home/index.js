@@ -325,7 +325,7 @@ function Home() {
                                 {window.innerWidth > 768 ? (
                                     <video autoPlay muted loop className="desktop-video">
                                         <source
-                                            src={startedVideo}
+                                            src="https://video.wixstatic.com/video/c794a2_553d56f3fda64a6bb01d8a7b545f8665/1080p/mp4/file.mp4"
                                             type="video/mp4"
                                         />
                                     </video>
