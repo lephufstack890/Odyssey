@@ -141,11 +141,6 @@ function SolutionChild() {
             <div className={cx('solution__intro')}>
                 <div className={cx('solution__intro-wraper')} style={{ position: 'absolute', maxWidth: '798px', left: '110px', bottom: ' 43px' }}>
                     <div className={cx('solution__intro__title')}>Innovative Software Solutions for a Better World</div>
-                    <div className={cx('solution__intro__description')}>
-                        We commit to integrate with your ecosystem and providing reliable and scalable solutions that
-                        help you achieve your business goals. Our team of experts constantly strives to stay ahead of
-                        the curve and bring you the latest technology solutions that drive innovation and progress.
-                    </div>
                     <div className={cx('solution__intro__description')}>{t('We commit to integrate')}</div>
                 </div>
             </div>
