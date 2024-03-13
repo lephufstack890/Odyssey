@@ -11,7 +11,7 @@ const resources = {
             solution: 'Solution',
             Misson: 'Misson',
             'Get started': 'Get started',
-            'About us': 'About us',
+            'About us': 'About Us',
             'Web and Mobile application': 'Web and Mobile application',
             'Data Analytics': 'Data Analytics',
             'Business Intelligence': 'Business Intelligence',

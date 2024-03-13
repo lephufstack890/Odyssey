@@ -51,7 +51,7 @@ function Footer() {
                     <div style={{ fontSize: '18px', color: 'rgb(138, 138, 138)', lineHeight: '36px' }}>0933621635</div>
 
                     <div style={{ fontSize: '18px', color: 'rgb(138, 138, 138)', lineHeight: '36px' }}>
-                        qkhanh2006@gmail.com
+                        odysseycompanyvn@gmail.com
                     </div>
 
                     <div

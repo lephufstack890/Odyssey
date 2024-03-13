@@ -142,7 +142,7 @@
 @media (max-width: 768px) {
     .solution {
         &__intro {
-            height: 338px;
+            height: 410px;
 
             &-wraper {
                 max-width: 100% !important;
@@ -150,19 +150,39 @@
                 text-align: center !important;
                 bottom: 0 !important;
                 position: absolute !important;
+                padding: 0px 16px;
             }
 
             &__title {
                 font-size: 25px;
                 line-height: 30px;
+                font-weight: 400;
             }
         }
 
         &__new {
-            flex-direction: column-reverse;
+            flex-direction: column;
+
+            &--three {
+                flex-direction: column !important;
+            }
+
+            &__video {
+                margin: 20px 0px;
+            }
 
             &__bottom {
-                width: 400px !important;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 653px;
+                margin-top: 0;
+                align-items: center;
+                flex-direction: column;
+
+                img {
+                    margin-right: 0 !important;
+                }
             }
 
             &__top {

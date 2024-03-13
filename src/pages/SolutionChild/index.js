@@ -140,16 +140,16 @@ function SolutionChild() {
         <div className={cx('solution')}>
             <div className={cx('solution__intro')}>
                 <div className={cx('solution__intro-wraper')} style={{ position: 'absolute', maxWidth: '798px', left: '110px', bottom: ' 43px' }}>
-                    <div className={cx('solution__intro__title')}>Innovative Software Solutions for a Better World</div>
-                    <div className={cx('solution__intro__description')}>{t('We commit to integrate')}</div>
+                    <div className={cx('solution__intro__title')}>{data[indexPage].title}</div>
+                    <div className={cx('solution__intro__description')}>{data[indexPage].content}</div>
                 </div>
             </div>
 
             <div className={cx('solution__new')}>
-                <div className={cx('solution__new__top')}>
+                {/* <div className={cx('solution__new__top')}>
                     <div className={cx('solution__new__top__text')}>{data[indexPage].title}</div>
                     <div className={cx('solution__new__top__text-two')}>{data[indexPage].content}</div>
-                </div>
+                </div> */}
 
                 <div className={cx('solution__new__video')}>
                     {/* <video autoPlay muted loop>

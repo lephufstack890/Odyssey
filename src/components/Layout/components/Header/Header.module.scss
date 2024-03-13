@@ -253,6 +253,26 @@
 }
 
 @media (max-width: 768px) {
+    .header {
+
+        &__started {
+            padding: 9px 13px;
+        }
+
+
+        &__logo {
+            margin-left: 20px;
+
+            &-img {
+                width: 55px;
+            }
+
+            &-text {
+                font-size: 19px !important;
+            }
+        }
+    }
+
     .mobile {
         display: none;
     }

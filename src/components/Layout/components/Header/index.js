@@ -92,9 +92,10 @@ function Header() {
                 <div className={cx('row', 'align-items-center')}>
                     <div className={cx('col-lg-3 col-4')}>
                         <NavLink to="/" style={{ textDecoration: 'none' }}>
-                            <div style={{ display: 'flex', alignItems: 'flex-end' }}>
-                                <img src={f1} alt="Logo" />
+                            <div className={cx('header__logo')} style={{ display: 'flex', alignItems: 'flex-end' }}>
+                                <img className={cx('header__logo-img')} src={f1} alt="Logo" />
                                 <span
+                                    className={cx('header__logo-text')}
                                     style={{
                                         fontSize: '25px',
                                         color: '#fff',

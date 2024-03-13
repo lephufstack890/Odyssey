@@ -115,8 +115,16 @@
 @media (max-width: 768px) {
     .solution {
         &__new {
+            padding: 16px 0 40px;
+
             &__top {
                 width: 100%;
+                margin-top: 78px;
+                padding: 0px 18px;
+
+                &__text {
+                    font-size: 35px !important;
+                }
 
                 &__text-two {
                     width: 100%;
@@ -145,6 +153,10 @@
 
         &__video {
             height: 100%;
+
+            img {
+                height: 350px;
+            }
         }
     }
 }
