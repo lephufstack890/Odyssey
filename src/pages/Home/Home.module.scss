@@ -52,6 +52,7 @@
 
         &-contentDestop {
             width: 100%;
+
             &-item {
                 width: 12.5%;
                 position: relative;
@@ -84,6 +85,7 @@
                     align-items: center;
                     width: 100%;
                     padding: 0 10px;
+
                     span {
                         font-size: 16px;
                         color: #fff;
@@ -485,6 +487,10 @@
 
         &__odyssey {
             &-content {
+                p {
+                    padding: 0px 15px;
+                }
+
                 h3 {
                     padding: 50px 10px;
                 }
