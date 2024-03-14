@@ -82,35 +82,35 @@ function Home() {
 
     const Menu = [
         {
-            title: 'Web & Application',
+            title: t('Web and Mobile application'),
             link: 'web-and-mobile-application',
         },
         {
-            title: 'Data Analytic',
+            title: t('Data Analytics'),
             link: 'data-analytics',
         },
         {
-            title: 'Business Intelligence',
+            title: t('Business Intelligence'),
             link: 'business-intelligence',
         },
         {
-            title: 'Artificial Intelligence',
+            title: t('Artificial Intelligence'),
             link: 'artificial-tntelligence',
         },
         {
-            title: 'Cloud Computing',
+            title: t('Cloud Computing'),
             link: 'cloud-computing',
         },
         {
-            title: 'Internet of things',
+            title: t('Internet of things'),
             link: 'internet-of-things',
         },
         {
-            title: 'Big Data',
+            title: t('Big Data'),
             link: 'big-data',
         },
         {
-            title: 'Blockchain',
+            title: t('Blockchain'),
             link: 'blockchain',
         },
     ];

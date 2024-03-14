@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import styles from './Footer.module.scss';
 import f1 from '~/assets/images/footer/f1.png';
 import fb from '~/assets/images/footer/fb.png';
-import twi from '~/assets/images/footer/twi.png';
+import zalo from '~/assets/images/footer/zalo.png';
 import inst from '~/assets/images/footer/in.png';
 import { useTranslation } from 'react-i18next';
 
@@ -166,7 +166,7 @@ function Footer() {
                                 marginRight: '10px',
                             }}
                         >
-                            <img src={twi} alt="Twitter" />
+                            <img src={zalo} alt="Zalo" />
                         </Link>
                     </div>
                 </div>

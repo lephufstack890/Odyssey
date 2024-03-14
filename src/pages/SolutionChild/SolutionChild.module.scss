@@ -118,14 +118,24 @@
 
                 img {
                     max-width: 120px;
+                    height: 70px;
 
-                    /* 3 images per row with space between */
-                    margin-bottom: 30px;
-                    margin-right: 50px;
-                    /* You can adjust the width percentage and margin as needed */
+                    margin-bottom: 9px;
                 }
 
                 // CSS
+                .image-container {
+                    text-align: center;
+                    width: 200px;
+                    margin-bottom: 22px;
+
+                    p {
+                        color: #fff;
+                        font-size: 27px;
+                        font-weight: bold;
+                    }
+                }
+
                 .image-container img {
                     transition: filter 0.3s;
                     /* Thêm hiệu ứng chuyển đổi */
