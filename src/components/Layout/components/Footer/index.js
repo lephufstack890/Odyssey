@@ -76,7 +76,7 @@ function Footer() {
                             <Link to="/solution"> {t('solution')}</Link>
                         </li>
                         <li className={cx('footer__layout__two__item')}>
-                            <Link to="/about"> {t('About us')}</Link>
+                            <Link to="/about-us"> {t('About us')}</Link>
                         </li>
                         <li className={cx('footer__layout__two__item')}>
                             <Link to="/contact"> {t('contact')}</Link>
