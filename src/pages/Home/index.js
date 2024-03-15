@@ -206,7 +206,7 @@ function Home() {
                         <div>
                             {Menu?.map((item, index) => (
                                 <div className={cx('row')} onClick={() => handleMobileSliderToggle(index)} key={index}>
-                                    <div className={cx('col-12', 'pb-4', 'position-relative')} style={{ height: indexMenu === index ? '100%' : '98px', transition: indexMenu === index ? 'height 0.5s linear' : 'none' }}
+                                    <div className={cx('col-12', 'pb-4', 'position-relative')} style={{ height: indexMenu === index ? '250px' : '98px', transitionDuration: indexMenu === index ? '0.3s' : '0.3s' }}
                                         onClick={() => setIndexMenu(index)}>
                                         <>
                                             <img
