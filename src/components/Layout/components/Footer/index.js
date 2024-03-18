@@ -166,7 +166,7 @@ function Footer() {
                                 marginRight: '10px',
                             }}
                         >
-                            <img src={zalo} alt="Zalo" />
+                            <img style={{ borderRadius: '50%' }} src={zalo} alt="Zalo" />
                         </Link>
                     </div>
                 </div>
