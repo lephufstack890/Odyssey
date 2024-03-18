@@ -7,6 +7,14 @@
     width: 100%;
     z-index: 100;
     transition: top 0.3s;
+
+    &__logo {
+
+        &-img {
+            width: 54px;
+            height: 45px;
+        }
+    }
 }
 
 .header--hidden {

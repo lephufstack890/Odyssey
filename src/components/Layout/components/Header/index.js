@@ -88,7 +88,7 @@ function Header() {
 
     return (
         <header className={cx('header', { 'header--hidden': !visible })}>
-            <div className={cx('container')} style={{ padding: '15px 0' }}>
+            <div className={cx('container')} style={{ padding: '25px 0' }}>
                 <div className={cx('row', 'align-items-center')}>
                     <div className={cx('col-lg-3 col-4')}>
                         <NavLink to="/" style={{ textDecoration: 'none' }}>
@@ -97,7 +97,7 @@ function Header() {
                                 <span
                                     className={cx('header__logo-text')}
                                     style={{
-                                        fontSize: '25px',
+                                        fontSize: '23px',
                                         color: '#fff',
                                         fontWeight: '500',
                                         marginLeft: '10px',

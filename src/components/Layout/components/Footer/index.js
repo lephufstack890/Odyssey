@@ -35,11 +35,11 @@ function Footer() {
                             <div
                                 style={{
                                     marginTop: '15px',
-                                    textAlign: 'center',
                                     color: '#fff',
                                     fontSize: '16px',
                                     marginBottom: '17px',
                                     width: '204px',
+                                    paddingLeft: '13px'
                                 }}
                                 className={cx('footer__layout__one-change')}
                             >
@@ -118,7 +118,7 @@ function Footer() {
                                 style={{
                                     width: '283px',
                                     height: '55px',
-                                    marginBottom: '25px',
+                                    marginBottom: '15px',
                                     backgroundColor: 'transparent',
                                     borderRadius: '5px',
                                     padding: '0 10px',

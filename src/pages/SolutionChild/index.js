@@ -25,7 +25,7 @@ function SolutionChild() {
                 'https://static.wixstatic.com/media/c794a2_d58ad571820f4c0abfc64f790842f6f6~mv2.png/v1/crop/x_0,y_0,w_399,h_395/fill/w_87,h_86,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c794a2_d58ad571820f4c0abfc64f790842f6f6~mv2.png',
                 'https://static.wixstatic.com/media/c794a2_8b8757ee50e147eba782d4f561d4d4df~mv2.png/v1/fill/w_99,h_86,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c794a2_8b8757ee50e147eba782d4f561d4d4df~mv2.png',
                 'https://static.wixstatic.com/media/c794a2_b9ebe2c757094f4587031b258320c88b~mv2.png/v1/crop/x_105,y_145,w_282,h_247/fill/w_99,h_86,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c794a2_b9ebe2c757094f4587031b258320c88b~mv2.png',
-                'https://static.wixstatic.com/media/c794a2_7b7415371f264f1e90df1c229a241153~mv2.png/v1/crop/x_14,y_0,w_514,h_188/fill/w_152,h_55,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Django_logo-01.png',
+                require('~/assets/images/solution/django.png'),
             ],
             name: [
                 'Angular',
@@ -44,9 +44,9 @@ function SolutionChild() {
             poster: 'https://static.wixstatic.com/media/11062b_91f1ae429baf467eba9f9ba98b5a7fc1f000.jpg/v1/fill/w_761,h_532,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/11062b_91f1ae429baf467eba9f9ba98b5a7fc1f000.jpg',
             content: t('Our data science team'),
             images: [
-                'https://static.wixstatic.com/media/c794a2_3ec5722787ef4742ab248bc30efd1f6c~mv2.png/v1/fill/w_127,h_76,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Amazon_Web_Services_Logo.png',
-                'https://static.wixstatic.com/media/c794a2_1e3cb8f945c54ed682ae5955a4381a1f~mv2.png/v1/crop/x_0,y_0,w_363,h_367/fill/w_89,h_90,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Horizontal_Logo_1-color_White_RapidMiner.png',
-                'https://static.wixstatic.com/media/c794a2_a2d4eaadbadb420ea31510326a773160~mv2.png/v1/fill/w_158,h_82,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Apache_Spark_logo.png',
+                require('~/assets/images/solution/aws.png'),
+                require('~/assets/images/solution/horizontal.png'),
+                require('~/assets/images/solution/spark.png'),
                 'https://static.wixstatic.com/media/c794a2_9e070f0f2fe34ca9a3ea420301e88a33~mv2.png/v1/crop/x_39,y_0,w_1241,h_332/fill/w_217,h_55,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1280px-Hadoop_logo_svg.png',
                 'https://static.wixstatic.com/media/c794a2_a6f9b0c6611244bb83ad86baec33ceaa~mv2.png/v1/crop/x_0,y_0,w_246,h_198/fill/w_107,h_86,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Google_Cloud_logo_svg.png',
                 'https://static.wixstatic.com/media/c794a2_7bd44d3b64bc4a648049bf8d1d6cfd14~mv2.png/v1/fill/w_206,h_86,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SAS_Institute.png',
@@ -72,7 +72,7 @@ function SolutionChild() {
                 'https://static.wixstatic.com/media/c794a2_b2e12532853a422d8a9e5f17cf80db44~mv2.png/v1/fill/w_89,h_90,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1024px-New_Power_BI_Logo_svg.png',
                 'https://static.wixstatic.com/media/c794a2_05c3c1f6c2824a189a4725a85a41d4df~mv2.png/v1/fill/w_152,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SAP-logo.png',
                 'https://static.wixstatic.com/media/c794a2_767dc6eaa7c14e5b933582dac96ccbdd~mv2.png/v1/fill/w_186,h_90,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/pngwing_com%20(3).png',
-                'https://static.wixstatic.com/media/c794a2_25ca334325b94f4a8645f6b9355f909c~mv2.png/v1/fill/w_261,h_55,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/TABlogo_wht.png',
+                require('~/assets/images/solution/TABlogo.png'),
             ],
             name: [
                 'Power BI',
@@ -90,8 +90,8 @@ function SolutionChild() {
             images: [
                 'https://static.wixstatic.com/media/c794a2_82c5b13834d840ecbbaa256d2ed035f2~mv2.png/v1/crop/x_0,y_0,w_547,h_611/fill/w_105,h_118,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/google-ai-seeklogo.png',
                 'https://static.wixstatic.com/media/c794a2_f10a02227fd24a3f8aa48e74721ba7fb~mv2.png/v1/crop/x_0,y_0,w_390,h_439/fill/w_100,h_113,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/lockup.png',
-                'https://static.wixstatic.com/media/c794a2_40361a65f27347daa65a0f0ac3b29fef~mv2.png/v1/crop/x_0,y_0,w_674,h_667/fill/w_104,h_103,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/OpenAI_Logo.png',
-                'https://static.wixstatic.com/media/c794a2_3ec5722787ef4742ab248bc30efd1f6c~mv2.png/v1/crop/x_16,y_0,w_611,h_375/fill/w_146,h_90,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Amazon_Web_Services_Logo.png',
+                require('~/assets/images/solution/openAI.png'),
+                require('~/assets/images/solution/aws.png'),
                 'https://static.wixstatic.com/media/c794a2_28b7e902ddd54c2aa432ecc7918a209a~mv2.png/v1/fill/w_268,h_63,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IBM%20Cloud.png',
                 'https://static.wixstatic.com/media/c794a2_82385deba5d144b6bc46f994602657b4~mv2.png/v1/crop/x_314,y_572,w_2387,h_866/fill/w_190,h_69,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Microsoft_Azure-Logo_wine.png',
             ],
@@ -115,7 +115,7 @@ function SolutionChild() {
                 'https://static.wixstatic.com/media/c794a2_767dc6eaa7c14e5b933582dac96ccbdd~mv2.png/v1/crop/x_0,y_216,w_1024,h_387/fill/w_152,h_55,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/pngwing_com%20(3).png',
                 'https://static.wixstatic.com/media/c794a2_51364d5aed944cfa9cc248a284b85712~mv2.png/v1/crop/x_7,y_0,w_884,h_113/fill/w_250,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Alibaba-Cloud.png',
                 'https://static.wixstatic.com/media/c794a2_8300f35d07b84b8faf1f33ff13356bdc~mv2.png/v1/crop/x_0,y_0,w_425,h_299/fill/w_117,h_82,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c794a2_8300f35d07b84b8faf1f33ff13356bdc~mv2.png',
-                'https://static.wixstatic.com/media/c794a2_3ec5722787ef4742ab248bc30efd1f6c~mv2.png/v1/crop/x_16,y_0,w_611,h_375/fill/w_117,h_72,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Amazon_Web_Services_Logo.png',
+                require('~/assets/images/solution/aws.png'),
                 'https://static.wixstatic.com/media/c794a2_28b7e902ddd54c2aa432ecc7918a209a~mv2.png/v1/fill/w_214,h_50,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IBM%20Cloud.png',
                 'https://static.wixstatic.com/media/c794a2_82385deba5d144b6bc46f994602657b4~mv2.png/v1/crop/x_314,y_572,w_2387,h_866/fill/w_152,h_55,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Microsoft_Azure-Logo_wine.png',
             ],
@@ -137,8 +137,8 @@ function SolutionChild() {
             content: t('We solve big data'),
             images: [
                 'https://static.wixstatic.com/media/c794a2_a199d6d1269044009e26b43ddeb3b82f~mv2.png/v1/fill/w_127,h_76,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/hortonworks-icon.png',
-                'https://static.wixstatic.com/media/c794a2_38bf03b884e84abeb92423b5a64e00bd~mv2.png/v1/fill/w_206,h_40,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Vertica.png',
-                'https://static.wixstatic.com/media/c794a2_a2d4eaadbadb420ea31510326a773160~mv2.png/v1/fill/w_158,h_82,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Apache_Spark_logo.png',
+                require('~/assets/images/solution/Vertica.png'),
+                require('~/assets/images/solution/aws.png'),
                 'https://static.wixstatic.com/media/c794a2_9e070f0f2fe34ca9a3ea420301e88a33~mv2.png/v1/crop/x_39,y_0,w_1241,h_332/fill/w_217,h_55,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1280px-Hadoop_logo_svg.png',
             ],
             name: [
@@ -254,7 +254,7 @@ function SolutionChild() {
                         return (
                             <div className={cx('image-container')} key={index}>
                                 <img src={item} alt={`Image ${index}`} />
-                                <p>{data[indexPage].name[index]}</p>
+                                {/* <p>{data[indexPage].name[index]}</p> */}
                             </div>
                         );
                     })}
