@@ -143,7 +143,7 @@ function Footer() {
                     >
                         {t('Follow Us')}
                     </div>
-                    <div>
+                    <div style={{ transform: 'translateY(-17px)' }}>
                         <Link
                             to="#"
                             style={{
