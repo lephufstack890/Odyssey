@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import styles from './Footer.module.scss';
@@ -8,10 +8,59 @@ import zalo from '~/assets/images/footer/zalo.png';
 import inst from '~/assets/images/footer/in.png';
 import { useTranslation } from 'react-i18next';
 
+import axios from 'axios';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+
 const cx = classNames.bind(styles);
 
 function Footer() {
     const { i18n, t } = useTranslation();
+    const [formData, setFormData] = useState({
+        email: '',
+    });
+
+    const [isSending, setIsSending] = useState(false);
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        // Kiểm tra validation
+        if (!formData.email) {
+            alert('Vui lòng điền đầy đủ thông tin.');
+            return;
+        }
+
+        // Kiểm tra định dạng email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            alert('Email không hợp lệ.');
+            return;
+        }
+
+        setIsSending(true);
+        try {
+            // Gửi dữ liệu biểu mẫu qua email
+            const data = await axios.post('http://14.225.254.135:8000/api/subcribe', formData);
+            // Đặt trạng thái hoặc thực hiện các hành động khác sau khi gửi email thành công
+            if (data.status === 200) {
+                alert('Gửi mail thành công!')
+                setFormData({
+                    email: '',
+                });
+            }
+        } catch (error) {
+            console.error('Error sending email:', error);
+        } finally {
+            setIsSending(false); // Kết thúc gửi
+        }
+    };
     return (
         <footer className={cx('footer')}>
             <div className={cx('row')}>
@@ -94,7 +143,7 @@ function Footer() {
                     >
                         {t('Stay Up to Date with Odyssey')}
                     </div>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div
                             style={{
                                 display: 'flex',
@@ -127,8 +176,11 @@ function Footer() {
                                     outline: 'none',
                                     border: '1px solid rgb(138, 138, 138)',
                                 }}
+                                name='email' value={formData.email} onChange={handleChange}
                             />
-                            <button type="submit">Subscribe</button>
+                            <button type="submit" disabled={isSending}>
+                                {isSending ? <AiOutlineLoading3Quarters className={cx('spinner')} /> : 'Subscribe'}
+                            </button>
                         </div>
                     </form>
                 </div>
