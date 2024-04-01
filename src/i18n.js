@@ -27,6 +27,7 @@ const resources = {
             'Cloud Computing': 'Cloud Computing',
             'Big Data': 'Big Data',
             'Internet of things': 'Internet of things',
+            'Email sent successfully': 'Email sent successfully!',
             Blockchain: 'Blockchain',
             'Transform Your World with Innovative Technology': 'Transform Your World with Innovative Technology',
             'We believe that technology':
@@ -122,6 +123,7 @@ const resources = {
             'Cloud Computing': 'Điện toán đám mây',
             'Big Data': 'Dữ liệu lớn',
             'Internet of things': 'Internet vạn vật',
+            'Email sent successfully': 'Gửi mail thành công!',
             Blockchain: 'Blockchain',
             'Get started': 'Bắt đầu',
             'Transform Your World with Innovative Technology': 'Thay đổi thế giới của bạn bằng đổi mới công nghệ',

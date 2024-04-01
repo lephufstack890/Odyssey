@@ -50,7 +50,7 @@ function Footer() {
             const data = await axios.post('http://14.225.254.135:8000/api/subcribe', formData);
             // Đặt trạng thái hoặc thực hiện các hành động khác sau khi gửi email thành công
             if (data.status === 200) {
-                alert('Gửi mail thành công!')
+                alert(t('Email sent successfully'))
                 setFormData({
                     email: '',
                 });
