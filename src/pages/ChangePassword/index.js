@@ -44,7 +44,7 @@ function ChangePassword() {
                 alert('Đổi mật khẩu thành công');
             }
         } catch (error) {
-            console.error('Error sending email:', error);
+            alert(`Error sending email: ${error.response.data.message}`);
         }
     };
 
