@@ -5,6 +5,10 @@ import Solution from '~/pages/Solution';
 import Contact from '~/pages/Contact';
 import AboutUs from '~/pages/AboutUs';
 import SolutionChild from '~/pages/SolutionChild';
+import Login from '~/pages/Login';
+import ListContactAdmin from '~/pages/ListContactAdmin';
+import ChangePassword from '~/pages/ChangePassword';
+import ListSubscribeAdmin from '~/pages/ListSubscribeAdmin';
 
 // Public routes
 const publicRoutes = [
@@ -21,8 +25,13 @@ const publicRoutes = [
     { path: '/big-data', component: SolutionChild },
     { path: '/internet-of-things', component: SolutionChild },
     { path: '/blockchain', component: SolutionChild },
+    { path: '/login', component: Login },
+    // { path: '/change-password', component: ChangePassword },
 ];
 
-const privateRoutes = [];
+const privateRoutes = [
+    { path: '/list-contact-admin', component: ListContactAdmin },
+    { path: '/list-contact-subscribe', component: ListSubscribeAdmin },
+];
 
 export { publicRoutes, privateRoutes };
