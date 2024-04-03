@@ -82,3 +82,17 @@
         }
     }
 }
+
+@media screen and (max-width: 767px) {
+    .admin {
+        &__main {
+            display: grid;
+            grid-template-columns: none;
+            grid-template-rows: 200px auto;
+        }
+
+        &__content {
+            overflow: auto;
+        }
+    }
+}
