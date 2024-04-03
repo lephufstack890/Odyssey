@@ -26,12 +26,12 @@ const publicRoutes = [
     { path: '/internet-of-things', component: SolutionChild },
     { path: '/blockchain', component: SolutionChild },
     { path: '/login', component: Login },
-    // { path: '/change-password', component: ChangePassword },
 ];
 
 const privateRoutes = [
     { path: '/list-contact-admin', component: ListContactAdmin },
     { path: '/list-contact-subscribe', component: ListSubscribeAdmin },
+    { path: '/change-password', component: ChangePassword },
 ];
 
 export { publicRoutes, privateRoutes };

@@ -21,6 +21,7 @@ function AdminLayout({ children }) {
             .then((response) => {
                 setToken('');
                 localStorage.clear();
+                window.location.reload();
             })
             .catch((error) => {
                 // Xử lý lỗi
@@ -80,6 +81,10 @@ function AdminLayout({ children }) {
 
                     <div className={cx('admin__item')}>
                         <NavLink to="/list-contact-subscribe">Danh sách subscribe</NavLink>
+                    </div>
+
+                    <div className={cx('admin__item')}>
+                        <NavLink to="/change-password">Thay đổi mật khẩu</NavLink>
                     </div>
                 </div>
 
