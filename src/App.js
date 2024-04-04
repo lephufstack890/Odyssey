@@ -22,7 +22,7 @@ function App() {
         <Router>
             <div className="App" style={{ overflowX: 'hidden' }}>
                 <Routes>
-                    {
+                    {!isLoggedIn &&
                         publicRoutes.map((route, index) => {
                             const Page = route.component;
                             let Layout = DefaultLayout;
@@ -64,7 +64,7 @@ function App() {
                             return <Route path={route.path} element={<Navigate to="/login" />} />;
                         })}
 
-                    {
+                    {isLoggedIn &&
                         publicRoutes.map((route, index) => {
                             return (
                                 <Route path={route.path} element={<Navigate to="/list-contact-admin" key={index} />} />
