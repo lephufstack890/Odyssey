@@ -28,6 +28,7 @@
 
 .header__list-menu--item {
     padding: 10px 10px;
+    font-size: 16px;
     color: rgba(138, 138, 138, 1);
     text-decoration: none;
 }
@@ -59,7 +60,8 @@
 }
 
 .header__started {
-    border: 1px solid #fff;
+    border: 1px solid rgba(253, 98, 98, 1);
+    background-color: rgba(253, 98, 98, 1);
     color: #fff;
     padding: 10px 13px;
     border-radius: 4px;
@@ -95,7 +97,13 @@
 
     span:hover {
         text-decoration: underline;
-        color: #8a8a8a;
+        color: #000f;
+        background-color: #ffff;
+        border: none;
+    }
+    .enable_true{
+        color: #000f;
+        background-color: #ffff;
         border: none;
     }
 }

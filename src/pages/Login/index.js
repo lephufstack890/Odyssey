@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import axios from 'axios';
 import GlobalStateContext from '~/GlobalStateContext ';
-
+import API_URL from '~/config';
 const cx = classNames.bind(styles);
 
 function Login() {
@@ -40,7 +40,7 @@ function Login() {
 
         try {
             // Gửi dữ liệu biểu mẫu qua email
-            const data = await axios.post('http://14.225.254.135:8000/api/login', formData);
+            const data = await axios.post(`${API_URL}/login`, formData);
             // Đặt trạng thái hoặc thực hiện các hành động khác sau khi gửi email thành công
             if (data.status === 200) {
                 localStorage.setItem('access_token', data.data.token);
@@ -81,6 +81,7 @@ function Login() {
 
                     <div className={cx('login__form-submit')}>
                         <button>Đăng Nhập</button>
+                        <Link to="/forgot-password">Quên mật khẩu?</Link>
                     </div>
                 </form>
             </div>

@@ -38,11 +38,14 @@
 
             p {
                 position: absolute;
+                width: 220px;
+                height: auto;
                 top: 50%;
+                left:  20%;
                 transform: translateY(-50%);
                 color: rgba(138, 138, 138, 1);
-                padding: 0px 140px;
-                text-align: justify;
+                // padding: 0px 125px;
+                text-align: start;
             }
         }
 
@@ -147,9 +150,7 @@
                 height: 325px;
 
                 p {
-                    padding: 0px 56px;
-                    text-align: justify;
-                    line-height: 35px;
+                    text-align: start;
                 }
             }
 

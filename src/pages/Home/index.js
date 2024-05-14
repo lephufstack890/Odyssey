@@ -19,8 +19,7 @@ function Home() {
     const sliderRef = useRef(null);
     const [indexMenu, setIndexMenu] = useState(0);
 
-    // const videoIN = 'http://localhost:3000/started.mp4'
-    const videoIN = 'http://14.225.254.135:3000/started.mp4'
+    const videoIN = './Sequence4.mp4'
 
     const handleMobileSliderToggle = (index) => {
         setMobileSliderOpen(index === mobileSliderOpen ? null : index);
@@ -148,7 +147,7 @@ function Home() {
                             />
                         </video>
                     ) : (
-                        <img
+                        <img style={{ height: '500px' }}
                             src="https://static.wixstatic.com/media/c794a2_553d56f3fda64a6bb01d8a7b545f8665f000.jpg/v1/fill/w_1519,h_820,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/c794a2_553d56f3fda64a6bb01d8a7b545f8665f000.jpg"
                             alt="Mobile Image"
                         />
@@ -170,7 +169,7 @@ function Home() {
                 <div className={cx('main-page__solutions')}>
                     <div className={cx('main-page__solutions-top')}>
                         <span> {t('Our Solutions')}</span>
-                        <span>{t('Cooperate to innovate your company')}</span>
+                        <span >{t('Cooperate to innovate your company')}</span>
                         <span>{t('Explore how you can digitalize your business with Odyssey')}</span>
                     </div>
                     <div className={cx('main-page__solutions-content')}>
@@ -228,13 +227,23 @@ function Home() {
                             ))}
                         </div>
                     </div>
+
                 </div>
+
+                <div className={cx('main-page__service-title')} style={{ background: '#141416', paddingTop: '100px' }}>
+                    <h2 className='text-center' style={{ marginBottom: 0 }}>Ours Services</h2>
+                </div>
+
+                <div className={cx('main-page__service')} style={{ background: '#141416', paddingTop: '100px' }}>
+                    <h2 className='text-center' style={{ marginBottom: 0 }}>Ours Services</h2>
+                </div>
+
 
                 <div style={{ background: '#141416', paddingTop: '100px' }}>
                     <div className={cx('container')}>
                         <div className={cx('row')}>
                             <div className={cx('col-lg-5', 'col-md-6', 'col-12', 'main-page__missons-left')}>
-                                <h3>{t('Our Mission: Making the world a better place')}</h3>
+                                <h3 className={cx(i18n.language)}>{t('Our Mission: Making the world a better place')}</h3>
                                 <p>{t('We apply the modern software')}</p>
                                 <div style={{ margin: '10px 120px' }}>
                                     <Link to={'/mission'}>{t('Learn more')}</Link>
@@ -311,7 +320,7 @@ function Home() {
                         </div>
                         <div className={cx('d-flex', 'flex-wrap')}>
                             <div
-                                className={cx('main-page__odyssey-actions-startedLeft')}
+                                className={cx(`main-page__odyssey-actions-startedLeft-${i18n.language}`,)}
                                 style={{ border: '1px solid rgb(138, 138, 138)' }}
                             >
                                 {window.innerWidth > 768 ? (

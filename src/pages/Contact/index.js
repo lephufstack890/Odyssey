@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import axios from 'axios';
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import API_URL from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -55,7 +56,7 @@ function Contact() {
         setIsSending(true);
         try {
             // Gửi dữ liệu biểu mẫu qua email
-            const data = await axios.post('http://14.225.254.135:8000/api/contact', formData);
+            const data = await axios.post(`${API_URL}/contact`, formData);
             // Đặt trạng thái hoặc thực hiện các hành động khác sau khi gửi email thành công
             if (data.status === 200) {
                 alert(t('Email sent successfully'))

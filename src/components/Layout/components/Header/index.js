@@ -143,8 +143,9 @@ function Header() {
                     <div className={cx('col-lg-3 col-8')}>
                         <div className={cx('d-flex', 'align-items-center', 'justify-content-end')}>
                             <div className={cx('header__language')}>
-                                <span onClick={() => changeLanguage('en')}>EN</span>
-                                <span onClick={() => changeLanguage('vn')}>VN</span>
+                                
+                                <span className={cx(`enable_${i18n.language == 'en'}`)}  onClick={() => changeLanguage('en')}>EN</span>
+                                <span className={cx(`enable_${i18n.language == 'vn'}`)} onClick={() => changeLanguage('vn')}>VN</span>
                             </div>
                             <Link className={cx('header__started')} to={'/contact'}>
                                 <span>{t('Get started')}</span>
@@ -177,8 +178,8 @@ function Header() {
                     </div>
                     <div className={cx('mobile-menu__content')}>
                         <div className={cx('header__language', 'header__language--mobile')}>
-                            <span onClick={() => changeLanguage('en')}>EN</span>
-                            <span onClick={() => changeLanguage('vn')}>VN</span>
+                        <span className={cx(`enable_${i18n.language == 'en'}`)}  onClick={() => changeLanguage('en')}>EN</span>
+                        <span className={cx(`enable_${i18n.language == 'vn'}`)} onClick={() => changeLanguage('vn')}>VN</span>
                         </div>
 
                         <NavLink className={cx('mobile-menu__item')} to="/" onClick={handleMenuItemClick}>

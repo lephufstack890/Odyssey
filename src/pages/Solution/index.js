@@ -184,8 +184,7 @@ function Solution() {
                                     </div>
 
                                     <div className={cx('image-item', 'image-item--h270')}>
-                                        <img src="https://static.wixstatic.com/media/c794a2_90fa6a18e5d847aa9ce92489eea8e503~mv2.jpg/v1/fill/w_214,h_270,fp_0.35_0.51,q_90/c794a2_90fa6a18e5d847aa9ce92489eea8e503~mv2.webp" />
-
+                                        <img src="./IOT.jpg"/>
                                         <div className={cx('overlay')}>
                                             <div>
                                                 <h2>{t('Internet of things')}</h2>

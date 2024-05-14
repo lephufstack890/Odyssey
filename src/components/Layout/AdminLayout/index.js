@@ -5,6 +5,7 @@ import f1 from '~/assets/images/footer/f1.png';
 import axios from 'axios';
 import GlobalStateContext from '~/GlobalStateContext ';
 import { useContext } from 'react';
+import API_URL from '~/config';
 const cx = classNames.bind(styles);
 
 function AdminLayout({ children }) {
@@ -13,7 +14,7 @@ function AdminLayout({ children }) {
 
     const onLogout = () => {
         axios
-            .post('http://14.225.254.135:8000/api/logout', null, {
+            .post(`${API_URL}/logout`, null, {
                 headers: {
                     Authorization: `Bearer ${token || accessToken}`,
                 },
@@ -74,7 +75,9 @@ function AdminLayout({ children }) {
             </div>
 
             <div className={cx('admin__main')}>
+                
                 <div className={cx('admin__sidebar')}>
+                    
                     <div className={cx('admin__item')}>
                         <NavLink to="/list-contact-admin">Danh sách contact</NavLink>
                     </div>
@@ -86,6 +89,11 @@ function AdminLayout({ children }) {
                     <div className={cx('admin__item')}>
                         <NavLink to="/change-password">Thay đổi mật khẩu</NavLink>
                     </div>
+
+                    <div className={cx('admin__item')}>
+                        <NavLink to="/mail-config">Thay thiết lập Mail</NavLink>
+                    </div>
+                    
                 </div>
 
                 <div className={cx('admin__content')}>{children}</div>

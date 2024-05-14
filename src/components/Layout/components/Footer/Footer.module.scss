@@ -15,8 +15,8 @@
             }
 
             &__item {
-                width: 121px;
-                height: 55px;
+                width: 150px;
+                height: 25px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -25,11 +25,7 @@
                 border-radius: 8px;
 
                 &:hover {
-                    background-color: #889ce7;
-
-                    a {
-                        color: #141416;
-                    }
+                    background-color: #ffffff;
                 }
 
                 a {
@@ -59,7 +55,6 @@
 
                 &:hover {
                     background-color: #889ce7;
-                    color: #141416;
                     border-color: #889ce7;
                 }
             }
@@ -108,13 +103,14 @@
             }
 
             &__two {
+                min-height: 200px;
 
                 &__item {
                     padding: 0;
                     width: 100%;
 
                     a {
-                        width: 121px;
+                        width: 150px;
                         height: 55px;
                         display: flex;
                         align-items: center;
@@ -122,6 +118,7 @@
                         margin-bottom: 10px;
                         transition: all 0.1s linear;
                         border-radius: 8px;
+                        color: rgb(138, 138, 138);
                     }
 
                     &:hover {
@@ -129,11 +126,7 @@
                     }
 
                     a:hover {
-                        background-color: #889ce7;
-
-                        a {
-                            color: #141416;
-                        }
+                        background-color: #ffffff;
                     }
                 }
 

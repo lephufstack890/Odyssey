@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 
 import axios from 'axios';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import API_URL from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -47,7 +48,7 @@ function Footer() {
         setIsSending(true);
         try {
             // Gửi dữ liệu biểu mẫu qua email
-            const data = await axios.post('http://14.225.254.135:8000/api/subcribe', formData);
+            const data = await axios.post(`${API_URL}/subcribe`, formData);
             // Đặt trạng thái hoặc thực hiện các hành động khác sau khi gửi email thành công
             if (data.status === 200) {
                 alert(t('Email sent successfully'))
@@ -97,10 +98,10 @@ function Footer() {
                         </Link>
                     </div>
 
-                    <div style={{ fontSize: '18px', color: 'rgb(138, 138, 138)', lineHeight: '36px' }}>0933621635</div>
+                    <div style={{ fontSize: '18px', color: 'rgb(138, 138, 138)', lineHeight: '36px' }}>+84933621635</div>
 
                     <div style={{ fontSize: '18px', color: 'rgb(138, 138, 138)', lineHeight: '36px' }}>
-                        odysseycompanyvn@gmail.com
+                            support@odyssey.net.vn
                     </div>
 
                     <div
@@ -125,10 +126,16 @@ function Footer() {
                             <Link to="/solution"> {t('solution')}</Link>
                         </li>
                         <li className={cx('footer__layout__two__item')}>
+                            <Link to="/mission"> {t('Misson')}</Link>
+                        </li>
+                        <li className={cx('footer__layout__two__item')}>
                             <Link to="/about-us"> {t('About us')}</Link>
                         </li>
                         <li className={cx('footer__layout__two__item')}>
                             <Link to="/contact"> {t('contact')}</Link>
+                        </li>
+                        <li className={cx('footer__layout__two__item')}>
+                            <Link to="/profile"> {t('profile')}</Link>
                         </li>
                     </ul>
                 </div>
@@ -190,6 +197,7 @@ function Footer() {
                             fontSize: '18px',
                             color: 'rgb(138, 138, 138)',
                             marginBottom: '25px',
+                            marginLeft: '10px',
                             lineHeight: '10px',
                         }}
                     >

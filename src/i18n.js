@@ -33,7 +33,7 @@ const resources = {
             'We believe that technology':
                 "We believe that technology can make the world a better place. That's why we commit to develop innovative, effective and reliable software solutions that help you transform your dream into reality.",
             'Learn more': 'Learn More',
-            address: '163/22 Huỳnh Văn Bánh, Ward 11, Phú Nhuận District, Hồ Chí Minh City',
+            address: '163/22 Huynh Van Banh, Ward 11, Phu Nhuan District, Ho Chi Minh City, Vietnam',
             '2021 Odyssey': '2021 Odyssey. All rights reserved.',
             contact: 'Contact us',
             'Stay Up to Date with Odyssey': 'Stay Up to Date with Odyssey',
@@ -100,11 +100,13 @@ const resources = {
             Phone: 'Phone',
             'Job Title': 'Job Title',
             'Your Messengers': 'Your Messengers',
+            profile: 'Odyssey profile',
         },
     },
     vn: {
         translation: {
             home: 'Trang chủ',
+            profile: 'Hồ sơ Odyssey',
             solution: 'Giải pháp',
             Misson: 'Sứ mệnh',
             'About us': 'Chúng tôi',
@@ -130,7 +132,7 @@ const resources = {
             'We believe that technology':
                 'Chúng tôi tin rằng công nghệ có thể làm thế giới trở nên tốt đẹp hơn. Đó là lý do tại sao chúng tôi cam kết phát triển các giải pháp phần mềm mới hiệu quả và đáng tin cậy để giúp bạn biến ước mơ của mình thành hiện thực.',
             'Learn more': 'Xem Thêm',
-            address: '163/22 Huỳnh Văn Bánh, Phường 11, Quận Phú Nhuận, Thành phố Hồ Chí Minh ',
+            address: '163/22 Huỳnh Văn Bánh, Phường 11, Quận Phú Nhuận, Thành phố Hồ Chí Minh, Việt Nam',
             '2021 Odyssey': '2021 Odyssey. Đã đăng ký bản quyền.',
             contact: 'Liên hệ',
             'Stay Up to Date with Odyssey': 'Cập Nhật Thông Tin với Odyssey',
@@ -207,9 +209,6 @@ i18n.use(initReactI18next) // passes i18n down to react-i18next
     .init({
         resources,
         lng: 'en', // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
-        // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
-        // if you're using a language detector, do not define the lng option
-
         interpolation: {
             escapeValue: false, // react already safes from xss
         },

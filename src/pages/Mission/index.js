@@ -34,11 +34,11 @@ function Mission() {
             <div className={cx('Mission__need')}>
                 <div className={cx('container')}>
                     <div className={cx('row')}>
-                        <div className={cx('Mission__need-left', 'col-lg-5', 'col-md-5', 'col-sm-12')}>
+                        <div className={cx('Mission__need-left', 'col-lg-5', 'col-md-6', 'col-sm-12')}>
                             <img style={{ width: '100%' }} src={m1} alt="mission" />
                             <p>{t('We understand what you need')}</p>
                         </div>
-                        <div className={cx('Mission__need-right', 'col-lg-7', 'col-md-5', 'col-sm-12')}>
+                        <div className={cx('Mission__need-right', 'col-lg-7', 'col-md-6', 'col-sm-12')}>
                             <p>{t('We understand that every business')}</p>
                         </div>
                     </div>

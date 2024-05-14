@@ -4,6 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import GlobalStateContext from '~/GlobalStateContext ';
+import API_URL from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -19,7 +20,7 @@ function ListSubscribeAdmin() {
 
     const fetchListSubscirbe = () => {
         axios
-            .get('http://14.225.254.135:8000/api/admin/subscribe', {
+            .get(`${API_URL}/admin/subscribe`, {
                 headers: {
                     Authorization: `Bearer ${token || baseToken}`,
                 },
@@ -40,7 +41,7 @@ function ListSubscribeAdmin() {
         }
 
         axios
-            .delete(`http://14.225.254.135:8000/api/admin/subscribe/${id}`, {
+            .delete(`${API_URL}/admin/subscribe/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token || baseToken}`,
                 },

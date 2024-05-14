@@ -49,7 +49,7 @@ function SolutionChild() {
                 require('~/assets/images/solution/spark.png'),
                 'https://static.wixstatic.com/media/c794a2_9e070f0f2fe34ca9a3ea420301e88a33~mv2.png/v1/crop/x_39,y_0,w_1241,h_332/fill/w_217,h_55,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1280px-Hadoop_logo_svg.png',
                 'https://static.wixstatic.com/media/c794a2_a6f9b0c6611244bb83ad86baec33ceaa~mv2.png/v1/crop/x_0,y_0,w_246,h_198/fill/w_107,h_86,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Google_Cloud_logo_svg.png',
-                'https://static.wixstatic.com/media/c794a2_7bd44d3b64bc4a648049bf8d1d6cfd14~mv2.png/v1/fill/w_206,h_86,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/SAS_Institute.png',
+                './sas_logo.svg',
                 'https://static.wixstatic.com/media/c794a2_82385deba5d144b6bc46f994602657b4~mv2.png/v1/crop/x_312,y_570,w_2387,h_866/fill/w_152,h_55,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Microsoft_Azure-Logo_wine.png',
             ],
             name: [
@@ -254,6 +254,8 @@ function SolutionChild() {
                         return (
                             <div className={cx('image-container')} key={index}>
                                 <img src={item} alt={`Image ${index}`} />
+                                <span class="icon-text">{data[indexPage].name[index]}</span>
+                                
                                 {/* <p>{data[indexPage].name[index]}</p> */}
                             </div>
                         );

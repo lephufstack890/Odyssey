@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import axios from 'axios';
 import GlobalStateContext from '~/GlobalStateContext ';
+import API_URL from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -34,7 +35,7 @@ function ChangePassword() {
 
         try {
             // Gửi dữ liệu biểu mẫu qua email
-            const data = await axios.post('http://14.225.254.135:8000/api/change-password', formData, {
+            const data = await axios.post(`${API_URL}/change-password`, formData, {
                 headers: {
                     Authorization: `Bearer ${token || baseToken}`,
                 },
