@@ -12,6 +12,7 @@ import ChangePassword from '~/pages/ChangePassword';
 import ListSubscribeAdmin from '~/pages/ListSubscribeAdmin';
 import ForgotPassword from '~/pages/ForgotPassword';
 import ChangeMailConfig from '~/pages/ChangeMailConfig';
+import MoreChild from '~/pages/MoreChild';
 
 // Public routes
 const publicRoutes = [
@@ -31,6 +32,10 @@ const publicRoutes = [
     { path: '/blockchain', component: SolutionChild },
     { path: '/login', component: Login },
     { path: '/forgot-password', component: ForgotPassword },
+    { path: '/services', component: MoreChild },
+    { path: '/digital-transformation', component: MoreChild },
+    { path: '/outsourcing', component: MoreChild },
+    { path: '/it-consulting', component: MoreChild },
 ];
 
 const privateRoutes = [

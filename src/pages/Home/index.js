@@ -19,7 +19,7 @@ function Home() {
     const sliderRef = useRef(null);
     const [indexMenu, setIndexMenu] = useState(0);
 
-    const videoIN = './Sequence4.mp4'
+    const videoIN = './Sequence4.mp4';
 
     const handleMobileSliderToggle = (index) => {
         setMobileSliderOpen(index === mobileSliderOpen ? null : index);
@@ -147,7 +147,8 @@ function Home() {
                             />
                         </video>
                     ) : (
-                        <img style={{ height: '500px' }}
+                        <img
+                            style={{ height: '500px' }}
                             src="https://static.wixstatic.com/media/c794a2_553d56f3fda64a6bb01d8a7b545f8665f000.jpg/v1/fill/w_1519,h_820,al_c,q_85,usm_0.33_1.00_0.00,enc_auto/c794a2_553d56f3fda64a6bb01d8a7b545f8665f000.jpg"
                             alt="Mobile Image"
                         />
@@ -169,7 +170,7 @@ function Home() {
                 <div className={cx('main-page__solutions')}>
                     <div className={cx('main-page__solutions-top')}>
                         <span> {t('Our Solutions')}</span>
-                        <span >{t('Cooperate to innovate your company')}</span>
+                        <span>{t('Cooperate to innovate your company')}</span>
                         <span>{t('Explore how you can digitalize your business with Odyssey')}</span>
                     </div>
                     <div className={cx('main-page__solutions-content')}>
@@ -205,19 +206,34 @@ function Home() {
                         <div>
                             {Menu?.map((item, index) => (
                                 <div className={cx('row')} onClick={() => handleMobileSliderToggle(index)} key={index}>
-                                    <div className={cx('col-12', 'pb-4', 'position-relative')} style={{ height: indexMenu === index ? '250px' : '98px', transitionDuration: indexMenu === index ? '0.3s' : '0.3s' }}
-                                        onClick={() => setIndexMenu(index)}>
+                                    <div
+                                        className={cx('col-12', 'pb-4', 'position-relative')}
+                                        style={{
+                                            height: indexMenu === index ? '250px' : '98px',
+                                            transitionDuration: indexMenu === index ? '0.3s' : '0.3s',
+                                        }}
+                                        onClick={() => setIndexMenu(index)}
+                                    >
                                         <>
                                             <img
-                                                style={{ width: '100%', cursor: 'pointer', height: '100%', objectFit: 'cover' }}
+                                                style={{
+                                                    width: '100%',
+                                                    cursor: 'pointer',
+                                                    height: '100%',
+                                                    objectFit: 'cover',
+                                                }}
                                                 className={cx('sl-img-mobile')}
-                                                src={require(`./../../assets/images/home/mobile/sl-big${index + 1
-                                                    }.png`)}
+                                                src={require(`./../../assets/images/home/mobile/sl-big${
+                                                    index + 1
+                                                }.png`)}
                                                 alt=""
                                             />
                                             <div className={cx('content-img')}>
                                                 <p>{item?.title}</p>
-                                                <Link to={item?.link} style={{ display: indexMenu === index ? 'flex' : 'none' }}>
+                                                <Link
+                                                    to={item?.link}
+                                                    style={{ display: indexMenu === index ? 'flex' : 'none' }}
+                                                >
                                                     <FaArrowRightLong />
                                                 </Link>
                                             </div>
@@ -227,23 +243,67 @@ function Home() {
                             ))}
                         </div>
                     </div>
-
-                </div>
-
-                <div className={cx('main-page__service-title')} style={{ background: '#141416', paddingTop: '100px' }}>
-                    <h2 className='text-center' style={{ marginBottom: 0 }}>Ours Services</h2>
                 </div>
 
                 <div className={cx('main-page__service')} style={{ background: '#141416', paddingTop: '100px' }}>
-                    <h2 className='text-center' style={{ marginBottom: 0 }}>Ours Services</h2>
+                    <h2 className="text-center" style={{ marginBottom: 0 }}>
+                        {t('Ours Services')}
+                    </h2>
+                    <div
+                        className={cx('main-page__service-content')}
+                        style={{ background: '#141416', paddingTop: '70px' }}
+                    >
+                        <>
+                            <img
+                                style={{ height: '720px', width: '100%' }}
+                                src="https://static.wixstatic.com/media/nsplsh_6ba87416d0b94c23ac816100911ff3dc~mv2.jpg/v1/fill/w_1899,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/nsplsh_6ba87416d0b94c23ac816100911ff3dc~mv2.jpg"
+                                alt="Image by Milad Fakurian"
+                            />
+                            <div className={cx('overlay-content')}>
+                                <div className={cx('d-flex', 'flex-wrap', 'align-items-center')}>
+                                    <div className={cx('service-item')}>
+                                        <div className={cx('number')}>1</div>
+                                        <p className={cx('title')}>{t('Digital Transformation')}</p>
+                                        <p className={cx('content')}>{t('Our digital transformation service')}</p>
+                                        <div className={cx('more-info')}>
+                                            <Link className={cx('redir')} to={'/'}>
+                                                {t('More Info')}
+                                            </Link>
+                                        </div>
+                                    </div>
+                                    <div className={cx('service-item')}>
+                                        <div className={cx('number')}>2</div>
+                                        <p className={cx('title')}>{t('Outsourcing')}</p>
+                                        <p className={cx('content')}>{t('Delegate your IT-related functions to')}</p>
+                                        <div className={cx('more-info')}>
+                                            <Link className={cx('redir')} to={'/'}>
+                                                {t('More Info')}
+                                            </Link>
+                                        </div>
+                                    </div>
+                                    <div className={cx('service-item')}>
+                                        <div className={cx('number')}>3</div>
+                                        <p className={cx('title')}>{t('IT consulting')}</p>
+                                        <p className={cx('content')}>{t('Our IT consulting services provide')}</p>
+                                        <div className={cx('more-info')}>
+                                            <Link className={cx('redir')} to={'/'}>
+                                                {t('More Info')}
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </>
+                    </div>
                 </div>
 
-
-                <div style={{ background: '#141416', paddingTop: '100px' }}>
+                <div style={{ background: '#141416' }}>
                     <div className={cx('container')}>
                         <div className={cx('row')}>
                             <div className={cx('col-lg-5', 'col-md-6', 'col-12', 'main-page__missons-left')}>
-                                <h3 className={cx(i18n.language)}>{t('Our Mission: Making the world a better place')}</h3>
+                                <h3 className={cx(i18n.language)}>
+                                    {t('Our Mission: Making the world a better place')}
+                                </h3>
                                 <p>{t('We apply the modern software')}</p>
                                 <div style={{ margin: '10px 120px' }}>
                                     <Link to={'/mission'}>{t('Learn more')}</Link>
@@ -320,15 +380,12 @@ function Home() {
                         </div>
                         <div className={cx('d-flex', 'flex-wrap')}>
                             <div
-                                className={cx(`main-page__odyssey-actions-startedLeft-${i18n.language}`,)}
+                                className={cx(`main-page__odyssey-actions-startedLeft-${i18n.language}`)}
                                 style={{ border: '1px solid rgb(138, 138, 138)' }}
                             >
                                 {window.innerWidth > 768 ? (
                                     <video autoPlay muted loop>
-                                        <source
-                                            src={videoIN}
-                                            type="video/mp4"
-                                        />
+                                        <source src={videoIN} type="video/mp4" />
                                     </video>
                                 ) : (
                                     <img

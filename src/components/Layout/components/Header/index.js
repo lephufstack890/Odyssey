@@ -11,6 +11,7 @@ const cx = classNames.bind(styles);
 function Header() {
     const { i18n, t } = useTranslation();
     const [isSolutionHovered, setIsSolutionHovered] = useState(false);
+    const [isMoreHovered, setIsMoreHovered] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -36,6 +37,14 @@ function Header() {
         setIsSolutionHovered(false);
     };
 
+    const handleMoreHover = () => {
+        setIsMoreHovered(true);
+    };
+
+    const handleMoreLeave = () => {
+        setIsMoreHovered(false);
+    };
+
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
     };
@@ -44,7 +53,7 @@ function Header() {
         setIsMobileMenuOpen(false); // Ẩn menu đi sau khi click vào một mục menu
     };
 
-    const Menu = [
+    const MenuSolution = [
         {
             type: 'Web and Mobile application',
             link: '/web-and-mobile-application',
@@ -86,6 +95,29 @@ function Header() {
         },
     ];
 
+    const MenuMore = [
+        {
+            type: 'Services',
+            titleVN: 'Những dịch vụ',
+            link: '/services',
+        },
+        {
+            type: 'Digital Transformation',
+            titleVN: 'Chuyển đổi kỹ thuật số',
+            link: '/digital-transformation',
+        },
+        {
+            type: 'Outsourcing',
+            titleVN: 'Gia công phần mềm',
+            link: '/outsourcing',
+        },
+        {
+            type: 'IT consulting',
+            titleVN: 'Tư vấn CNTT',
+            link: '/it-consulting',
+        },
+    ];
+
     return (
         <header className={cx('header', { 'header--hidden': !visible })}>
             <div className={cx('container')} style={{ padding: '25px 0' }}>
@@ -124,7 +156,7 @@ function Header() {
 
                                 {isSolutionHovered && (
                                     <div className={cx('dropdown-content')}>
-                                        {Menu?.map((item, index) => (
+                                        {MenuSolution?.map((item, index) => (
                                             <NavLink key={index} to={item?.link}>
                                                 {t(item.type)}
                                             </NavLink>
@@ -138,14 +170,40 @@ function Header() {
                             <NavLink className={cx('header__list-menu--item')} to="/about-us">
                                 {t('About us')}
                             </NavLink>
+                            <a
+                                onMouseEnter={handleMoreHover}
+                                onMouseLeave={handleMoreLeave}
+                                className={cx('header__list-menu--item', 'position-relative')}
+                            >
+                                <span> {t('More')}</span>
+
+                                {isMoreHovered && (
+                                    <div className={cx('dropdown-content')}>
+                                        {MenuMore?.map((item, index) => (
+                                            <NavLink key={index} to={item?.link}>
+                                                {t(item.type)}
+                                            </NavLink>
+                                        ))}
+                                    </div>
+                                )}
+                            </a>
                         </div>
                     </div>
                     <div className={cx('col-lg-3 col-8')}>
                         <div className={cx('d-flex', 'align-items-center', 'justify-content-end')}>
                             <div className={cx('header__language')}>
-                                
-                                <span className={cx(`enable_${i18n.language == 'en'}`)}  onClick={() => changeLanguage('en')}>EN</span>
-                                <span className={cx(`enable_${i18n.language == 'vn'}`)} onClick={() => changeLanguage('vn')}>VN</span>
+                                <span
+                                    className={cx(`enable_${i18n.language == 'en'}`)}
+                                    onClick={() => changeLanguage('en')}
+                                >
+                                    EN
+                                </span>
+                                <span
+                                    className={cx(`enable_${i18n.language == 'vn'}`)}
+                                    onClick={() => changeLanguage('vn')}
+                                >
+                                    VN
+                                </span>
                             </div>
                             <Link className={cx('header__started')} to={'/contact'}>
                                 <span>{t('Get started')}</span>
@@ -178,8 +236,18 @@ function Header() {
                     </div>
                     <div className={cx('mobile-menu__content')}>
                         <div className={cx('header__language', 'header__language--mobile')}>
-                        <span className={cx(`enable_${i18n.language == 'en'}`)}  onClick={() => changeLanguage('en')}>EN</span>
-                        <span className={cx(`enable_${i18n.language == 'vn'}`)} onClick={() => changeLanguage('vn')}>VN</span>
+                            <span
+                                className={cx(`enable_${i18n.language == 'en'}`)}
+                                onClick={() => changeLanguage('en')}
+                            >
+                                EN
+                            </span>
+                            <span
+                                className={cx(`enable_${i18n.language == 'vn'}`)}
+                                onClick={() => changeLanguage('vn')}
+                            >
+                                VN
+                            </span>
                         </div>
 
                         <NavLink className={cx('mobile-menu__item')} to="/" onClick={handleMenuItemClick}>
@@ -207,7 +275,7 @@ function Header() {
                         </NavLink>
 
                         <div style={{ display: isMobileSolutionOpen ? 'flex' : 'none', flexDirection: 'column' }}>
-                            {Menu?.map((item, index) => (
+                            {MenuSolution?.map((item, index) => (
                                 <NavLink
                                     key={index}
                                     to={item?.link}

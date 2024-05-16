@@ -38,7 +38,6 @@
             }
 
             span:nth-child(3) {
-
                 font-size: 44px;
             }
 
@@ -114,10 +113,79 @@
         }
     }
 
-    &__service-title {
+    &__service {
         h2 {
-            font-size: 60px;
+            font-size: 56px;
             color: #fff;
+        }
+
+        &-content {
+            position: relative;
+
+            .overlay-content {
+                position: absolute;
+                top: 170px;
+                z-index: 2;
+                width: 100%;
+                padding: 0 275px;
+                .service-item {
+                    background-color: rgb(20 20 22);
+                    width: 310px;
+                    height: 488px;
+                    margin: 0 5px;
+                    position: relative;
+
+                    .number {
+                        width: 100px;
+                        height: 100px;
+                        background-color: rgb(27 28 30);
+                        position: absolute;
+                        top: -30px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        border-radius: 50%;
+                        color: #ffffff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 38px;
+                    }
+
+                    .title {
+                        font-size: 20px;
+                        color: #fff;
+                        text-align: center;
+                        padding-top: 90px;
+                    }
+
+                    .content {
+                        font-size: 16px;
+                        color: rgb(138, 138, 138);
+                        text-align: center;
+                        padding: 10px 15px 0 15px;
+                        line-height: 26px;
+                    }
+
+                    .more-info {
+                        width: 142px;
+                        height: 40px;
+                        background-color: #fd6262;
+                        padding-bottom: 10px;
+                        position: absolute;
+                        bottom: 30px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .redir {
+                            text-decoration: none;
+                            color: #ffffff;
+                            padding-top: 8px;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -211,7 +279,6 @@
                 flex: 0 0 auto;
                 width: 20%;
             }
-
 
             &-startedLeft-vn {
                 flex: 0 0 auto;
@@ -373,7 +440,6 @@
             height: 500px;
             position: relative;
             line-height: 9px;
-
         }
 
         &__sectionOne {
@@ -478,6 +544,60 @@
             }
         }
 
+        &__service {
+            h2 {
+                font-size: 36px;
+                color: #fff;
+                text-align: center;
+            }
+
+            &-content {
+                img {
+                    min-height: 1850px;
+                }
+                .overlay-content {
+                    top: 100px;
+                    padding: 0 30px;
+
+                    .service-item {
+                        width: 100%;
+                        height: 100%;
+                        margin: 20px 0;
+                        padding: 20px;
+
+                        .number {
+                            width: 80px;
+                            height: 80px;
+                            font-size: 24px;
+                            top: -25px;
+                        }
+
+                        .title {
+                            font-size: 26px;
+                            padding-top: 30px;
+                        }
+
+                        .content {
+                            font-size: 23px;
+                            padding: 10px;
+                            line-height: 36px;
+                            margin-bottom: 80px;
+                        }
+
+                        .more-info {
+                            width: 182px;
+                            height: 50px;
+                            margin-bottom: 2px;
+                            font-size: 20px;
+                            .redir {
+                                padding-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         &__missons {
             &-left {
                 border: none;
@@ -577,6 +697,5 @@
                 }
             }
         }
-
     }
 }

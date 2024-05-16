@@ -13,13 +13,16 @@ const resources = {
             'Get started': 'Get started',
             'About us': 'About Us',
             'Web and Mobile application': 'Web and Mobile application',
-            'tech application': 'We stay at the forefront of technology to provide cutting-edge solutions for our clients',
+            'tech application':
+                'We stay at the forefront of technology to provide cutting-edge solutions for our clients',
             'tech analytics': 'We offer data analytics services that can help our clients grow their businesses',
-            'tech bussiness': 'We deliver our enterprise business inteligence solutions to help you make better decisions',
+            'tech bussiness':
+                'We deliver our enterprise business inteligence solutions to help you make better decisions',
             'tech artificial': 'We offer AI solutions that will help you achieve your business objectives faster',
             'tech cloud': 'We offer scalable and secure cloud solutions tailored to your needs',
             'tech data': 'Our big data solutions are designed to help enterprises leverage the power of data',
-            'tech internet': 'We develop reliable IoT solutions that provide optimal support for the digitization of your business',
+            'tech internet':
+                'We develop reliable IoT solutions that provide optimal support for the digitization of your business',
             'tech blockchain': 'Our blockchain solutions can help promote trust, transparency and efficiency',
             'Data Analytics': 'Data Analytics',
             'Business Intelligence': 'Business Intelligence',
@@ -101,6 +104,32 @@ const resources = {
             'Job Title': 'Job Title',
             'Your Messengers': 'Your Messengers',
             profile: 'Odyssey profile',
+            'Digital Transformation Services': 'Digital Transformation Services that Help Businesses Champion Change',
+            'Exciting IT Outsourcing': 'Exciting IT Outsourcing Services We Offer',
+            'IT Consulting Build': 'IT Consulting Build a Roadmap to Better Business',
+            'We offer a wide range spectrum':
+                'We offer a wide range spectrum of services to help organisations work better. We can combine any of our products and services to create a package that’s tailored to your business. This removes the complexity and unnecessary cost of getting you where you want to be – whatever your starting point.',
+            'Our digital transformation service':
+                'Our digital transformation service helps businesses adapt to modern technology and helps you with your software development projects. Our company can guide your business in an area of development',
+            'Delegate your IT-related functions to':
+                'Delegate your IT-related functions to us who will organize corresponding processes as well as deliver necessary competences & software outsourcing services. We will help you f ill in competence gaps, scale your IT capacity',
+            'Our IT consulting services provide':
+                'Our IT consulting services provide access to experienced consultants for specialized projects and strategic guidance to foster business expansion. We help businesses utilize cutting-edge technologies and optimal methodologies to achieve a competitive advantage in the market.',
+            'We believe every business':
+                'We believe every business is unique, with its own set of challenges, opportunities, and goals- strongly rejecting the one-size-fits-all approach. Our digital transformation strategies are designed to work from day one and continue to evolve with your business needs. With a focus on leveraging the latest technology, industry best practices, and a deep understanding of your business, we help you navigate the complex digital roadmap and transform your organization to meet the challenges of tomorrow.',
+            'Outsourced IT services':
+                'Outsourced IT services enable you to collaborate with the best experts without making large upfront time and financial investments. Outsourcing enables your company to count on more flexible solutions. In an ever-evolving technological landscape, businesses require dynamic and tailored solutions. We pride ourselves on offering a diverse range of IT outsourcing services, each designed to address specific challenges and drive operational efficiency.',
+            'With a team steeped in deep':
+                "With a team steeped in deep tech expertise, we're more than just consultants. We're your partners in shaping a future-ready IT roadmap. Our approach is tailored, ensuring your business not only adapts but thrives. From digitizing operations and optimizing your software portfolio to harnessing the power of mobile solutions, we're here to elevate your journey every step of the way. Likewise, our business consultants help you implement processes and systems that support long-term business advantage.",
+            'Our services will help': 'Our services will help you grow your bussiness',
+            'At Odyssey, we understand':
+                'At Odyssey, we understand the importance of digital transformation in today’s fast-moving world. That’s why we specialize in offering top-tier services that are known for their reliability and precision. Our team of experts will work with your company to provide a customized plan that fits your specific needs and will take your business to the next level.',
+            'Our digital business transformation services':
+                'Our digital business transformation services drive impactful benefits by optimizing processes, automating systems, and propelling innovation. As a renowned digital transformation services company, we utilize a forward-thinking approach that not only addresses your immediate digital concerns but also guides you in making well-informed, future-proof decisions for your business.',
+            'Outsourced IT services enable you':
+                'Outsourced IT services enable you to collaborate with the best experts without making large upfront time and financial investments. Outsourcing enables your company to count on more flexible solutions. In an ever-evolving technological landscape, businesses require dynamic and tailored solutions. We pride ourselves on offering a diverse range of IT outsourcing services, each designed to address specific challenges and drive operational efficiency.',
+            'We are committed to delivering':
+                'We are committed to delivering world-class technology solutions for complex business opportunities and challenges, leveraging from our five most compelling strengths of Speed, Scale, Global Presence, Quality and Compliance. Our Consulting Services help you build a roadmap to better business outcomes by optimizing and transforming your existing IT environment.',
         },
     },
     vn: {
@@ -111,14 +140,21 @@ const resources = {
             Misson: 'Sứ mệnh',
             'About us': 'Chúng tôi',
             'Web and Mobile application': 'Ứng dụng di động và web',
-            'tech application': 'Chúng tôi đi đầu về công nghệ để cung cấp những giải pháp tiên tiến nhất cho khách hàng',
-            'tech analytics': 'Chúng tôi cung cấp dịch vụ dữ liệu và phân tích để hỗ trợ khách hàng mở rộng hoạt động kinh doanh của họ',
-            'tech bussiness': 'Chúng tôi cung cấp các giải pháp trí tuệ doanh nghiệp để giúp bạn đưa ra quyết định tốt hơn',
+            'tech application':
+                'Chúng tôi đi đầu về công nghệ để cung cấp những giải pháp tiên tiến nhất cho khách hàng',
+            'tech analytics':
+                'Chúng tôi cung cấp dịch vụ dữ liệu và phân tích để hỗ trợ khách hàng mở rộng hoạt động kinh doanh của họ',
+            'tech bussiness':
+                'Chúng tôi cung cấp các giải pháp trí tuệ doanh nghiệp để giúp bạn đưa ra quyết định tốt hơn',
             'tech artificial': 'Chúng tôi cung cấp các giải pháp AI giúp bạn đạt mục tiêu kinh doanh nhanh hơn',
-            'tech cloud': 'Chúng tôi cung cấp các giải pháp đám mây linh hoạt và an toàn, được tùy chỉnh theo nhu cầu cụ thể của bạn',
-            'tech data': 'Các giải pháp dữ liệu lớn của chúng tôi được thiết kế để giúp doanh nghiệp tận dụng sức mạnh của dữ liệu',
-            'tech internet': 'Chúng tôi phát triển các giải pháp Internet vạn vật đáng tin cậy, cung cấp hỗ trợ tối ưu cho quá trình số hóa doanh nghiệp bạn',
-            'tech blockchain': 'Các giải pháp blockchain của chúng tôi thúc đẩy niềm tin, tăng tính minh bạch và hiệu quả',
+            'tech cloud':
+                'Chúng tôi cung cấp các giải pháp đám mây linh hoạt và an toàn, được tùy chỉnh theo nhu cầu cụ thể của bạn',
+            'tech data':
+                'Các giải pháp dữ liệu lớn của chúng tôi được thiết kế để giúp doanh nghiệp tận dụng sức mạnh của dữ liệu',
+            'tech internet':
+                'Chúng tôi phát triển các giải pháp Internet vạn vật đáng tin cậy, cung cấp hỗ trợ tối ưu cho quá trình số hóa doanh nghiệp bạn',
+            'tech blockchain':
+                'Các giải pháp blockchain của chúng tôi thúc đẩy niềm tin, tăng tính minh bạch và hiệu quả',
             'Data Analytics': 'Phân tích dữ liệu',
             'Business Intelligence': 'Trí tuệ doanh nghiệp',
             'Artificial Intelligence': 'Trí tuệ nhân tạo',
@@ -201,6 +237,40 @@ const resources = {
             Phone: 'Số điện thoại',
             'Job Title': 'Chức danh',
             'Your Messengers': 'Lời nhắn của bạn',
+            'Ours Services': 'Dịch vụ của chúng tôi',
+            'Digital Transformation': 'Chuyển đổi kỹ thuật số',
+            Outsourcing: 'Gia công phần mềm',
+            'IT consulting': 'Tư vấn CNTT',
+            'More Info': 'Thông tin thêm',
+            Services: 'Những dịch vụ',
+            More: 'Hơn',
+            'Digital Transformation Services': 'Dịch vụ chuyển đổi kỹ thuật số giúp doanh nghiệp thay đổi thành công',
+            'Exciting IT Outsourcing': 'Dịch vụ gia công CNTT thú vị mà chúng tôi cung cấp',
+            'IT Consulting Build': 'Tư vấn CNTT Xây dựng lộ trình để kinh doanh tốt hơn',
+            'We offer a wide range spectrum':
+                'Chúng tôi cung cấp nhiều loại dịch vụ để giúp các tổ chức hoạt động tốt hơn. Chúng tôi có thể kết hợp bất kỳ sản phẩm và dịch vụ nào của mình để tạo ra một gói phù hợp với doanh nghiệp của bạn. Điều này loại bỏ sự phức tạp và chi phí không cần thiết để đưa bạn đến nơi bạn muốn - bất kể điểm xuất phát của bạn là gì.',
+            'We believe every business':
+                'Chúng tôi tin rằng mỗi doanh nghiệp là duy nhất, có những thách thức, cơ hội và mục tiêu riêng - phản đối mạnh mẽ cách tiếp cận một quy mô phù hợp cho tất cả. Các chiến lược chuyển đổi kỹ thuật số của chúng tôi được thiết kế để hoạt động ngay từ ngày đầu tiên và tiếp tục phát triển theo nhu cầu kinh doanh của bạn. Với trọng tâm là tận dụng công nghệ mới nhất, các phương pháp hay nhất trong ngành và sự hiểu biết sâu sắc về doanh nghiệp của bạn, chúng tôi giúp bạn điều hướng lộ trình kỹ thuật số phức tạp và chuyển đổi tổ chức của bạn để đáp ứng những thách thức trong tương lai.',
+            'Outsourced IT services':
+                'Dịch vụ CNTT thuê ngoài cho phép bạn cộng tác với các chuyên gia giỏi nhất mà không cần đầu tư tài chính và thời gian trả trước lớn. Gia công phần mềm cho phép công ty của bạn tin cậy vào các giải pháp linh hoạt hơn. Trong bối cảnh công nghệ không ngừng phát triển, các doanh nghiệp cần có các giải pháp năng động và phù hợp. Chúng tôi tự hào cung cấp nhiều dịch vụ gia công CNTT đa dạng, mỗi dịch vụ được thiết kế để giải quyết những thách thức cụ thể và thúc đẩy hiệu quả hoạt động.',
+            'With a team steeped in deep':
+                'Với đội ngũ có chuyên môn sâu về công nghệ, chúng tôi không chỉ đóng vai trò là nhà tư vấn. Chúng tôi là đối tác của bạn trong việc định hình lộ trình CNTT sẵn sàng cho tương lai. Cách tiếp cận của chúng tôi được điều chỉnh phù hợp, đảm bảo doanh nghiệp của bạn không chỉ thích ứng mà còn phát triển. Từ số hóa các hoạt động và tối ưu hóa danh mục phần mềm của bạn đến khai thác sức mạnh của các giải pháp di động, chúng tôi sẵn sàng nâng tầm hành trình của bạn trên từng bước đi. Tương tự như vậy, các chuyên gia tư vấn kinh doanh của chúng tôi sẽ giúp bạn triển khai các quy trình và hệ thống hỗ trợ lợi thế kinh doanh lâu dài.',
+            'Our digital transformation service':
+                'Dịch vụ chuyển đổi kỹ thuật số của chúng tôi giúp doanh nghiệp thích ứng với công nghệ hiện đại và hỗ trợ bạn thực hiện các dự án phát triển phần mềm. Công ty chúng tôi có thể hướng dẫn doanh nghiệp của bạn trong một lĩnh vực phát triển',
+            'Delegate your IT-related functions to':
+                'Giao các chức năng liên quan đến CNTT của bạn cho chúng tôi, những người sẽ tổ chức các quy trình tương ứng cũng như cung cấp các dịch vụ gia công phần mềm và năng lực cần thiết. Chúng tôi sẽ giúp bạn lấp đầy những khoảng trống về năng lực, mở rộng năng lực CNTT của bạn',
+            'Our IT consulting services provide':
+                'Dịch vụ tư vấn CNTT của chúng tôi cung cấp cơ hội tiếp cận với các chuyên gia tư vấn giàu kinh nghiệm cho các dự án chuyên ngành và hướng dẫn chiến lược để thúc đẩy mở rộng kinh doanh. Chúng tôi giúp doanh nghiệp sử dụng các công nghệ tiên tiến và phương pháp tối ưu để đạt được lợi thế cạnh tranh trên thị trường',
+            'Our services will help': 'Dịch vụ của chúng tôi sẽ giúp bạn phát triển doanh nghiệp của mình',
+            'Digital transformation': 'Chuyển đổi kỹ thuật số',
+            'At Odyssey, we understand':
+                'Tại Odyssey, chúng tôi hiểu tầm quan trọng của chuyển đổi kỹ thuật số trong thế giới chuyển động nhanh ngày nay. Đó là lý do tại sao chúng tôi chuyên cung cấp các dịch vụ hàng đầu nổi tiếng về độ tin cậy và độ chính xác. Đội ngũ chuyên gia của chúng tôi sẽ làm việc với công ty của bạn để cung cấp một kế hoạch tùy chỉnh phù hợp với nhu cầu cụ thể của bạn và sẽ đưa doanh nghiệp của bạn lên một tầm cao mới.',
+            'Our digital business transformation services':
+                'Các dịch vụ chuyển đổi kinh doanh kỹ thuật số của chúng tôi mang lại lợi ích to lớn bằng cách tối ưu hóa quy trình, tự động hóa hệ thống và thúc đẩy đổi mới. Là một công ty dịch vụ chuyển đổi kỹ thuật số nổi tiếng, chúng tôi sử dụng phương pháp tiếp cận có tư duy tiến bộ, không chỉ giải quyết các mối quan tâm kỹ thuật số trước mắt của bạn mà còn hướng dẫn bạn đưa ra các quyết định sáng suốt, phù hợp với tương lai cho doanh nghiệp của mình.',
+            'Outsourced IT services enable you':
+                'Dịch vụ CNTT thuê ngoài cho phép bạn cộng tác với các chuyên gia giỏi nhất mà không cần đầu tư tài chính và thời gian trả trước lớn. Gia công phần mềm cho phép công ty của bạn tin cậy vào các giải pháp linh hoạt hơn. Trong bối cảnh công nghệ không ngừng phát triển, các doanh nghiệp cần có các giải pháp năng động và phù hợp. Chúng tôi tự hào cung cấp nhiều dịch vụ gia công CNTT đa dạng, mỗi dịch vụ được thiết kế để giải quyết những thách thức cụ thể và thúc đẩy hiệu quả hoạt động.',
+            'We are committed to delivering':
+                'Chúng tôi cam kết cung cấp các giải pháp công nghệ đẳng cấp thế giới cho các cơ hội và thách thức kinh doanh phức tạp, tận dụng năm thế mạnh hấp dẫn nhất của chúng tôi là Tốc độ, Quy mô, Hiện diện toàn cầu, Chất lượng và Tuân thủ. Dịch vụ tư vấn của chúng tôi giúp bạn xây dựng lộ trình đạt được kết quả kinh doanh tốt hơn bằng cách tối ưu hóa và chuyển đổi môi trường CNTT hiện tại của bạn.',
         },
     },
 };
